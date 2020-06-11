@@ -1,22 +1,35 @@
-import React from "react"
+import React, {useRef, useState, useEffect, useCallback, useContext} from "react"
+import "../styles/index.css"
 import { Link } from "gatsby"
-
+import AnimatedTitle from "../components/AnimatedTitle";
 import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import { useTransition, animated } from "react-spring"
+import Navbar from "../components/Navbar";
+import MainPageBody from "../components/MainPageBody"
+import Hero from "../components/Hero"
+import Photo from "../components/Photo";
+import FlexJustified from "../components/UIComponents/FlexJustified";
+import { ThemeProvider } from "styled-components";
+import { GlobalStyles } from "../components/UIComponents/Globalstyles";
+import { lightTheme, darkTheme } from "../components/UIComponents/Themes";
+// import AppContext from "../context/AppContext";
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-  </Layout>
-)
+const IndexPage = () => {
+  const [theme, setTheme] = React.useState("light");
+  const changeTheme = () => {
+    console.log("CHANGING")
+    theme === "light" ? setTheme("dark") : setTheme("light")
+  };
+
+  return (
+    <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
+    <GlobalStyles />
+      <Navbar changeTheme={changeTheme} />
+      <MainPageBody>
+        <Hero />
+      </MainPageBody>
+    </ThemeProvider>
+  )
+}
 
 export default IndexPage
