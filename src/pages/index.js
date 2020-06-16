@@ -1,23 +1,24 @@
-import React, {useRef, useState, useEffect, useCallback, useContext} from "react"
+import React from "react"
 import "../styles/index.css"
-import { Link } from "gatsby"
-import AnimatedTitle from "../components/AnimatedTitle";
-import Layout from "../components/layout"
-import { useTransition, animated } from "react-spring"
 import Navbar from "../components/Navbar";
 import MainPageBody from "../components/MainPageBody"
 import Hero from "../components/Hero"
-import Photo from "../components/Photo";
-import FlexJustified from "../components/UIComponents/FlexJustified";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "../components/UIComponents/Globalstyles";
 import { lightTheme, darkTheme } from "../components/UIComponents/Themes";
-// import AppContext from "../context/AppContext";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faLinkedin, faGithub, faJs, faReact, faNode, faHtml5, faCss3Alt } from "@fortawesome/free-brands-svg-icons";
+import { faMobileAlt, faDatabase, faEnvelope, faExternalLinkAlt, faPlayCircle, faTimesCircle, faCode } from "@fortawesome/free-solid-svg-icons"
+import SocialsStrip from "../components/SocialsStrip";
+import About from "../components/About";
+import ProjectsSection from "../components/ProjectsSection";
+import Image from "../components/ProjectPic";
+
+library.add(faLinkedin, faGithub, faJs, faReact, faNode, faHtml5, faCss3Alt, faMobileAlt, faDatabase, faEnvelope, faExternalLinkAlt, faPlayCircle, faTimesCircle, faCode); 
 
 const IndexPage = () => {
   const [theme, setTheme] = React.useState("light");
   const changeTheme = () => {
-    console.log("CHANGING")
     theme === "light" ? setTheme("dark") : setTheme("light")
   };
 
@@ -27,6 +28,10 @@ const IndexPage = () => {
       <Navbar changeTheme={changeTheme} />
       <MainPageBody>
         <Hero />
+        <SocialsStrip />
+        <About />
+        <ProjectsSection />
+        <Image fileName="../images/covid19.png" />
       </MainPageBody>
     </ThemeProvider>
   )

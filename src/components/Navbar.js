@@ -3,9 +3,8 @@ import styled from "styled-components";
 import Logo from "./Logo";
 import constants from "../constants/constants";
 import ButtonLight from "./UIComponents/ButtonLight";
-import FlexJustified from "./UIComponents/FlexJustified";
+import FlexJustified from "./UIComponents/FlexRow";
 import ThemeSwitch from "./UIComponents/ThemeSwitch";
-import AppContext from "../context/AppContext";
 
 const NavLink = styled.div`
   font-family: "Proxima Nova";
@@ -15,7 +14,10 @@ const NavLink = styled.div`
   cursor: pointer;
   margin: 0 2.5rem;
   border-bottom: ${props => props.active ? "2px solid " + props.theme.highlights : "2px solid transparent"};
-  transition: all 0.50s linear; 
+  transition: color 0.50s linear; 
+  &:hover {
+    transform: scale(1.1);
+  }
 `;
 
 const Nav = styled.nav`
@@ -28,7 +30,6 @@ const Nav = styled.nav`
 `
 
 const NavRight = ({ changeTheme }) => {
-  const context = React.useContext(AppContext);
   return (
     <FlexJustified>
       <div
@@ -38,7 +39,7 @@ const NavRight = ({ changeTheme }) => {
         <NavLink>Projects</NavLink>
         <NavLink>Contact</NavLink>
       </div>
-      <ButtonLight title="RESUME" />
+      <ButtonLight title="RESUME" isHoverable={true} />
       <ThemeSwitch changeTheme={changeTheme} />
     </FlexJustified>
   )

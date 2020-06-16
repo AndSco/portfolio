@@ -54,7 +54,7 @@ input[type="checkbox"]
 }
 
 #_1st-toggle-btn span:after {
-    background-color: yellow;
+    background-color: #FFFF00;
     transform: translate(8px,0px);
     z-index: 0;
 }

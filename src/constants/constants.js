@@ -6,9 +6,20 @@ export default {
     lightGrey: "#7B8081",
     darkThemeBackground: "#09182F",
     aqua: "#5BFFDB",
+    overlayGradient:
+      "linear-gradient(rgba(255, 68, 131, 0.62), rgba(14, 217, 158, 0.62))",
+    modalBground: "rgba(66, 73, 73, .9)"  
   },
   padding: {
     topBottom: "2rem",
-    sides: "1rem",
+    right: "9rem",
+    left: "6rem",
+  },
+  fonts: {
+    smallText: {
+      fontFamily: "Roboto",
+      size: ".9rem",
+      weight: 400,
+    },
   },
 }

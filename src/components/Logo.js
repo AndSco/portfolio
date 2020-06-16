@@ -1,6 +1,4 @@
-import React from "react";
 import styled from "styled-components";
-import constants from "../constants/constants";
 
 
 const Logo = styled.h1`
@@ -11,7 +9,12 @@ const Logo = styled.h1`
   border-radius: 50%;
   color: ${props => props.theme.highlights};
   margin: 0;
+  cursor: pointer;
   transition: all 0.5s linear;
+
+  &:hover {
+    transform: rotateX(360deg);
+  }
 `
 
 export default Logo;

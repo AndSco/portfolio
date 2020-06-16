@@ -1,21 +1,30 @@
 import React from "react";
 import styled from "styled-components";
-import constants from "../../constants/constants";
-import { checkPropTypes } from "prop-types";
 
 const ButtonStyled = styled.div`
-  border: 1px solid ${constants.colors.green};
-  color: ${constants.colors.green};
-  padding: .2rem .5rem;
+  border: 1px solid ${props => props.color || props.theme.buttonColor};
+  color: ${props => props.color || props.theme.buttonColor};
+  padding: 0.2rem 0.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: .6rem;
+  font-size: ${props => props.textSize || "0.6rem"};
+  font-weight: 600;
+  text-transform: uppercase;
+  width: ${props => (props.width ? props.width + "px" : undefined)};
+  cursor: pointer;
+  transition: all 0.5s linear;
+
+  &:hover {
+    color: ${props => props.noEffect ? props.color : props.theme.highlights};
+    border-color: ${props => props.noEffect ? props.color : props.theme.highlights};
+    transform: ${props => props.noEffect ? "scale(1)" : "scale(1.1)"};
+  }
 `
 
-const ButtonLight = ({title}) => {
+const ButtonLight = ({title, width, textSize, color, noEffect}) => {
   return (
-    <ButtonStyled width={40} height={20}>
+    <ButtonStyled width={width} textSize={textSize} color={color} noEffect={noEffect}>
       {title}
     </ButtonStyled>
   )
