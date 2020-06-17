@@ -29,3 +29,7 @@ body {
   line-height: 80px;
 }
 
+
+a {
+  text-decoration: none;
+}

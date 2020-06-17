@@ -35,16 +35,21 @@ export const techs = [
 ]
 
 const Circle = styled.div`
-  width: 90px;
-  height: 90px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: ${props => props.theme.text};
   background-color: ${props => props.theme.body};
-  margin: 0 1rem .5rem 1rem;
-`;
+  margin: 0 1rem 0.5rem 1rem;
+  transition: all .3s ease;
+
+  &:hover {
+    transform: scale(1.08);
+  }
+`
 
 const CircleContainer = styled.div`
   display: flex;

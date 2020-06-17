@@ -18,7 +18,7 @@ const ButtonStyled = styled.div`
   &:hover {
     color: ${props => props.noEffect ? props.color : props.theme.highlights};
     border-color: ${props => props.noEffect ? props.color : props.theme.highlights};
-    transform: ${props => props.noEffect ? "scale(1)" : "scale(1.1)"};
+    transform: ${props => props.noEffect ? "scale(1)" : "scale(1.03)"};
   }
 `
 

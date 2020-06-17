@@ -2,7 +2,6 @@ import React, {useRef, useState, useEffect, useCallback} from "react"
 import "../styles/index.css"
 import styled, { keyframes } from "styled-components";
 import constants from "../constants/constants";
-import {techs} from "./CodeTechnology";
 
 import { useTransition, animated } from "react-spring"
 
@@ -34,17 +33,16 @@ const Title = styled.div`
 `
 
 const AnimatedTitle = props => {
-  const [indexTechShowing, setIndexTechShowing] = useState(0)
-  const techShowing = techs[indexTechShowing];
+  const [techShowing, setTechShowing] = useState("javascript")
   
   // useEffect(() => {
   //   const interval = setInterval(() => {
   //     debugger
-  //     if (indexTechShowing === techs.length - 1) setIndexTechShowing(0);
+  //     if (techShowing === "javascript") setTechShowing("react");
   //     else {
-  //       setIndexTechShowing(indexTechShowing + 1);
+  //       setTechShowing("javascript");
   //     }
-  //   }, 1000);
+  //   }, 2000);
 
   //   return function cleanUp() {
   //     clearInterval(interval)
@@ -91,7 +89,7 @@ const AnimatedTitle = props => {
     <div>
       <Title main>Andrea</Title>
       <Title main>Scorcia</Title>
-      <Title>{techShowing.name}</Title>
+      <Title>Javascript</Title>
       <Title>Developer</Title>
       {/* {transitions.map(({ item, props: { innerHeight, ...rest }, key }) => (
         <animated.div

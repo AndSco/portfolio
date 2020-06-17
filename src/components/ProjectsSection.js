@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import styled from "styled-components";
 import ProjectCard from "./UIComponents/ProjectCard";
 import SectionTitle from "./UIComponents/SectionTitle"
@@ -21,10 +21,15 @@ const ProjectsSection = () => {
   const prepareProjectForModal = (project) => setCurrentProject(project);
 
   return (
-    <StyledContainer>
-      {isModalOpen && <ModalDemo project={currentProject} closeModal={closeModal} />}
-      <SectionTitle>Some of my projects</SectionTitle>
-      <div style={{display: "flex", flexDirection: "column"}}>
+    <StyledContainer id="projectsSection">
+      {isModalOpen && (
+        <ModalDemo project={currentProject} closeModal={closeModal} />
+      )}
+      <SectionTitle
+        title="Some of my projects"
+        // styles={{ borderBottom: "2px solid", paddingBottom: "1rem" }}
+      />
+      <div style={{ display: "flex", flexDirection: "column" }}>
         {projects.map((proj, index) => {
           return (
             <ProjectCard
@@ -34,7 +39,8 @@ const ProjectsSection = () => {
               openModal={openModal}
               prepareProjectForModal={prepareProjectForModal}
             />
-          )})}
+          )
+        })}
       </div>
     </StyledContainer>
   )

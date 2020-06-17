@@ -13,7 +13,7 @@ const StyledExcerpt = styled.p`
   font-size: ${constants.fonts.smallText.size};
   font-weight: ${constants.fonts.smallText.weight};
   transition: all 0.5s linear;
-  margin: 1em 0;
+  margin: 1.4em 0;
 `
 
 const Hero = () => {
@@ -34,7 +34,7 @@ const Hero = () => {
           libero. Duis non pharetra felis. Donec maximus, nulla sit amet
           consectetur pulvinar, nunc dolor.
       </StyledExcerpt>
-      <ButtonLight title="See projects" width={200} textSize="1rem" />
+      <ButtonLight title="See projects" width={200} textSize=".9rem" />
       </FlexColumn>
       {/* <BackgroundImage /> */}
       <Circles />

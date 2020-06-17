@@ -21,11 +21,21 @@ const StyledStrip = styled.div`
   }
 `
 
+const StyledIconContainer = styled.div`
+  margin: .5rem 0;
+
+  &:hover {
+    transform: translateY(-3px) scale(1.1);
+  }
+`;
+
+
+
 const IconContainer = ({iconName}) => {
   return (
-    <div style={{ margin: ".5rem 0", cursor: "pointer" }}>
+    <StyledIconContainer>
       <ClickableIcon icon={iconName} />
-    </div>
+    </StyledIconContainer>
   )
 }
 
