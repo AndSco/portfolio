@@ -51,6 +51,7 @@ const Nav = styled.nav`
   left: 0;
   z-index: 10000;
   visibility: ${props => (props.isVisible ? "visible" : "hidden")};
+  box-shadow: ${props => props.scrollPosition < -100 ? "6px 7px 9px -4px rgba(0,0,0,0.38)" : "none"};
 
   transition: all 0.5s linear;
 `
@@ -90,6 +91,7 @@ const Navbar = ({ changeTheme }) => {
   const [isVisible, setIsVisible] = useState(true);
   const [scrollPosition, setScrollPosition] = useState(0);
 
+
   const handleScroll = () => {
     setScrollPosition(document.body.getBoundingClientRect().top);
     setIsVisible(document.body.getBoundingClientRect().top > scrollPosition);
@@ -101,7 +103,7 @@ const Navbar = ({ changeTheme }) => {
   })
 
   return (
-    <Nav isVisible={isVisible}>
+    <Nav isVisible={isVisible} scrollPosition={scrollPosition}>
       <Logo />
       <NavRight changeTheme={changeTheme} />
     </Nav>
