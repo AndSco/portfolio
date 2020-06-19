@@ -47,7 +47,7 @@ const Circle = styled.div`
   transition: all .3s ease;
 
   &:hover {
-    transform: scale(1.08);
+    transform: scale(1.1);
   }
 `
 

@@ -23,9 +23,10 @@ const StyledStrip = styled.div`
 
 const StyledIconContainer = styled.div`
   margin: .5rem 0;
+  padding: .2rem;
 
   &:hover {
-    transform: translateY(-3px) scale(1.1);
+    transform: translateY(-3px) scale(1.2);
   }
 `;
 

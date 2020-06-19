@@ -13,12 +13,13 @@ const ButtonStyled = styled.div`
   text-transform: uppercase;
   width: ${props => (props.width ? props.width + "px" : undefined)};
   cursor: pointer;
-  transition: all 0.5s linear;
+  transition: color 0.2s linear, border 0.2s linear;
 
   &:hover {
-    color: ${props => props.noEffect ? props.color : props.theme.highlights};
-    border-color: ${props => props.noEffect ? props.color : props.theme.highlights};
-    transform: ${props => props.noEffect ? "scale(1)" : "scale(1.03)"};
+    color: ${props => (props.noEffect ? props.color : props.theme.highlights)};
+    border-color: ${props =>
+      props.noEffect ? props.color : props.theme.highlights};
+    transform: ${props => (props.noEffect ? "scale(1)" : "scale(1.03)")};
   }
 `
 

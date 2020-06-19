@@ -3,44 +3,20 @@ import styled from "styled-components";
 import SectionTitle from "./UIComponents/SectionTitle";
 import ParagraphText from "./UIComponents/ParagraphText"
 import CodeTechnology from "./CodeTechnology";
-import constants from "../constants/constants";
-
-const StyledContainer = styled.div`
-  width: 100vw;
-  height: 100vh;
-  background-color: ${props => props.theme.aboutStrip}; 
-  margin-bottom: 100px 0 2rem 0;
-  padding: 1.6rem ${constants.padding.left} 3rem ${constants.padding.right};
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  /* align-items: center; */
-  z-index: 130;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    transform-origin: bottom right;
-    transform: skewY(5deg);
-    background: inherit;
-    /* background-color: ${props => props.theme.aboutStrip}; */
-    z-index: -1;
-  }
-`
+import SkewedContainer from "./UIComponents/SkewedContainer";
 
 
 const About = () => {
   return (
-    <StyledContainer id="aboutSection">
+    <SkewedContainer id="aboutSection" scope="about">
       <SectionTitle title="About me" />
-      <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
         <ParagraphText padding={"0 0 2rem 0"}>
           Hello! I’m Andrea, a self-taught Javascript developer based in Brno,
           Czech Republic. applications, or anything in between. I enjoy creating
@@ -54,7 +30,7 @@ const About = () => {
         </ParagraphText>
         <CodeTechnology />
       </div>
-    </StyledContainer>
+    </SkewedContainer>
   )
 }
 

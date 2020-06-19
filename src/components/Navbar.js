@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Logo from "./Logo";
 import ButtonLight from "./UIComponents/ButtonLight";
 import FlexJustified from "./UIComponents/FlexRow";
 import ThemeSwitch from "./UIComponents/ThemeSwitch";
-import { AnchorLink } from "gatsby-plugin-anchor-links"
+import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 
 const NavLink = styled.div`
@@ -39,11 +39,20 @@ const NavLink = styled.div`
 
 const Nav = styled.nav`
   width: 100%;
-  height: 10vh;
+  height: 13vh;
   display: flex;
-  padding: 20px 40px 0 40px;
+  padding: 0 2rem;
   align-items: center;
   justify-content: space-between;
+
+  background-color: ${props => props.theme.body};
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  visibility: ${props => (props.isVisible ? "visible" : "hidden")};
+
+  transition: all 0.5s linear;
 `
 
 const Anchor = ({to, children}) => {
@@ -67,7 +76,9 @@ const NavRight = ({ changeTheme }) => {
         <Anchor to="projectsSection">
           <NavLink>Projects</NavLink>
         </Anchor>
-        <NavLink>Contact</NavLink>
+        <Anchor to="contactsSection">
+          <NavLink>Contact</NavLink>
+        </Anchor>  
       </div>
       <ButtonLight title="RESUME" isHoverable={true} />
       <ThemeSwitch changeTheme={changeTheme} />
@@ -76,9 +87,22 @@ const NavRight = ({ changeTheme }) => {
 }
 
 const Navbar = ({ changeTheme }) => {
+  const [isVisible, setIsVisible] = useState(true);
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  const handleScroll = () => {
+    setScrollPosition(document.body.getBoundingClientRect().top);
+    setIsVisible(document.body.getBoundingClientRect().top > scrollPosition);
+  }
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll)
+  })
+
   return (
-    <Nav>
-      <Logo>AS</Logo>
+    <Nav isVisible={isVisible}>
+      <Logo />
       <NavRight changeTheme={changeTheme} />
     </Nav>
   )

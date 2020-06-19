@@ -30,7 +30,7 @@ const Description = styled.div`
   justify-content: center;
   font-size: 0.8rem;
   align-items: center;
-  background-color: ${props => props.theme.aboutStrip};
+  background: ${props => props.theme.aboutStrip};
   color: ${props => props.theme.text};
   padding: 1rem 1.5rem;
   -webkit-box-shadow: 6px 5px 9px -4px rgba(0, 0, 0, 0.38);

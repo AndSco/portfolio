@@ -21,7 +21,6 @@ const Modal = styled.div`
 const DemoBox = styled.div`
   width: 65vw;
   height: 80vh;
-  background-color: white;
 `
 
 const DetailsBox = styled.div`

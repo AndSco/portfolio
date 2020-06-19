@@ -5,9 +5,11 @@ import SectionTitle from "./UIComponents/SectionTitle"
 import projects from "../constants/projects";
 import constants from "../constants/constants";
 import ModalDemo from "./ModalDemo";
+import ProjectCard2 from "./UIComponents/ProjectCard2"
+
 
 const StyledContainer = styled.div`
-  padding: 6rem ${constants.padding.left} 3rem ${constants.padding.right};
+  padding: 6rem ${constants.padding.left} 6rem ${constants.padding.right};
   display: flex;
   flex-direction: column;
 `
@@ -32,7 +34,7 @@ const ProjectsSection = () => {
       <div style={{ display: "flex", flexDirection: "column" }}>
         {projects.map((proj, index) => {
           return (
-            <ProjectCard
+            <ProjectCard2
               key={proj.title}
               project={proj}
               orientation={index % 2 === 0 ? "left" : "right"}

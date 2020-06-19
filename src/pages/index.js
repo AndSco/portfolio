@@ -8,13 +8,14 @@ import { GlobalStyles } from "../components/UIComponents/Globalstyles";
 import { lightTheme, darkTheme } from "../components/UIComponents/Themes";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faLinkedin, faGithub, faJs, faReact, faNode, faHtml5, faCss3Alt } from "@fortawesome/free-brands-svg-icons";
-import { faMobileAlt, faDatabase, faEnvelope, faExternalLinkAlt, faPlayCircle, faTimesCircle, faStarOfLife } from "@fortawesome/free-solid-svg-icons"
+import { faMobileAlt, faDatabase, faEnvelope, faExternalLinkAlt, faPlayCircle, faTimesCircle, faStarOfLife, faBriefcase } from "@fortawesome/free-solid-svg-icons"
 import SocialsStrip from "../components/SocialsStrip";
 import About from "../components/About";
 import ProjectsSection from "../components/ProjectsSection";
-import Image from "../components/ProjectPic";
+import ContactsSection from "../components/ContactsSection"
 
-library.add(faLinkedin, faGithub, faJs, faReact, faNode, faHtml5, faCss3Alt, faMobileAlt, faDatabase, faEnvelope, faExternalLinkAlt, faPlayCircle, faTimesCircle, faStarOfLife); 
+
+library.add(faLinkedin, faGithub, faJs, faReact, faNode, faHtml5, faCss3Alt, faMobileAlt, faDatabase, faEnvelope, faExternalLinkAlt, faPlayCircle, faTimesCircle, faStarOfLife, faBriefcase); 
 
 const IndexPage = () => {
   const [theme, setTheme] = React.useState("light");
@@ -31,7 +32,7 @@ const IndexPage = () => {
         <SocialsStrip />
         <About />
         <ProjectsSection />
-        <Image fileName="../images/covid19.png" />
+        <ContactsSection />
       </MainPageBody>
     </ThemeProvider>
   )

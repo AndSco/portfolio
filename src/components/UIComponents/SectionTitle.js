@@ -3,8 +3,8 @@ import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Asterisk = styled.div`
-  color: ${props => props.theme.secondaryTitle};
-  margin-right: 0.5rem;
+  color: ${props => props.theme.highlights};
+  margin-right: 0.7rem;
   transition: all .6s ease;
 `
 
@@ -15,7 +15,7 @@ const SectionTitle = styled.h2`
   align-items: center;
   font-weight: 500;
   font-size: 1.7rem;
-
+  
   &:hover ${Asterisk} {
     transform: rotate(180deg);
   }

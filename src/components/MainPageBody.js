@@ -2,7 +2,7 @@ import React from "react";
 
 const MainPageBody = ({children}) => {
   return (
-    <div style={{ maxWidth: "100vw", padding: "4rem 0" }}>
+    <div style={{ maxWidth: "100vw", padding: "7rem 0 0 0" }}>
       {children}
     </div>
   )
@@ -10,4 +10,3 @@ const MainPageBody = ({children}) => {
 
 export default MainPageBody;
 
-// padding: "4rem 6rem 0 6rem", 
