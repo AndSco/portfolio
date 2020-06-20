@@ -4,9 +4,10 @@ import Logo from "./Logo";
 import ButtonLight from "./UIComponents/ButtonLight";
 import FlexJustified from "./UIComponents/FlexRow";
 import ThemeSwitch from "./UIComponents/ThemeSwitch";
-import { AnchorLink } from "gatsby-plugin-anchor-links";
 import constants from "../constants/constants";
-
+import BurgerMenu from "./UIComponents/BurgerMenu";
+import MobileMenu from "./UIComponents/MobileMenu";
+import Anchor from "./UIComponents/Anchor";
 
 const NavLink = styled.div`
   font-family: "Proxima Nova";
@@ -69,13 +70,6 @@ const LinksContainer = styled(FlexJustified)`
 `
 
 
-const Anchor = ({to, children}) => {
-  return (
-  <AnchorLink to={`/#${to}`}>
-    {children}
-  </AnchorLink>
-  )
-}
 
 const NavRight = () => {
   return (
@@ -102,7 +96,10 @@ const NavRight = () => {
 const Navbar = ({ changeTheme }) => {
   const [isVisible, setIsVisible] = useState(true);
   const [scrollPosition, setScrollPosition] = useState(0);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  const openMobileMenu = () => setIsMobileMenuOpen(true);
+  const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
   const handleScroll = () => {
     setScrollPosition(document.body.getBoundingClientRect().top);
@@ -116,9 +113,11 @@ const Navbar = ({ changeTheme }) => {
 
   return (
     <Nav isVisible={isVisible} scrollPosition={scrollPosition}>
+      <MobileMenu isMenuVisible={isMobileMenuOpen} closeMobileMenu={closeMobileMenu} />
       <Logo />
       <NavRight changeTheme={changeTheme} />
       <ThemeSwitch changeTheme={changeTheme} />
+      <BurgerMenu openMobileMenu={openMobileMenu} closeMobileMenu={closeMobileMenu} />
     </Nav>
   )
 }
