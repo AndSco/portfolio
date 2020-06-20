@@ -17,9 +17,9 @@ const BackgroundCircle = styled.div`
   z-index: 100;
 
   @media (max-width: ${constants.breakPoints.medium}) {
-    width: 135px;
-    min-width: 135px;
-    height: 135px;
+    width: 165px;
+    min-width: 165px;
+    height: 165px;
     position: static;
     align-items: center;
     justify-content: center;

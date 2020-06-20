@@ -113,11 +113,18 @@ const Navbar = ({ changeTheme }) => {
 
   return (
     <Nav isVisible={isVisible} scrollPosition={scrollPosition}>
-      <MobileMenu isMenuVisible={isMobileMenuOpen} closeMobileMenu={closeMobileMenu} />
+      <MobileMenu
+        isMenuVisible={isMobileMenuOpen}
+        closeMobileMenu={closeMobileMenu}
+      />
       <Logo />
       <NavRight changeTheme={changeTheme} />
       <ThemeSwitch changeTheme={changeTheme} />
-      <BurgerMenu openMobileMenu={openMobileMenu} closeMobileMenu={closeMobileMenu} />
+      <BurgerMenu
+        openMobileMenu={openMobileMenu}
+        closeMobileMenu={closeMobileMenu}
+        isMobileMenuOpen={isMobileMenuOpen}
+      />
     </Nav>
   )
 }

@@ -3,11 +3,19 @@ import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import constants from "../../constants/constants";
 
-const Asterisk = styled.div`
-  color: ${props => props.theme.highlights};
+const AsteriskContainer = styled.div`
+  color: ${props => props.color || props.theme.highlights};
   margin-right: 0.7rem;
   transition: all .6s ease;
 `
+
+export const Asterisk = ({color}) => {
+  return (
+    <AsteriskContainer color={color}>
+      <FontAwesomeIcon icon="star-of-life" size="sm" />
+    </AsteriskContainer>
+  )
+}
 
 const SectionTitle = styled.h2`
   text-transform: uppercase;
@@ -17,7 +25,7 @@ const SectionTitle = styled.h2`
   font-weight: 500;
   font-size: 1.7rem;
 
-  &:hover ${Asterisk} {
+  &:hover ${AsteriskContainer} {
     transform: rotate(180deg);
   }
 
@@ -30,7 +38,7 @@ const SectionTitle = styled.h2`
 const Title = ({title, styles}) => {
   return (
     <SectionTitle styles={styles}>
-      <Asterisk><FontAwesomeIcon icon="star-of-life" size="sm" /></Asterisk>
+      <Asterisk />
       {title}
     </SectionTitle>
   )

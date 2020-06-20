@@ -15,18 +15,16 @@ const BurgerMenuContainer = styled.div`
 `;
 
 
-const BurgerMenu = ({ openMobileMenu, closeMobileMenu }) => {
-  const [iconShowing, setIconShowing] = React.useState("bars")
+const BurgerMenu = ({ openMobileMenu, closeMobileMenu, isMobileMenuOpen }) => {
+  const iconShowing = isMobileMenuOpen ? "times-circle" : "bars";
+  
   const manageMenu = () => {
-    if (iconShowing === "bars") {
-      setIconShowing("times-circle");
-      openMobileMenu();
+    if (!isMobileMenuOpen) {
+      openMobileMenu()
     } else {
-      setIconShowing("bars");
-      closeMobileMenu();
+      closeMobileMenu()
     }
   }
-
 
   return (
     <BurgerMenuContainer onTouchStart={manageMenu} iconShowing={iconShowing}>

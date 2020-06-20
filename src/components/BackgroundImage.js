@@ -43,9 +43,9 @@ const StyledBackgroundSection = styled(BackgroundSection)`
   transition: all 0.5s linear;
 
   @media (max-width: ${constants.breakPoints.medium}) {
-    width: 120px;
-    min-width: 120px;
-    height: 120px;
+    width: 150px;
+    min-width: 150px;
+    height: 150px;
   }
 `
 

@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Anchor from "./Anchor";
+import {Asterisk} from "./SectionTitle";
 
 const MobileMenuContainer = styled.div`
   width: 70vw;
@@ -21,20 +22,40 @@ const MobileMenuContainer = styled.div`
 const Link = styled.h2`
   color: ${props => props.theme.body};
   text-transform: uppercase;
-`;
+  display: flex;
+`
+
+const MenuItem = ({closeMobileMenu, linkTo, text}) => {
+  return (
+    <div onTouchStart={closeMobileMenu}>
+      <Anchor to={linkTo}>
+        <Link>
+          <Asterisk color="white" />
+          {text}
+        </Link>
+      </Anchor>
+    </div>
+  )
+}
 
 const MobileMenu = ({ isMenuVisible, closeMobileMenu }) => {
   return (
     <MobileMenuContainer isMenuVisible={isMenuVisible}>
-      <Anchor to="aboutSection">
-        <Link onTouchStart={closeMobileMenu}>ABOUT</Link>
-      </Anchor>
-      <Anchor to="projectsSection">
-        <Link onTouchStart={closeMobileMenu}>Projects</Link>
-      </Anchor>
-      <Anchor to="contactsSection">
-        <Link onTouchStart={closeMobileMenu}>Contact</Link>
-      </Anchor>
+      <MenuItem
+        closeMobileMenu={closeMobileMenu}
+        linkTo="aboutSection"
+        text="ABOUT"
+      />
+      <MenuItem
+        closeMobileMenu={closeMobileMenu}
+        linkTo="projectsSection"
+        text="Projects"
+      />
+      <MenuItem
+        closeMobileMenu={closeMobileMenu}
+        linkTo="contactsSection"
+        text="contact"
+      />
     </MobileMenuContainer>
   )
 }
