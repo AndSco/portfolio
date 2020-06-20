@@ -19,7 +19,7 @@ export default [
     title: "Kayaking mobile app",
     description:
       "React native app for IOS and Android. Users can check in when going for a paddle and all subscribers receive an alert if the kayaker does not check out by his/her ETA. Also used as a logbook, repository of kayaking trips and technical reference.",
-    stack: ["React Native", "NodeJS", "API Creation"],
+    stack: ["React Native", "NodeJS", "API Creation", "Redux"],
     picName: "covid19.png",
     demoUrl: "https://www.youtube.com/embed/ce70Qc5wxc0",
   },

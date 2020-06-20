@@ -8,29 +8,55 @@ import ButtonLight from "./UIComponents/ButtonLight";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 import FadeInDiv from "./UIComponents/FadeInDiv";
 
+
+const TextContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: ${constants.breakPoints.medium}) {
+    order: 2;
+    align-items: center;
+    text-align: center;
+    margin-top: 2rem;
+  }  
+`
+
+const HeroContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  padding: 6vh ${constants.padding.right};
+  height: 100vh;
+  margin-bottom: 2.4rem;
+
+  @media (max-width: ${constants.breakPoints.medium}) {
+    padding: 0;
+    padding-top: 3rem;
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    margin-bottom: 7rem;
+  }
+`
+
 const StyledExcerpt = styled.p`
   color: ${props => props.theme.text};
-  width: 360px;
+  max-width: 300px;
   font-family: ${constants.fonts.smallText.fontFamily};
   font-size: ${constants.fonts.smallText.size};
   font-weight: ${constants.fonts.smallText.weight};
   transition: color 0.5s linear;
   margin: 1.4em 0;
+
+  @media (max-width: ${constants.breakPoints.medium}) {
+    max-width: 200px;
+  }
 `
 
 
 const Hero = () => {
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "space-between",
-        padding: `0 ${constants.padding.right}`,
-        height: "90vh",
-        marginBottom: "2.4rem",
-      }}
-    >
-      <FlexColumn>
+    <HeroContainer>
+      <TextContainer>
         <AnimatedTitle />
         <FadeInDiv>
           <StyledExcerpt>
@@ -42,9 +68,9 @@ const Hero = () => {
             <ButtonLight title="See projects" width={200} textSize=".9rem" />
           </AnchorLink>
         </FadeInDiv>
-      </FlexColumn>
+      </TextContainer>
       <Circles />
-    </div>
+    </HeroContainer>
   )
 }
 

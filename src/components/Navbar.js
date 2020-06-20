@@ -5,6 +5,7 @@ import ButtonLight from "./UIComponents/ButtonLight";
 import FlexJustified from "./UIComponents/FlexRow";
 import ThemeSwitch from "./UIComponents/ThemeSwitch";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
+import constants from "../constants/constants";
 
 
 const NavLink = styled.div`
@@ -40,6 +41,7 @@ const NavLink = styled.div`
 const Nav = styled.nav`
   width: 100%;
   height: 13vh;
+  min-height: 80px;
   display: flex;
   padding: 0 2rem;
   align-items: center;
@@ -50,11 +52,22 @@ const Nav = styled.nav`
   top: 0;
   left: 0;
   z-index: 10000;
-  visibility: ${props => (props.isVisible ? "visible" : "hidden")};
-  box-shadow: ${props => props.scrollPosition < -100 ? "6px 7px 9px -4px rgba(0,0,0,0.38)" : "none"};
+  transform: ${props => (props.isVisible ? "none" : "translateY(-200px)")};
+  box-shadow: ${props =>
+    props.scrollPosition < -100 ? "6px 7px 9px -4px rgba(0,0,0,0.38)" : "none"};
 
   transition: all 0.5s linear;
 `
+
+const LinksContainer = styled(FlexJustified)`
+  flex: 3;
+  justify-content: flex-end;
+
+  @media (max-width: ${constants.breakPoints.medium}) {
+    display: none;
+  }
+`
+
 
 const Anchor = ({to, children}) => {
   return (
@@ -64,9 +77,9 @@ const Anchor = ({to, children}) => {
   )
 }
 
-const NavRight = ({ changeTheme }) => {
+const NavRight = () => {
   return (
-    <FlexJustified>
+    <LinksContainer>
       <div
         style={{ display: "flex", alignItems: "center", paddingRight: "1rem" }}
       >
@@ -79,11 +92,10 @@ const NavRight = ({ changeTheme }) => {
         </Anchor>
         <Anchor to="contactsSection">
           <NavLink>Contact</NavLink>
-        </Anchor>  
+        </Anchor>
       </div>
       <ButtonLight title="RESUME" isHoverable={true} />
-      <ThemeSwitch changeTheme={changeTheme} />
-    </FlexJustified>
+    </LinksContainer>
   )
 }
 
@@ -106,6 +118,7 @@ const Navbar = ({ changeTheme }) => {
     <Nav isVisible={isVisible} scrollPosition={scrollPosition}>
       <Logo />
       <NavRight changeTheme={changeTheme} />
+      <ThemeSwitch changeTheme={changeTheme} />
     </Nav>
   )
 }

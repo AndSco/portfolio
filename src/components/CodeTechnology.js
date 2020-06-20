@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import constants from "../constants/constants";
 
 
 export const techs = [
@@ -44,10 +45,17 @@ const Circle = styled.div`
   color: ${props => props.theme.text};
   background-color: ${props => props.theme.body};
   margin: 0 1rem 0.5rem 1rem;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 
   &:hover {
     transform: scale(1.1);
+  }
+
+  @media (max-width: ${constants.breakPoints.medium}) {
+    width: 60px;
+    height: 60px;
+    margin-left: 0.7rem;
+    margin-right: 0.7rem;
   }
 `
 
@@ -58,16 +66,32 @@ const CircleContainer = styled.div`
   width: 40vw;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: ${constants.breakPoints.medium}) {
+    width: 75vw;
+  };
+`
+
+const IconContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1rem;
+
+  @media (max-width: ${constants.breakPoints.medium}) {
+    margin-left: 0;
+  }
 `
 
 const TechIcon = ({ iconName, techName }) => {
   return (
-    <div style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", marginLeft: "1rem"}}>
+    <IconContainer>
       <Circle>
         <FontAwesomeIcon icon={iconName} size="2x" />
       </Circle>
       <h6>{techName}</h6>
-    </div>
+    </IconContainer>
   )
 }
 

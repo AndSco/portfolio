@@ -12,6 +12,11 @@ const StyledContainer = styled.div`
   padding: 6rem ${constants.padding.left} 6rem ${constants.padding.right};
   display: flex;
   flex-direction: column;
+  align-items: center;
+
+  @media (max-width: ${constants.breakPoints.medium}) {
+    padding: ${constants.padding.paddingResponsive};
+  }
 `
 
 const ProjectsSection = () => {

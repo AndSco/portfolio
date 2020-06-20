@@ -2,6 +2,7 @@ import React, {useContext} from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import styled, {ThemeContext} from "styled-components";
 import BackgroundImage from "gatsby-background-image";
+import constants from "../constants/constants";
 
 
 const BackgroundSection = ({ className }) => {
@@ -40,6 +41,12 @@ const StyledBackgroundSection = styled(BackgroundSection)`
   border-radius: 50%;
   overflow: hidden;
   transition: all 0.5s linear;
+
+  @media (max-width: ${constants.breakPoints.medium}) {
+    width: 120px;
+    min-width: 120px;
+    height: 120px;
+  }
 `
 
 

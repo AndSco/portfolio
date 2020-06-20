@@ -2,6 +2,7 @@ import React from "react"
 import "../styles/index.css"
 import styled from "styled-components";
 import {slideUp, slideDown} from "../constants/animations";
+import constants from "../constants/constants";
 
 
 const Title = styled.div`
@@ -20,10 +21,16 @@ const Title = styled.div`
   white-space: nowrap;
   line-height: ${props => (props.main ? "70px" : "60px")};
   transition: all 0.5s linear;
-  animation: ${props => props.main ? slideUp : slideDown} 1s ease;
+  animation: ${props => (props.main ? slideUp : slideDown)} 1s ease;
 
   &:hover {
     transform: translate(10px);
+  }
+
+  @media (max-width: ${constants.breakPoints.medium}) {
+    font-size: ${props => (props.main ? "3em" : "2.2em")};
+    line-height: ${props => (props.main ? "2.5rem" : "2.2rem")};
+    justify-content: center;
   }
 `
 

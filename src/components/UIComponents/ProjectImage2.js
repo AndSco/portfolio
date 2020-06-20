@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import { graphql, StaticQuery } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import constants from "../../constants/constants";
+
 
 const Overlay = styled.div`
   width: 50vw;
@@ -14,13 +16,18 @@ const Overlay = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  /* justify-content: ${props =>
-    props.orientation === "right" ? "flex-start" : "flex-end"}; */
   padding: 1rem 2rem;
   transition: all 0.35s linear;
 
   &:hover {
     opacity: 0.7;
+  }
+
+  @media (max-width: ${constants.breakPoints.medium}) {
+    width: 90vw;
+    height: 25vh;
+    min-height: 280px;
+    opacity: 0.6;
   }
 `
 
@@ -31,7 +38,7 @@ const ProjectImage = ({
   openModal,
   prepareProjectForModal,
 }) => {
-  const { title, description, picName, demoUrl } = project
+  const { picName } = project
   const [isBeingChecked, setIsBeingChecked] = useState(false)
 
   const launchModal = project => {
@@ -39,7 +46,28 @@ const ProjectImage = ({
     openModal()
   }
 
-  // useEffect(() => console.log("is active?", isBeingChecked), [isBeingChecked]);
+  const ImageContainer = styled.div`
+    -webkit-box-shadow: 6px 7px 9px -4px rgba(0, 0, 0, 0.38);
+    box-shadow: 6px 7px 9px -4px rgba(0, 0, 0, 0.38);
+    transition: all 0.35s linear;
+
+    @media (max-width: ${constants.breakPoints.medium}) {
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      margin-bottom: 1rem;
+    }
+  `
+
+  const PlayButton = styled.h1`
+    color: white;
+    opacity: ${props => (props.isBeingChecked ? 1 : 0)};
+    cursor: pointer;
+    transition: all 0.35s linear;
+
+    @media (max-width: ${constants.breakPoints.medium}) {
+      opacity: 1;
+    }
+  `
 
   return (
     <StaticQuery
@@ -72,11 +100,7 @@ const ProjectImage = ({
         const imageData = image.node.childImageSharp.fluid
 
         return (
-          <div
-            style={{
-              WebkitBoxShadow: "6px 7px 9px -4px rgba(0,0,0,0.38)",
-              boxShadow: "6px 7px 9px -4px rgba(0,0,0,0.38)",
-            }}
+          <ImageContainer
             onMouseEnter={() => setIsBeingChecked(true)}
             onMouseLeave={() => setIsBeingChecked(false)}
           >
@@ -86,23 +110,19 @@ const ProjectImage = ({
               className={className}
             >
               <Overlay orientation={orientation}>
-                <h1
+                <PlayButton
+                  isBeingChecked={isBeingChecked}
                   onClick={() => launchModal(project)}
-                  style={{
-                    color: "white",
-                    opacity: isBeingChecked ? 1 : 0,
-                    cursor: "pointer",
-                  }}
                 >
                   <FontAwesomeIcon
                     style={{ marginRight: ".5rem" }}
                     icon="play-circle"
                   />
                   DEMO
-                </h1>
+                </PlayButton>
               </Overlay>
             </BackgroundImage>
-          </div>
+          </ImageContainer>
         )
       }}
     />

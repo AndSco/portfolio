@@ -9,6 +9,21 @@ const Container = styled.div`
   padding: 5rem 0;
   padding-right: ${constants.padding.left};
   padding-left: ${constants.padding.right};
+
+  @media (max-width: ${constants.breakPoints.medium}) {
+    padding: 3rem 0;
+  }
+`
+
+const ContentWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+
+  @media (max-width: ${constants.breakPoints.medium}) {
+    flex-direction: column;
+  }
 `
 
 const Form = styled.form`
@@ -16,6 +31,10 @@ const Form = styled.form`
   flex-direction: column;
   width: 40vw;
   margin-top: 1.7rem;
+
+  @media (max-width: ${constants.breakPoints.medium}) {
+    width: 75vw;
+  }
 `
 
 const InputContainer = styled.div`
@@ -86,17 +105,17 @@ const Button = styled.div`
 
 const Paragraph = styled.div`
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   justify-content: center;
   padding: 0 3.5rem;
-  border-right: ${props => "2px solid " + props.theme.highlights};
+  /* border-right: ${props => "2px solid " + props.theme.highlights}; */
 `
 
 const ContactDetail = ({icon, text}) => {
   return (
     <div style={{display: "flex", alignItems: "center", paddingBottom: ".6rem", fontSize: ".9rem"}}>
       <FontAwesomeIcon icon={icon} style={{marginRight: ".9rem", opacity: .4}} />     
-      {text}
+      {/* {text} */}
     </div>  
   )  
 }
@@ -105,13 +124,7 @@ const ContactsSection = () => {
   return (
     <Container id="contactsSection">
       <SectionTitle title="Get in touch!" />
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-        }}
-      >
+      <ContentWrapper>
         <Form>
           <InputContainer>
             <Label>Name</Label>
@@ -127,12 +140,12 @@ const ContactsSection = () => {
         </Form>
 
         <Paragraph>
-          <ContactDetail icon="envelope" text="andrea.scorcia@gmail.com" />
-          <ContactDetail icon={["fab", "linkedin"]} text="linkedIn" />
-          <ContactDetail icon={["fab", "github"]} text="github link" />
-          <ContactDetail icon={"briefcase"} text="Download my CV" />
+          <ContactDetail icon="envelope" />
+          <ContactDetail icon={["fab", "linkedin"]} />
+          <ContactDetail icon={["fab", "github"]} />
+          <ContactDetail icon={"file-pdf"} text="Download my CV" />
         </Paragraph>
-      </div>
+      </ContentWrapper>
     </Container>
   )
 }

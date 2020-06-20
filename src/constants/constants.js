@@ -8,12 +8,13 @@ export default {
     aqua: "#5BFFDB",
     overlayGradient:
       "linear-gradient(rgba(255, 68, 131, 0.62), rgba(14, 217, 158, 0.62))",
-    modalBground: "rgba(66, 73, 73, .9)"  
+    modalBground: "rgba(66, 73, 73, .9)",
   },
   padding: {
     topBottom: "2rem",
     right: "9rem",
     left: "6rem",
+    paddingResponsive: "4rem 1rem",
   },
   fonts: {
     smallText: {
@@ -21,5 +22,9 @@ export default {
       size: ".9rem",
       weight: 400,
     },
+  },
+
+  breakPoints: {
+    medium: "900px",
   },
 }

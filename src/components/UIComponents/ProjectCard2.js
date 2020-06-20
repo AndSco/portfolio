@@ -1,7 +1,8 @@
 import React, { useContext } from "react"
 import styled, { ThemeContext } from "styled-components"
 import ProjectImage2 from "../UIComponents/ProjectImage2"
-import ClickableIcon from "../UIComponents/ClickableIcon"
+import ClickableIcon from "../UIComponents/ClickableIcon";
+import constants from "../../constants/constants";
 
 const TextSide = styled.div`
   display: flex;
@@ -10,6 +11,7 @@ const TextSide = styled.div`
   align-items: ${props =>
     props.orientation === "left" ? "flex-start" : "flex-end"};
   width: 45vw;
+  max-width: 320px;
   min-height: 450px;
   order: ${props => (props.orientation === "right" ? 1 : 0)};
   z-index: -19;
@@ -18,6 +20,16 @@ const TextSide = styled.div`
   box-shadow: rgba(0, 0, 0, 0.38) 6px 7px 9px -4px;
   margin-left: ${props => (props.orientation === "right" ? "2rem" : 0)};
   margin-right: ${props => (props.orientation === "right" ? 0 : "2rem")};
+  text-align: ${props => (props.orientation === "right" ? "right" : "left")};
+
+  @media (max-width: ${constants.breakPoints.medium}) {
+    order: 2;
+    width: 90vw;
+    max-width: 90vw;
+    margin: 0;
+    min-height: 250px;
+    box-shadow: none;
+  }
 `
 
 const Title = styled.h3`
@@ -74,6 +86,18 @@ const LinksSection = () => {
   )
 }
 
+
+const CardContainer = styled.div`
+  display: flex;
+  align-items: center;
+  margin: 6rem 0;
+
+  @media (max-width: ${constants.breakPoints.medium}) {
+    flex-direction: column;
+    margin: 3.2rem 0;
+  }
+`
+
 const ProjectCard = ({
   project,
   orientation,
@@ -82,13 +106,7 @@ const ProjectCard = ({
 }) => {
   const { title, description, stack, picName, demoUrl } = project
   return (
-    <div
-      style={{
-        display: "flex",
-        alignItems: "center",
-        margin: "6rem 0",
-      }}
-    >
+    <CardContainer>
       <TextSide orientation={orientation}>
         <Title>{title}</Title>
         <Description>{description}</Description>
@@ -103,7 +121,7 @@ const ProjectCard = ({
         openModal={openModal}
         prepareProjectForModal={prepareProjectForModal}
       />
-    </div>
+    </CardContainer>
   )
 }
 

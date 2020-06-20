@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import ClickableIcon from "./UIComponents/ClickableIcon";
+import constants from "../constants/constants";
 
 const StyledStrip = styled.div`
   display: flex;
@@ -16,8 +17,12 @@ const StyledStrip = styled.div`
     width: 1px;
     height: 45vh;
     background-color: ${props => props.theme.text};
-    opacity: .2;
+    opacity: 0.2;
     margin: 2rem auto 0 auto;
+  }
+
+  @media (max-width: ${constants.breakPoints.medium}) {
+    display: none;
   }
 `
 

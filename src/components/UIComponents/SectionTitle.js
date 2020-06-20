@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import constants from "../../constants/constants";
 
 const Asterisk = styled.div`
   color: ${props => props.theme.highlights};
@@ -15,20 +16,15 @@ const SectionTitle = styled.h2`
   align-items: center;
   font-weight: 500;
   font-size: 1.7rem;
-  
+
   &:hover ${Asterisk} {
     transform: rotate(180deg);
   }
 
-  /* &::after {
-    content: "";
-    display: block;
-    height: 1px;
-    margin-left: 3rem;
-    flex-grow: 1;
-    background-color: ${props => props.theme.text};
-    opacity: 0.2;
-  } */
+  @media (max-width: ${constants.breakPoints.medium}) {
+    align-self: center;
+    justify-content: center;
+  }
 `
 
 const Title = ({title, styles}) => {
