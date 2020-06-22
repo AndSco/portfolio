@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 import MainPageBody from "../components/MainPageBody"
 import Hero from "../components/Hero"
 import { ThemeProvider } from "styled-components";
-import { GlobalStyles } from "../components/UIComponents/Globalstyles";
+import GlobalStyles from "../components/UIComponents/GlobalStyles";
 import { lightTheme, darkTheme } from "../components/UIComponents/Themes";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faLinkedin, faGithub, faJs, faReact, faNode, faHtml5, faCss3Alt } from "@fortawesome/free-brands-svg-icons";
