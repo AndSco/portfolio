@@ -5,6 +5,28 @@ import BackgroundImage from "gatsby-background-image"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import constants from "../../constants/constants";
 
+const PlayButton = styled.h1`
+  color: white;
+  opacity: ${props => (props.isBeingChecked ? 1 : 0)};
+  cursor: pointer;
+  transition: all 0.35s linear;
+
+  @media (max-width: ${constants.breakPoints.medium}) {
+    opacity: 1;
+  }
+`
+
+const ImageContainer = styled.div`
+  -webkit-box-shadow: 6px 7px 9px -4px rgba(0, 0, 0, 0.38);
+  box-shadow: 6px 7px 9px -4px rgba(0, 0, 0, 0.38);
+  transition: all 0.35s linear;
+
+  @media (max-width: ${constants.breakPoints.medium}) {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    margin-bottom: 1rem;
+  }
+`
 
 const Overlay = styled.div`
   width: 50vw;
@@ -26,7 +48,7 @@ const Overlay = styled.div`
   @media (max-width: ${constants.breakPoints.medium}) {
     width: 90vw;
     height: 25vh;
-    min-height: 280px;
+    min-height: 320px;
     opacity: 0.6;
   }
 `
@@ -46,28 +68,6 @@ const ProjectImage = ({
     openModal()
   }
 
-  const ImageContainer = styled.div`
-    -webkit-box-shadow: 6px 7px 9px -4px rgba(0, 0, 0, 0.38);
-    box-shadow: 6px 7px 9px -4px rgba(0, 0, 0, 0.38);
-    transition: all 0.35s linear;
-
-    @media (max-width: ${constants.breakPoints.medium}) {
-      -webkit-box-shadow: none;
-      box-shadow: none;
-      margin-bottom: 1rem;
-    }
-  `
-
-  const PlayButton = styled.h1`
-    color: white;
-    opacity: ${props => (props.isBeingChecked ? 1 : 0)};
-    cursor: pointer;
-    transition: all 0.35s linear;
-
-    @media (max-width: ${constants.breakPoints.medium}) {
-      opacity: 1;
-    }
-  `
 
   return (
     <StaticQuery

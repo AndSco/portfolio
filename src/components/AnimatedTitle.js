@@ -32,6 +32,11 @@ const Title = styled.div`
     line-height: ${props => (props.main ? "2.5rem" : "2.2rem")};
     justify-content: center;
   }
+
+  @media (min-width: ${constants.breakPoints.large}) {
+    font-size: ${props => (props.main ? "7em" : "6.2em")};
+    line-height: ${props => (props.main ? "5.5rem" : "4.8rem")};
+  }
 `
 
 const AnimatedTitle = props => {

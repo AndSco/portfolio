@@ -3,15 +3,16 @@ import styled from "styled-components";
 import SectionTitle from "./UIComponents/SectionTitle";
 import constants from "../constants/constants";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Footer from "./Footer";
 
 const Container = styled.div`
   background-color: ${props => props.theme.contactsStrip};
-  padding: 5rem 0;
+  padding: 5rem 0 1rem 0;
   padding-right: ${constants.padding.left};
   padding-left: ${constants.padding.right};
 
   @media (max-width: ${constants.breakPoints.medium}) {
-    padding: 3rem 0;
+    padding: 3rem 0 1rem 0;
   }
 `
 
@@ -46,8 +47,12 @@ const InputContainer = styled.div`
 const Label = styled.label`
   margin-bottom: 0.3rem;
   font-weight: 300;
-  font-size: .8rem;
+  font-size: 0.8rem;
   color: ${props => props.theme.secondaryDetails};
+
+  @media (max-width: ${constants.breakPoints.medium}) {
+    font-size: 1rem;
+  }
 `
 
 const Input = styled.input`
@@ -101,14 +106,17 @@ const Button = styled.div`
   &:hover {
     opacity: 1;
   }
+
+  @media (max-width: ${constants.breakPoints.medium}) {
+    font-size: 1.2rem;
+  }
 `
 
-const Paragraph = styled.div`
+const LinksIcons = styled.div`
   display: flex;
-  /* flex-direction: column; */
   justify-content: center;
   padding: 0 3.5rem;
-  /* border-right: ${props => "2px solid " + props.theme.highlights}; */
+  margin: 3rem 0;
 `
 
 const ContactDetail = ({icon, text}) => {
@@ -139,13 +147,14 @@ const ContactsSection = () => {
           <Button>SEND!</Button>
         </Form>
 
-        <Paragraph>
+        <LinksIcons>
           <ContactDetail icon="envelope" />
           <ContactDetail icon={["fab", "linkedin"]} />
           <ContactDetail icon={["fab", "github"]} />
           <ContactDetail icon={"file-pdf"} text="Download my CV" />
-        </Paragraph>
+        </LinksIcons>
       </ContentWrapper>
+      <Footer />
     </Container>
   )
 }

@@ -10,19 +10,24 @@ const MobileMenuContainer = styled.div`
   height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
+  padding-right: 4rem;
   justify-content: center;
   background-color: ${props => props.theme.highlights};
   color: white;
   z-index: 10;
-  right: ${props => props.isMenuVisible ? 0 : "-2500px"};
-  transition: all .6s ease;
-`;
+  right: ${props => (props.isMenuVisible ? 0 : "-2500px")};
+  transition: all 0.6s ease;
+  -webkit-box-shadow: -2px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -2px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: -2px 0px 5px 0px rgba(0, 0, 0, 0.75);
+`
 
 const Link = styled.h2`
   color: ${props => props.theme.body};
   text-transform: uppercase;
   display: flex;
+  margin: 1.5rem 0;
 `
 
 const MenuItem = ({closeMobileMenu, linkTo, text}) => {
@@ -30,8 +35,8 @@ const MenuItem = ({closeMobileMenu, linkTo, text}) => {
     <div onTouchStart={closeMobileMenu}>
       <Anchor to={linkTo}>
         <Link>
-          <Asterisk color="white" />
           {text}
+          {/* <Asterisk color="white" /> */}
         </Link>
       </Anchor>
     </div>

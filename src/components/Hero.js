@@ -30,12 +30,16 @@ const HeroContainer = styled.div`
 
   @media (max-width: ${constants.breakPoints.medium}) {
     padding: 0;
-    padding-top: 3rem;
+    /* padding-top: 3rem; */
     flex-direction: column;
     height: auto;
     align-items: center;
     margin-bottom: 7rem;
   }
+
+  @media (min-width: ${constants.breakPoints.large}) {
+    padding-top: 15vh;
+  };
 `
 
 const StyledExcerpt = styled.p`
@@ -49,6 +53,7 @@ const StyledExcerpt = styled.p`
 
   @media (max-width: ${constants.breakPoints.medium}) {
     max-width: 200px;
+    font-size: 1rem;
   }
 `
 

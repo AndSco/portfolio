@@ -27,7 +27,7 @@ const TextSide = styled.div`
     width: 90vw;
     max-width: 90vw;
     margin: 0;
-    min-height: 250px;
+    min-height: 350px;
     box-shadow: none;
   }
 `
@@ -37,6 +37,10 @@ const Title = styled.h3`
   font-weight: 700;
   margin: 0;
   color: ${props => props.theme.highlights};
+
+  @media (max-width: ${constants.breakPoints.medium}) {
+    font-size: 1.2rem;
+  };
 `
 
 const Description = styled.div`
@@ -44,9 +48,11 @@ const Description = styled.div`
   justify-content: center;
   font-size: 0.8rem;
   align-items: center;
-  /* background: ${props => props.theme.aboutStrip}; */
   color: ${props => props.theme.text};
-  /* padding: 1rem 1.5rem; */
+
+  @media (max-width: ${constants.breakPoints.medium}) {
+    font-size: 1rem;
+  }
 `
 
 const StackList = ({ stack }) => {

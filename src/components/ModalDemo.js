@@ -16,11 +16,23 @@ const Modal = styled.div`
   display: flex;
   align-items: center;
   padding: 3rem 5rem;
+
+  @media (max-width: ${constants.breakPoints.medium}) {
+    flex-direction: column;
+    padding: 1rem;
+    justify-content: center;
+  }
 `
 
 const DemoBox = styled.div`
   width: 65vw;
   height: 80vh;
+
+  @media (max-width: ${constants.breakPoints.medium}) {
+    width: 95vw;
+    height: auto;
+    min-height: 320px;
+  }
 `
 
 const DetailsBox = styled.div`
@@ -47,6 +59,7 @@ const ModalDemo = ({project, closeModal}) => {
          right: "2rem",
          top: "2rem",
          cursor: "pointer",
+         zIndex: 1000
        }}
        onClick={closeModal}
      />

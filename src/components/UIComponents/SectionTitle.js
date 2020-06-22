@@ -33,6 +33,10 @@ const SectionTitle = styled.h2`
     align-self: center;
     justify-content: center;
   }
+
+  @media (min-width: ${constants.breakPoints.large}) {
+    font-size: 2.7rem;
+  };
 `
 
 const Title = ({title, styles}) => {

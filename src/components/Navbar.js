@@ -37,6 +37,10 @@ const NavLink = styled.div`
   &:hover::after {
     width: 100%;
   }
+
+  @media (min-width: ${constants.breakPoints.large}) {
+    font-size: 1rem;
+  }
 `
 
 const Nav = styled.nav`
@@ -102,6 +106,7 @@ const Navbar = ({ changeTheme }) => {
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
   const handleScroll = () => {
+    if (isMobileMenuOpen) return;
     setScrollPosition(document.body.getBoundingClientRect().top);
     setIsVisible(document.body.getBoundingClientRect().top > scrollPosition);
   }
@@ -119,12 +124,14 @@ const Navbar = ({ changeTheme }) => {
       />
       <Logo />
       <NavRight changeTheme={changeTheme} />
-      <ThemeSwitch changeTheme={changeTheme} />
-      <BurgerMenu
-        openMobileMenu={openMobileMenu}
-        closeMobileMenu={closeMobileMenu}
-        isMobileMenuOpen={isMobileMenuOpen}
-      />
+      <div style={{display: "flex"}}>
+        <ThemeSwitch changeTheme={changeTheme} />
+        <BurgerMenu
+          openMobileMenu={openMobileMenu}
+          closeMobileMenu={closeMobileMenu}
+          isMobileMenuOpen={isMobileMenuOpen}
+        />
+      </div>
     </Nav>
   )
 }
