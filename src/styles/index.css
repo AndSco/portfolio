@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto,
     segoe ui, arial, sans-serif;
@@ -32,4 +34,9 @@ body {
 
 a {
   text-decoration: none;
+}
+
+
+#logo {
+  font-family: 'Gugi', cursive;
 }

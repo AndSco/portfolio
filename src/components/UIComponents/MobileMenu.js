@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import Anchor from "./Anchor";
-import {Asterisk} from "./SectionTitle";
 
 const MobileMenuContainer = styled.div`
   width: 70vw;
@@ -16,8 +15,8 @@ const MobileMenuContainer = styled.div`
   background-color: ${props => props.theme.highlights};
   color: white;
   z-index: 10;
-  right: ${props => (props.isMenuVisible ? 0 : "-2500px")};
-  transition: all 0.6s ease;
+  right: ${props => (props.isMenuVisible ? 0 : "-2000px")};
+  transition: all 0.2s ease;
   -webkit-box-shadow: -2px 0px 5px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: -2px 0px 5px 0px rgba(0, 0, 0, 0.75);
   box-shadow: -2px 0px 5px 0px rgba(0, 0, 0, 0.75);
@@ -32,12 +31,9 @@ const Link = styled.h2`
 
 const MenuItem = ({closeMobileMenu, linkTo, text}) => {
   return (
-    <div onTouchStart={closeMobileMenu}>
+    <div>
       <Anchor to={linkTo}>
-        <Link>
-          {text}
-          {/* <Asterisk color="white" /> */}
-        </Link>
+        <Link onTouchStart={closeMobileMenu}>{text}</Link>
       </Anchor>
     </div>
   )
