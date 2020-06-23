@@ -47,9 +47,9 @@ const Circle = styled.div`
   margin: 0 1rem 0.5rem 1rem;
   transition: all 0.3s ease;
 
-  &:hover {
+  /* &:hover {
     transform: scale(1.1);
-  }
+  } */
 
   @media (max-width: ${constants.breakPoints.medium}) {
     width: 60px;

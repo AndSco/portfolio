@@ -45,7 +45,7 @@ const HeroContainer = styled.div`
 const StyledExcerpt = styled.p`
   color: ${props => props.theme.text};
   max-width: 300px;
-  font-family: ${constants.fonts.smallText.fontFamily};
+  /* font-family: ${constants.fonts.smallText.fontFamily}; */
   font-size: ${constants.fonts.smallText.size};
   font-weight: ${constants.fonts.smallText.weight};
   transition: color 0.5s linear;

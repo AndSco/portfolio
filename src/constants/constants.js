@@ -18,7 +18,7 @@ export default {
   },
   fonts: {
     smallText: {
-      fontFamily: "Roboto",
+      // fontFamily: "Roboto, sans-serif",
       size: ".9rem",
       weight: 400,
     },
@@ -26,6 +26,6 @@ export default {
 
   breakPoints: {
     medium: "900px",
-    large: "1600px"
+    large: "1600px",
   },
 }

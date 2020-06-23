@@ -4,16 +4,17 @@ import constants from "../constants/constants";
 
 const StyledFooter = styled.div`
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   font-size: 0.6rem;
+  margin-top: 2rem;
 
   @media (max-width: ${constants.breakPoints.medium}) {
-    justify-content: center;
+    margin-top: 0;
   }
 `
 
 
-const Footer = () => <StyledFooter>Designed and coded by Andrea Scorcia | 2020</StyledFooter>
+const Footer = () => <StyledFooter className="footer">Designed and coded by Andrea Scorcia | 2020</StyledFooter>
  
 
 export default Footer;

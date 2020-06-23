@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gugi&family=Ubuntu+Mono&display=swap');
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto,
@@ -39,4 +39,8 @@ a {
 
 #logo {
   font-family: 'Gugi', cursive;
+}
+
+.footer {
+  font-family: 'Ubuntu Mono', monospace;
 }

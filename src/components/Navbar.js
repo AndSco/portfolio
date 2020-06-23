@@ -107,6 +107,10 @@ const Navbar = ({ changeTheme }) => {
 
   const handleScroll = () => {
     if (isMobileMenuOpen) return;
+    if (document.body.getBoundingClientRect().top === 0) {
+      setIsVisible(true);
+      return;
+    }
     setScrollPosition(document.body.getBoundingClientRect().top);
     setIsVisible(document.body.getBoundingClientRect().top > scrollPosition);
   }
