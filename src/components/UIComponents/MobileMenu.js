@@ -33,7 +33,7 @@ const MenuItem = ({closeMobileMenu, linkTo, text}) => {
   return (
     <div>
       <Anchor to={linkTo}>
-        <Link onTouchStart={closeMobileMenu}>{text}</Link>
+        <Link onTouchEnd={closeMobileMenu}>{text}</Link>
       </Anchor>
     </div>
   )
