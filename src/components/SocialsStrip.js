@@ -37,10 +37,10 @@ const StyledIconContainer = styled.div`
 
 
 
-const IconContainer = ({iconName}) => {
+const IconContainer = ({iconName, link}) => {
   return (
     <StyledIconContainer>
-      <ClickableIcon icon={iconName} />
+      <ClickableIcon icon={iconName} link={link} />
     </StyledIconContainer>
   )
 }
@@ -48,9 +48,18 @@ const IconContainer = ({iconName}) => {
 const SocialStrip = () => {
   return (
     <StyledStrip>
-      <IconContainer iconName={["fab", "linkedin"]} />
-      <IconContainer iconName={["fab", "github"]} />
-      <IconContainer iconName="envelope" />
+      <IconContainer
+        iconName={["fab", "linkedin"]}
+        link="https://www.linkedin.com/in/andrea-scorcia-1144931a5/"
+      />
+      <IconContainer
+        iconName={["fab", "github"]}
+        link="https://github.com/AndSco?tab=repositories"
+      />
+      <IconContainer
+        iconName="envelope"
+        link="mailto:andrea.scorcia@gmail.com"
+      />
     </StyledStrip>
   )
 }

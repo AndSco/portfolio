@@ -10,6 +10,8 @@ const Container = styled.div`
   padding: 5rem 0 1rem 0;
   padding-right: ${constants.padding.left};
   padding-left: ${constants.padding.right};
+  display: flex;
+  flex-direction: column;
 
   @media (max-width: ${constants.breakPoints.medium}) {
     padding: 3rem 0 4rem 0;
@@ -18,7 +20,7 @@ const Container = styled.div`
 
 const ContentWrapper = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   /* flex-direction: column; */
 
@@ -32,9 +34,11 @@ const Form = styled.form`
   flex-direction: column;
   width: 40vw;
   margin-top: 1.7rem;
+  margin-right: 6rem;
 
   @media (max-width: ${constants.breakPoints.medium}) {
     width: 75vw;
+    margin-right: 0;
   }
 `
 

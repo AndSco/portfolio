@@ -24,6 +24,9 @@ const SectionTitle = styled.h2`
   align-items: center;
   font-weight: 500;
   font-size: 1.7rem;
+  border-right: 7px solid ${props => props.theme.highlights};
+  padding-right: 1rem;
+  align-self: flex-start;
 
   &:hover ${AsteriskContainer} {
     transform: rotate(180deg);
@@ -32,11 +35,12 @@ const SectionTitle = styled.h2`
   @media (max-width: ${constants.breakPoints.medium}) {
     align-self: center;
     justify-content: center;
+    font-size: 1.5rem;
   }
 
   @media (min-width: ${constants.breakPoints.large}) {
     font-size: 2.7rem;
-  };
+  }
 `
 
 const Title = ({title, styles}) => {

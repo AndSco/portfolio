@@ -6,7 +6,7 @@ const StyledFooter = styled.div`
   display: flex;
   justify-content: center;
   font-size: 0.6rem;
-  margin-top: 2rem;
+  margin-top: 3rem;
 
   @media (max-width: ${constants.breakPoints.medium}) {
     margin-top: 0;
