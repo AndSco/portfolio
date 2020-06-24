@@ -12,13 +12,13 @@ const MobileMenuContainer = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 4rem 2rem;
-  padding-top: 15rem;
+  padding-top: 6rem;
   justify-content: space-between;
   background-color: ${props => props.theme.highlights};
   color: white;
   z-index: 10;
   right: ${props => (props.isMenuVisible ? 0 : "-2000px")};
-  transition: all 0.2s ease;
+  transition: all 0.3s linear;
   -webkit-box-shadow: -2px 0px 5px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: -2px 0px 5px 0px rgba(0, 0, 0, 0.75);
   box-shadow: -2px 0px 5px 0px rgba(0, 0, 0, 0.75);
@@ -65,8 +65,30 @@ const MenuItem = ({closeMobileMenu, linkTo, text}) => {
 }
 
 const MobileMenu = ({ isMenuVisible, closeMobileMenu }) => {
+  const componentRef = React.useRef();
+  const {current} = componentRef;
+
+  const handleTouch = React.useCallback((e) => {
+    if (current.contains(e.target)) {
+      return;
+    } else {
+      closeMobileMenu();
+    }
+  }, [current]);
+
+  React.useEffect(() => {
+    if (isMenuVisible) {
+      document.addEventListener("touchstart", handleTouch);
+    }
+    
+    return () => {
+      document.removeEventListener("touchstart", handleTouch)
+    }
+  }, [isMenuVisible, handleTouch]);
+
+
   return (
-    <MobileMenuContainer isMenuVisible={isMenuVisible}>
+    <MobileMenuContainer isMenuVisible={isMenuVisible} ref={componentRef}>
       <div style={{}}>
         <MenuItem
           closeMobileMenu={closeMobileMenu}
