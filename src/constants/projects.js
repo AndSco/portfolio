@@ -6,6 +6,7 @@ export default [
     stack: ["React", "NodeJS", "D3", "API", "Express"],
     picName: "covid19.png",
     demoUrl: "https://www.youtube.com/embed/ce70Qc5wxc0",
+    longDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempus nibh sapien, sit amet gravida lorem rutrum fermentum. Proin ac varius mauris. Nullam scelerisque mollis tristique. "
   },
   {
     title: "@ec.events.mt",
@@ -14,6 +15,7 @@ export default [
     stack: ["React", "NodeJS", "Express"],
     picName: "ec-events-mt.png",
     demoUrl: "https://www.youtube.com/embed/MNxRvuT80Qo",
+    longDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempus nibh sapien, sit amet gravida lorem rutrum fermentum. Proin ac varius mauris. Nullam scelerisque mollis tristique. "
   },
   {
     title: "Kayaking mobile app",
@@ -22,6 +24,7 @@ export default [
     stack: ["React Native", "NodeJS", "API Creation", "Redux"],
     picName: "covid19.png",
     demoUrl: "https://www.youtube.com/embed/ce70Qc5wxc0",
+    longDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempus nibh sapien, sit amet gravida lorem rutrum fermentum. Proin ac varius mauris. Nullam scelerisque mollis tristique. "
   },
   {
     title: "Organigram generator",
@@ -30,6 +33,7 @@ export default [
     stack: ["React", "NodeJS", "D3", "API"],
     picName: "organigram.png",
     demoUrl: "https://www.youtube.com/embed/ce70Qc5wxc0",
+    longDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempus nibh sapien, sit amet gravida lorem rutrum fermentum. Proin ac varius mauris. Nullam scelerisque mollis tristique. "
   },
   {
     title: "Automation tools",
@@ -38,6 +42,7 @@ export default [
     stack: ["React", "NodeJS", "Express", "Web-Scraping"],
     picName: "utils.png",
     demoUrl: "https://www.youtube.com/embed/ce70Qc5wxc0",
+    longDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempus nibh sapien, sit amet gravida lorem rutrum fermentum. Proin ac varius mauris. Nullam scelerisque mollis tristique. "
   },
   {
     title: "Family weather",
@@ -46,5 +51,6 @@ export default [
     stack: ["React", "NodeJS", "API"],
     picName: "familyWeather.png",
     demoUrl: "https://www.youtube.com/embed/ce70Qc5wxc0",
+    longDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempus nibh sapien, sit amet gravida lorem rutrum fermentum. Proin ac varius mauris. Nullam scelerisque mollis tristique. "
   },
 ]

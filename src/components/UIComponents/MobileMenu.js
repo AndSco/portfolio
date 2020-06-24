@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Anchor from "./Anchor";
+import ClickableIcon from "./ClickableIcon";
 
 const MobileMenuContainer = styled.div`
   width: 70vw;
@@ -9,9 +10,10 @@ const MobileMenuContainer = styled.div`
   height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  padding-right: 4rem;
-  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+  padding-top: 15rem;
+  justify-content: space-between;
   background-color: ${props => props.theme.highlights};
   color: white;
   z-index: 10;
@@ -26,8 +28,31 @@ const Link = styled.h2`
   color: ${props => props.theme.body};
   text-transform: uppercase;
   display: flex;
-  margin: 1.5rem 0;
+  margin: 2.5rem 0;
+  justify-content: flex-end;
 `
+
+const IconSectionContainer = styled.div`
+  display: flex;
+  padding: 1rem;
+  padding-top: 2rem;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 6rem;
+  color: ${props => props.theme.body};
+  opacity: 0.6;
+  border-top: 2px solid;
+`
+
+const IconSection = () => {
+  return (
+    <IconSectionContainer>
+      <ClickableIcon size="2x" icon={["fab", "linkedin"]} />
+      <ClickableIcon size="2x" icon={["fab", "github"]} />
+      <ClickableIcon size="2x" icon="envelope" />
+    </IconSectionContainer>
+  )
+}
 
 const MenuItem = ({closeMobileMenu, linkTo, text}) => {
   return (
@@ -42,21 +67,24 @@ const MenuItem = ({closeMobileMenu, linkTo, text}) => {
 const MobileMenu = ({ isMenuVisible, closeMobileMenu }) => {
   return (
     <MobileMenuContainer isMenuVisible={isMenuVisible}>
-      <MenuItem
-        closeMobileMenu={closeMobileMenu}
-        linkTo="aboutSection"
-        text="ABOUT"
-      />
-      <MenuItem
-        closeMobileMenu={closeMobileMenu}
-        linkTo="projectsSection"
-        text="Projects"
-      />
-      <MenuItem
-        closeMobileMenu={closeMobileMenu}
-        linkTo="contactsSection"
-        text="contact"
-      />
+      <div style={{}}>
+        <MenuItem
+          closeMobileMenu={closeMobileMenu}
+          linkTo="aboutSection"
+          text="ABOUT"
+        />
+        <MenuItem
+          closeMobileMenu={closeMobileMenu}
+          linkTo="projectsSection"
+          text="Projects"
+        />
+        <MenuItem
+          closeMobileMenu={closeMobileMenu}
+          linkTo="contactsSection"
+          text="contact"
+        />
+      </div>
+      <IconSection />
     </MobileMenuContainer>
   )
 }

@@ -43,10 +43,15 @@ const DetailsBox = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  max-width: 250px;
+
+  @media (max-width: ${constants.breakPoints.medium}) {
+    display: none;
+  }
 `
 
 const ModalDemo = ({project, closeModal}) => {
-  const {demoUrl, title} = project;
+  const {demoUrl, title, longDescription} = project;
   console.log("url", demoUrl)
  return (
    <Modal>
@@ -74,6 +79,7 @@ const ModalDemo = ({project, closeModal}) => {
      </DemoBox>
      <DetailsBox>
        <u><h4 style={{textAlign: "right", fontWeight: 400}}>{title}</h4></u>
+       <p style={{fontSize: ".7rem", textAlign: "right"}}>{longDescription}</p>
        <ButtonLight title="See source code" color="white" noEffect />
      </DetailsBox>
    </Modal>
