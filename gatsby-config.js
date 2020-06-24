@@ -4,7 +4,7 @@ module.exports = {
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
   },
-  plugins: [ 
+  plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-anchor-links`,
     `gatsby-plugin-styled-components`,
@@ -15,6 +15,16 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Gugi`,
+          `Ubuntu Mono`, // you can also specify font weights and styles
+        ],
+        display: "swap",
+      }
+    }, 
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
