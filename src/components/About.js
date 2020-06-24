@@ -22,7 +22,7 @@ const About = () => {
   return (
     <SkewedContainer id="aboutSection" scope="about">
       <SectionTitle title="About me" />
-      <Content>
+      <Content data-sal="fade" data-sal-delay="300" data-sal-easing="ease">
         <ParagraphText padding={"0 0 2rem 0"}>
           Hello! I’m Andrea, a self-taught Javascript developer based in Brno,
           Czech Republic. applications, or anything in between. I enjoy creating

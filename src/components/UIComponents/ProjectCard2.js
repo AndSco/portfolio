@@ -112,7 +112,11 @@ const ProjectCard = ({
 }) => {
   const { title, description, stack, picName, demoUrl } = project
   return (
-    <CardContainer>
+    <CardContainer
+      data-sal="fade"
+      data-sal-delay="300"
+      data-sal-easing="ease"
+    >
       <TextSide orientation={orientation}>
         <Title>{title}</Title>
         <Description>{description}</Description>

@@ -71,9 +71,9 @@ const Input = styled.input`
     border-bottom: ${props => `2px solid ${props.theme.highlights}`};
   }
 
-  &:active {
+  /* &:active {
     outline: ${props => `2px solid ${props.theme.highlights}`};
-  }
+  } */
 ` 
 
 const TextArea = styled.textarea`
@@ -90,10 +90,10 @@ const TextArea = styled.textarea`
     border-bottom: ${props => `2px solid ${props.theme.highlights}`};
   }
 
-  &:active {
+  /* &:active {
     outline: none;
     border-bottom: ${props => `2px solid ${props.theme.highlights}`};
-  }
+  } */
 `
 
 const Button = styled.div`
@@ -152,7 +152,11 @@ const ContactsSection = () => {
   return (
     <Container id="contactsSection">
       <SectionTitle title="Get in touch!" />
-      <ContentWrapper>
+      <ContentWrapper
+        data-sal="fade"
+        data-sal-delay="300"
+        data-sal-easing="ease"
+      >
         <Form>
           <InputContainer>
             <Label>Name</Label>

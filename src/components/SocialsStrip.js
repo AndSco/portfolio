@@ -47,7 +47,7 @@ const IconContainer = ({iconName, link}) => {
 
 const SocialStrip = () => {
   return (
-    <StyledStrip>
+    <StyledStrip data-sal="slide-up" data-sal-delay="500" data-sal-easing="ease">
       <IconContainer
         iconName={["fab", "linkedin"]}
         link="https://www.linkedin.com/in/andrea-scorcia-1144931a5/"

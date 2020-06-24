@@ -11,7 +11,7 @@ const StyledLogo = styled.h1`
   color: ${props => props.theme.highlights};
   margin: 0;
   cursor: pointer;
-  transition: color 0.5s linear, transform 0.5s linear;
+  transition: color 0.5s linear, transform 0.9s ease;
 
   &:hover {
     transform: rotateX(360deg);

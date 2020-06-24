@@ -9,6 +9,12 @@ module.exports = {
     `gatsby-plugin-anchor-links`,
     `gatsby-plugin-styled-components`,
     {
+      resolve: `gatsby-plugin-scroll-reveal`,
+      options: {
+        threshold: .1,
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
@@ -23,8 +29,8 @@ module.exports = {
           `Ubuntu Mono`, // you can also specify font weights and styles
         ],
         display: "swap",
-      }
-    }, 
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

@@ -77,7 +77,7 @@ const LinksContainer = styled(FlexJustified)`
 
 const NavRight = () => {
   return (
-    <LinksContainer>
+    <LinksContainer data-sal="fade" data-sal-delay="300" data-sal-easing="ease">
       <div
         style={{ display: "flex", alignItems: "center", paddingRight: "1rem" }}
       >
@@ -121,14 +121,17 @@ const Navbar = ({ changeTheme }) => {
   })
 
   return (
-    <Nav isVisible={isVisible} scrollPosition={scrollPosition}>
+    <Nav
+      isVisible={isVisible}
+      scrollPosition={scrollPosition}
+    >
       <MobileMenu
         isMenuVisible={isMobileMenuOpen}
         closeMobileMenu={closeMobileMenu}
       />
       <Logo />
       <NavRight changeTheme={changeTheme} />
-      <div style={{display: "flex"}}>
+      <div style={{ display: "flex" }}>
         <ThemeSwitch changeTheme={changeTheme} />
         <BurgerMenu
           openMobileMenu={openMobileMenu}
