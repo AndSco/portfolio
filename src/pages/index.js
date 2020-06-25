@@ -18,7 +18,7 @@ import ContactsSection from "../components/ContactsSection"
 library.add(faLinkedin, faGithub, faJs, faReact, faNode, faHtml5, faCss3Alt, faMobileAlt, faDatabase, faEnvelope, faExternalLinkAlt, faPlayCircle, faTimesCircle, faStarOfLife, faFilePdf, faBars); 
 
 const IndexPage = () => {
-  const startingTheme = typeof window !== 'undefined' ? localStorage.getItem("selectedTheme") : "light";
+  const startingTheme = typeof window !== 'undefined' && localStorage.getItem("selectedTheme") ? localStorage.getItem("selectedTheme") : "light";
   const [theme, setTheme] = React.useState(startingTheme);
   const changeTheme = () => {
     if (theme === "light") {
