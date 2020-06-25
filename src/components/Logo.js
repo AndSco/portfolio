@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 
 const StyledLogo = styled.h1`
-  /* font-family: "Gugi"; */
+  font-family: "Gugi";
   font-size: 1.5rem;
   padding: 14px;
   border: 1px solid ${props => props.theme.highlights};
@@ -20,7 +20,7 @@ const StyledLogo = styled.h1`
 
 const Logo = () => {
   return (
-    <StyledLogo id="logo"
+    <StyledLogo
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
         AS
     </StyledLogo>    

@@ -1,7 +1,6 @@
 import React from "react";
 import AnimatedTitle from "./AnimatedTitle";
-import FlexColumn from "./UIComponents/FlexColumn"
-import styled, {keyframes} from "styled-components";
+import styled from "styled-components";
 import constants from "../constants/constants";
 import Circles from "./Circles"
 import ButtonLight from "./UIComponents/ButtonLight";
@@ -30,7 +29,6 @@ const HeroContainer = styled.div`
 
   @media (max-width: ${constants.breakPoints.medium}) {
     padding: 0;
-    /* padding-top: 3rem; */
     flex-direction: column;
     height: auto;
     align-items: center;
@@ -45,7 +43,6 @@ const HeroContainer = styled.div`
 const StyledExcerpt = styled.p`
   color: ${props => props.theme.text};
   max-width: 300px;
-  /* font-family: ${constants.fonts.smallText.fontFamily}; */
   font-size: ${constants.fonts.smallText.size};
   font-weight: ${constants.fonts.smallText.weight};
   transition: color 0.5s linear;
@@ -60,7 +57,7 @@ const StyledExcerpt = styled.p`
 
 const Hero = () => {
   return (
-    <HeroContainer>
+    <HeroContainer id="top">
       <TextContainer>
         <AnimatedTitle />
         <FadeInDiv>
