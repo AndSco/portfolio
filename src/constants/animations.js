@@ -33,3 +33,15 @@ export const slideDown = keyframes`
 `
 
 
+export const socialStripBounce = keyframes`
+  0% {
+    transform: translate3d(0, 100%, 0);
+  }
+  75% {
+    transform: translate3d(0, -5%, 0);
+  }, 
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+`
+

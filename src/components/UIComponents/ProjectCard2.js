@@ -33,7 +33,7 @@ const TextSide = styled.div`
 `
 
 const Title = styled.h3`
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   font-weight: 700;
   margin: 0;
   color: ${props => props.theme.highlights};

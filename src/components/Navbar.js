@@ -97,7 +97,7 @@ const NavRight = () => {
   )
 }
 
-const Navbar = ({ changeTheme }) => {
+const Navbar = ({ changeTheme, theme }) => {
   const [isVisible, setIsVisible] = useState(true);
   const [scrollPosition, setScrollPosition] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -132,7 +132,7 @@ const Navbar = ({ changeTheme }) => {
       <Logo />
       <NavRight changeTheme={changeTheme} />
       <div style={{ display: "flex" }}>
-        <ThemeSwitch changeTheme={changeTheme} />
+        <ThemeSwitch changeTheme={changeTheme} theme={theme} />
         <BurgerMenu
           openMobileMenu={openMobileMenu}
           closeMobileMenu={closeMobileMenu}

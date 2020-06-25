@@ -70,10 +70,6 @@ const Input = styled.input`
     outline: none;
     border-bottom: ${props => `2px solid ${props.theme.highlights}`};
   }
-
-  /* &:active {
-    outline: ${props => `2px solid ${props.theme.highlights}`};
-  } */
 ` 
 
 const TextArea = styled.textarea`
@@ -89,11 +85,6 @@ const TextArea = styled.textarea`
     outline: none;
     border-bottom: ${props => `2px solid ${props.theme.highlights}`};
   }
-
-  /* &:active {
-    outline: none;
-    border-bottom: ${props => `2px solid ${props.theme.highlights}`};
-  } */
 `
 
 const Button = styled.div`
@@ -178,7 +169,7 @@ const ContactsSection = () => {
           </InputContainer>
           <InputContainer>
             <Label>Email</Label>
-            <Input type="text" />
+            <Input type="email" />
           </InputContainer>
           <Label>Message</Label>
           <TextArea type="text" rows={6} />

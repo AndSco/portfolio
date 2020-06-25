@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import ClickableIcon from "./UIComponents/ClickableIcon";
 import constants from "../constants/constants";
+import { socialStripBounce } from "../constants/animations";
 
 const StyledStrip = styled.div`
   display: flex;
@@ -10,6 +11,7 @@ const StyledStrip = styled.div`
   bottom: 0;
   left: 2rem;
   z-index: 2000;
+  animation: ${socialStripBounce} 1s ease;
 
   &::after {
     content: "";
@@ -47,7 +49,7 @@ const IconContainer = ({iconName, link}) => {
 
 const SocialStrip = () => {
   return (
-    <StyledStrip data-sal="slide-up" data-sal-delay="500" data-sal-easing="ease">
+    <StyledStrip>
       <IconContainer
         iconName={["fab", "linkedin"]}
         link="https://www.linkedin.com/in/andrea-scorcia-1144931a5/"
