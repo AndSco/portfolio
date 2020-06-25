@@ -14,14 +14,14 @@ const TextSide = styled.div`
   max-width: 320px;
   min-height: 450px;
   order: ${props => (props.orientation === "right" ? 1 : 0)};
-  z-index: -19;
+  /* z-index: -19; */
   background: ${props => props.theme.aboutStrip};
   padding: 1.5rem;
   box-shadow: rgba(0, 0, 0, 0.38) 6px 7px 9px -4px;
   margin-left: ${props => (props.orientation === "right" ? "2rem" : 0)};
   margin-right: ${props => (props.orientation === "right" ? 0 : "2rem")};
   text-align: ${props => (props.orientation === "right" ? "right" : "left")};
-
+  
   @media (max-width: ${constants.breakPoints.medium}) {
     order: 2;
     width: 90vw;
@@ -55,39 +55,48 @@ const Description = styled.div`
   }
 `
 
+const TechItem = styled.h6`
+  margin: 0.2rem 0.4rem;
+  color: ${props => props.theme.secondaryDetails};
+  font-size: 0.7rem;
+  font-weight: 300;
+
+  @media (max-width: ${constants.breakPoints.medium}) {
+    font-size: 1rem;
+  }
+`
+
 const StackList = ({ stack }) => {
   const theme = useContext(ThemeContext)
   return (
-    <div style={{ display: "flex" }}>
+    <div style={{ display: "flex", flexWrap: "wrap" }}>
       {stack.map(tech => (
-        <h6
-          style={{
-            margin: "0 .7rem",
-            color: theme.secondaryDetails,
-            fontSize: ".7rem",
-            fontWeight: 300,
-          }}
-          key={tech}
-        >
-          {" "}
+        <TechItem key={tech}>
           {tech}
-        </h6>
+        </TechItem>
       ))}
     </div>
   )
 }
 
-const LinksSection = () => {
+const LinksSection = ({url, githubRepository}) => {
   const theme = useContext(ThemeContext)
   return (
     <div style={{ display: "flex", margin: "0 .8rem" }}>
       <ClickableIcon
         icon={["fab", "github"]}
-        styles={{ marginRight: ".8rem" }}
+        styles={{ marginRight: "1rem" }}
         color={theme.secondaryDetails}
+        link={githubRepository}
       />
 
-      <ClickableIcon icon="external-link-alt" color={theme.secondaryDetails} />
+      {url !== "NA" && (
+        <ClickableIcon
+          icon="external-link-alt"
+          color={theme.secondaryDetails}
+          link={url}
+        />
+      )}
     </div>
   )
 }
@@ -110,7 +119,7 @@ const ProjectCard = ({
   openModal,
   prepareProjectForModal,
 }) => {
-  const { title, description, stack, picName, demoUrl } = project
+  const { title, description, stack, picName, demoUrl, url, githubRepository } = project;
   return (
     <CardContainer
       data-sal="fade"
@@ -121,7 +130,7 @@ const ProjectCard = ({
         <Title>{title}</Title>
         <Description>{description}</Description>
         <StackList stack={stack} />
-        <LinksSection />
+        <LinksSection url={url} githubRepository={githubRepository} />
       </TextSide>
       <ProjectImage2
         project={project}

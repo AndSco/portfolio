@@ -42,6 +42,7 @@ const IconSectionContainer = styled.div`
   color: ${props => props.theme.body};
   opacity: 0.6;
   border-top: 2px solid;
+  max-width: 300px;
 `
 
 const IconSection = () => {
@@ -58,7 +59,7 @@ const MenuItem = ({closeMobileMenu, linkTo, text}) => {
   return (
     <div>
       <Anchor to={linkTo}>
-        <Link onTouchEnd={closeMobileMenu}>{text}</Link>
+        <Link onMouseUp={closeMobileMenu}>{text}</Link>
       </Anchor>
     </div>
   )

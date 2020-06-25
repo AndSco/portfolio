@@ -139,12 +139,26 @@ const LinkIconText = styled.h5`
   }
 `
 
+const ContactDetailContainer = styled.div`
+  display: flex;
+  align-items: center;
+  padding-bottom: 0.6rem;
+  font-size: 0.9rem;
+
+  @media (max-width: ${constants.breakPoints.medium}) {
+    font-size: 1.5rem;
+  }
+`
+
 const ContactDetail = ({icon, text}) => {
   return (
-    <div style={{display: "flex", alignItems: "center", paddingBottom: ".6rem", fontSize: ".9rem"}}>
-      <FontAwesomeIcon icon={icon} style={{marginRight: ".9rem", opacity: .4}} />     
+    <ContactDetailContainer>
+      <FontAwesomeIcon
+        icon={icon}
+        style={{ marginRight: ".9rem", opacity: 0.4 }}
+      />
       <LinkIconText>{text}</LinkIconText>
-    </div>  
+    </ContactDetailContainer>
   )  
 }
 

@@ -33,8 +33,15 @@ const BurgerMenu = ({ openMobileMenu, closeMobileMenu, isMobileMenuOpen }) => {
   }
 
   return (
-    <BurgerMenuContainer onTouchStart={manageMenu} iconShowing={iconShowing}>
-      <FontAwesomeIcon icon={iconShowing} size={iconShowing === "times-circle" ? "3x" : "2x"}  />
+    <BurgerMenuContainer
+      onClick={manageMenu}
+      // onTouchStart={manageMenu}
+      iconShowing={iconShowing}
+    >
+      <FontAwesomeIcon
+        icon={iconShowing}
+        size={iconShowing === "times-circle" ? "3x" : "2x"}
+      />
     </BurgerMenuContainer>
   )
 }

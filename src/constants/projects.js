@@ -6,7 +6,10 @@ export default [
     stack: ["React", "NodeJS", "D3", "API", "Express"],
     picName: "covid19.png",
     demoUrl: "https://www.youtube.com/embed/ce70Qc5wxc0",
-    longDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempus nibh sapien, sit amet gravida lorem rutrum fermentum. Proin ac varius mauris. Nullam scelerisque mollis tristique. "
+    longDescription:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempus nibh sapien, sit amet gravida lorem rutrum fermentum. Proin ac varius mauris. Nullam scelerisque mollis tristique. ",
+    url: "https://covid19-update.herokuapp.com/",
+    githubRepository: "https://github.com/AndSco/COVID19",
   },
   {
     title: "@ec.events.mt",
@@ -15,7 +18,10 @@ export default [
     stack: ["React", "NodeJS", "Express"],
     picName: "ec-events-mt.png",
     demoUrl: "https://www.youtube.com/embed/MNxRvuT80Qo",
-    longDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempus nibh sapien, sit amet gravida lorem rutrum fermentum. Proin ac varius mauris. Nullam scelerisque mollis tristique. "
+    longDescription:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempus nibh sapien, sit amet gravida lorem rutrum fermentum. Proin ac varius mauris. Nullam scelerisque mollis tristique. ",
+    url: "https://ec-events-mt.herokuapp.com/",
+    githubRepository: "https://github.com/AndSco/ec-event-manager-final",
   },
   {
     title: "Kayaking mobile app",
@@ -24,7 +30,10 @@ export default [
     stack: ["React Native", "NodeJS", "API Creation", "Redux"],
     picName: "covid19.png",
     demoUrl: "https://www.youtube.com/embed/ce70Qc5wxc0",
-    longDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempus nibh sapien, sit amet gravida lorem rutrum fermentum. Proin ac varius mauris. Nullam scelerisque mollis tristique. "
+    longDescription:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempus nibh sapien, sit amet gravida lorem rutrum fermentum. Proin ac varius mauris. Nullam scelerisque mollis tristique. ",
+    url: "NA",
+    githubRepository: "https://github.com/AndSco/seakatsRNclient",
   },
   {
     title: "Organigram generator",
@@ -33,7 +42,10 @@ export default [
     stack: ["React", "NodeJS", "D3", "API"],
     picName: "organigram.png",
     demoUrl: "https://www.youtube.com/embed/ce70Qc5wxc0",
-    longDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempus nibh sapien, sit amet gravida lorem rutrum fermentum. Proin ac varius mauris. Nullam scelerisque mollis tristique. "
+    longDescription:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempus nibh sapien, sit amet gravida lorem rutrum fermentum. Proin ac varius mauris. Nullam scelerisque mollis tristique. ",
+    url: "https://ecrep-organigram.herokuapp.com/",
+    githubRepository: "https://github.com/AndSco/organigram",
   },
   {
     title: "Automation tools",
@@ -42,7 +54,10 @@ export default [
     stack: ["React", "NodeJS", "Express", "Web-Scraping"],
     picName: "utils.png",
     demoUrl: "https://www.youtube.com/embed/ce70Qc5wxc0",
-    longDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempus nibh sapien, sit amet gravida lorem rutrum fermentum. Proin ac varius mauris. Nullam scelerisque mollis tristique. "
+    longDescription:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempus nibh sapien, sit amet gravida lorem rutrum fermentum. Proin ac varius mauris. Nullam scelerisque mollis tristique. ",
+    url: "https://ecrep-utils.herokuapp.com/",
+    githubRepository: "https://github.com/AndSco/DNSgenerator",
   },
   {
     title: "Family weather",
@@ -51,6 +66,9 @@ export default [
     stack: ["React", "NodeJS", "API"],
     picName: "familyWeather.png",
     demoUrl: "https://www.youtube.com/embed/ce70Qc5wxc0",
-    longDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempus nibh sapien, sit amet gravida lorem rutrum fermentum. Proin ac varius mauris. Nullam scelerisque mollis tristique. "
+    longDescription:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempus nibh sapien, sit amet gravida lorem rutrum fermentum. Proin ac varius mauris. Nullam scelerisque mollis tristique. ",
+    url: "https://familyweather.herokuapp.com/",
+    githubRepository: "https://github.com/AndSco/meteoPWA",
   },
 ]
