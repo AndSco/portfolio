@@ -18,15 +18,15 @@ import ContactsSection from "../components/ContactsSection"
 library.add(faLinkedin, faGithub, faJs, faReact, faNode, faHtml5, faCss3Alt, faMobileAlt, faDatabase, faEnvelope, faExternalLinkAlt, faPlayCircle, faTimesCircle, faStarOfLife, faFilePdf, faBars); 
 
 const IndexPage = () => {
-  const startingTheme = localStorage.getItem("selectedTheme" || "light")
+  const startingTheme = typeof window !== 'undefined' ? localStorage.getItem("selectedTheme") : "light";
   const [theme, setTheme] = React.useState(startingTheme);
   const changeTheme = () => {
     if (theme === "light") {
       setTheme("dark");
-      localStorage.setItem("selectedTheme", "dark");
+      typeof window !== 'undefined' && localStorage.setItem("selectedTheme", "dark");
     } else {
       setTheme("light");
-      localStorage.setItem("selectedTheme", "light");
+      typeof window !== 'undefined' && localStorage.setItem("selectedTheme", "light");
     }
   };
 
