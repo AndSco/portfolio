@@ -5,7 +5,7 @@ const ThemeSwitch = ({ changeTheme, theme }) => {
   return (
     <section>
       <div className="toggle-btn" id="_1st-toggle-btn">
-        <input type="checkbox" onChange={changeTheme} defaultChecked={theme === "light" ? false : true} />
+        <input type="checkbox" onChange={changeTheme} defaultChecked={theme !== "light"} />
         <span></span>
       </div>
     </section>

@@ -100,6 +100,7 @@ const Button = styled.div`
 
   &:hover {
     opacity: 1;
+    transform: translateY(5px);
   }
 
   @media (max-width: ${constants.breakPoints.medium}) {
