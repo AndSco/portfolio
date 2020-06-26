@@ -40,11 +40,7 @@ export const socialStripBounce = keyframes`
   55% {
     transform: translate3d(0, -10%, 0);
   }
-  /* 75% {
-    transform: translate3d(0, -5%, 0);
-  },  */
   100% {
     transform: translate3d(0, 0, 0);
   }
 `
-

@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import constants from "../../constants/constants";
 
+
 const ButtonStyled = styled.div`
   border: 1px solid ${props => props.color || props.theme.buttonColor};
   color: ${props => props.color || props.theme.buttonColor};
@@ -21,6 +22,7 @@ const ButtonStyled = styled.div`
     border-color: ${props =>
       props.noEffect ? props.color : props.theme.highlights};
     transform: ${props => (props.noEffect ? "scale(1)" : "scale(1.03)")};
+    
   }
 
   @media (max-width: ${constants.breakPoints.medium}) {
