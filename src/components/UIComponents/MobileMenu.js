@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Anchor from "./Anchor";
 import ClickableIcon from "./ClickableIcon";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const MobileMenuContainer = styled.div`
   width: 70vw;
@@ -18,7 +19,8 @@ const MobileMenuContainer = styled.div`
   color: white;
   z-index: 10;
   right: ${props => (props.isMenuVisible ? 0 : "-2000px")};
-  transition: all 0.3s ease;
+  /* transition: all 0.3s ease; */
+  transition: ${props => !props.isMenuVisible ? "all 2s ease" : "all 0.3s ease"};
   -webkit-box-shadow: -2px 0px 5px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: -2px 0px 5px 0px rgba(0, 0, 0, 0.75);
   box-shadow: -2px 0px 5px 0px rgba(0, 0, 0, 0.75);
@@ -65,6 +67,16 @@ const MenuItem = ({closeMobileMenu, linkTo, text}) => {
   )
 }
 
+const IconCloseContainer = styled.div`
+  position: absolute;
+  top: 30px;
+  right: 30px;
+
+  &:active {
+    transform: rotate(180deg);
+  }
+`
+
 const MobileMenu = ({ isMenuVisible, closeMobileMenu }) => {
   const componentRef = React.useRef();
   const {current} = componentRef;
@@ -79,18 +91,21 @@ const MobileMenu = ({ isMenuVisible, closeMobileMenu }) => {
 
   React.useEffect(() => {
     if (isMenuVisible) {
-      document.addEventListener("touchstart", handleTouch);
+      document.addEventListener("click", handleTouch);
     }
     
     return () => {
-      document.removeEventListener("touchstart", handleTouch)
+      document.removeEventListener("click", handleTouch)
     }
   }, [isMenuVisible, handleTouch]);
 
 
   return (
     <MobileMenuContainer isMenuVisible={isMenuVisible} ref={componentRef}>
-      <div style={{}}>
+      <div>
+        <IconCloseContainer>
+          <FontAwesomeIcon icon="times-circle" onClick={closeMobileMenu} size="3x" />
+        </IconCloseContainer>
         <MenuItem
           closeMobileMenu={closeMobileMenu}
           linkTo="aboutSection"

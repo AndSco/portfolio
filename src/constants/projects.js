@@ -29,7 +29,7 @@ export default [
       "React Native sea-kayaking app for IOS and Android. Users can check in when going for a paddle and all subscribers receive an alert if the kayaker does not check out by his/her ETA. Also used as a logbook, repository of kayaking trips and technical reference.",
     stack: ["React Native", "NodeJS", "API Creation", "Redux"],
     picName: "seakats.jpg",
-    demoUrl: "https://www.youtube.com/embed/7qsP-GybXGA",
+    demoUrl: "https://www.youtube.com/embed/7KI3v4ue7F0",
     longDescription:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempus nibh sapien, sit amet gravida lorem rutrum fermentum. Proin ac varius mauris. Nullam scelerisque mollis tristique. ",
     url: "NA",
