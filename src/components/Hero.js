@@ -62,9 +62,8 @@ const Hero = () => {
         <AnimatedTitle />
         <FadeInDiv>
           <StyledExcerpt>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in varius
-            libero. Duis non pharetra felis. Donec maximus, nulla sit amet
-            consectetur pulvinar, nunc dolor.
+            Self-taught Javascript developer based in Brno with a soft spot
+            for ReactJS!
           </StyledExcerpt>
           <AnchorLink to="/#projectsSection">
             <ButtonLight title="See projects" width={200} textSize=".9rem" />

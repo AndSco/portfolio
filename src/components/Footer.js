@@ -14,7 +14,7 @@ const StyledFooter = styled.div`
 `
 
 
-const Footer = () => <StyledFooter className="footer">Designed and coded by Andrea Scorcia | 2020</StyledFooter>
+const Footer = () => <StyledFooter className="footer">Designed and coded w/ GatsbyJS by Andrea Scorcia | 2020</StyledFooter>
  
 
 export default Footer;

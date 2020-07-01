@@ -19,8 +19,8 @@ const MobileMenuContainer = styled.div`
   color: white;
   z-index: 10;
   right: ${props => (props.isMenuVisible ? 0 : "-2000px")};
-  /* transition: all 0.3s ease; */
-  transition: ${props => !props.isMenuVisible ? "all 2s ease" : "all 0.3s ease"};
+  transition: all 0.3s ease;
+  /* transition: ${props => !props.isMenuVisible ? "all 2s ease" : "all 0.3s ease"}; */
   -webkit-box-shadow: -2px 0px 5px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: -2px 0px 5px 0px rgba(0, 0, 0, 0.75);
   box-shadow: -2px 0px 5px 0px rgba(0, 0, 0, 0.75);

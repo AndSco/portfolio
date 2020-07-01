@@ -121,6 +121,7 @@ const LinksIcons = styled.div`
   @media (max-width: ${constants.breakPoints.medium}) {
     flex-direction: row;
     border: none;
+    justify-content: space-around;
   }
 `
 
@@ -143,11 +144,11 @@ const ContactDetailContainer = styled.div`
   display: flex;
   align-items: center;
   padding-bottom: 0.9rem;
-  font-size: 0.9rem;
+  font-size: 1.8rem;
   cursor: pointer;
 
   @media (max-width: ${constants.breakPoints.medium}) {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 `
 
@@ -169,7 +170,6 @@ const ContactDetail = ({icon, text, link}) => {
             transition: "all 1s ease",
             marginLeft: icon === "file-pdf" ? 5 : 0,
           }}
-          size="2x"
         />
       </ContactDetailContainer>
     </a>

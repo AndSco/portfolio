@@ -27,7 +27,7 @@ const TextSide = styled.div`
     width: 90vw;
     max-width: 90vw;
     margin: 0;
-    min-height: 350px;
+    min-height: 400px;
     box-shadow: none;
   }
 `

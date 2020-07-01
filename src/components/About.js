@@ -25,14 +25,7 @@ const About = () => {
       <Content data-sal="fade" data-sal-delay="300" data-sal-easing="ease">
         <ParagraphText padding={"0 0 2rem 0"}>
           Hello! I’m Andrea, a self-taught Javascript developer based in Brno,
-          Czech Republic. applications, or anything in between. I enjoy creating
-          things that live on the internet, whether that be websites,
-          applications, or anything in between. My goal is to always build
-          products that provide pixel-perfect, performant experiences. Shortly
-          after graduating from Northeastern University, I joined the
-          engineering team at Upstatement where I work on a wide variety of
-          interesting and meaningful projects on a daily basis. Here are a few
-          technologies I’ve been working with recently:
+          Czech Republic. My background is not exactly Computer Science, but rather social sciences and humanities. I've been working for the past 13 years in communications, with a particular focus on online communications in all its aspects. In the past three years, I took up web development, and I created a number of applications for my latest employer. On the front-end, I enoy working with ReactJS, as well as leverage its mobile potential with React Native. On the back-end, I usually reach for NodeJs, Express and MongoDB. This is the stack I'm currently comfortable with, but I'm always excited to learn new stuff (currently having a go at GraphQL and TypeScript). Here are a few technologies I’ve been working with recently:
         </ParagraphText>
         <CodeTechnology />
       </Content>

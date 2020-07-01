@@ -40,7 +40,7 @@ export default [
     description:
       "Staff changes happen all the time... Instead of designing a new diagram every time someone left or joined the organisation, this web application allows the staff of the European Commission Representation in Malta to create, update and save as PDF the organisation’s organigram in a few clicks. This responsive & progressive web app is also usable as a contacts’ directory to call or email colleagues with one tap.",
     stack: ["React", "NodeJS", "D3", "API"],
-    picName: "organigram.png",
+    picName: "organigramBlurred.png",
     demoUrl: "https://www.youtube.com/embed/7qsP-GybXGA",
     longDescription:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempus nibh sapien, sit amet gravida lorem rutrum fermentum. Proin ac varius mauris. Nullam scelerisque mollis tristique. ",
