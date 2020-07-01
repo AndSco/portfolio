@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import SectionTitle from "./UIComponents/SectionTitle";
 import constants from "../constants/constants";
@@ -20,7 +20,7 @@ const Container = styled.div`
 
 const ContentWrapper = styled.div`
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   /* flex-direction: column; */
 
@@ -46,7 +46,7 @@ const InputContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 1rem;
-`;
+`
 
 const Label = styled.label`
   margin-bottom: 0.3rem;
@@ -111,6 +111,8 @@ const Button = styled.div`
 const LinksIcons = styled.div`
   display: flex;
   justify-content: center;
+  align-items: flex-end;
+  width: 350px;
   padding: 0 1.5rem;
   margin: 3rem 0;
   flex-direction: column;
@@ -124,7 +126,13 @@ const LinksIcons = styled.div`
 
 const LinkIconText = styled.h5`
   margin: 0;
-  font-weight: 400;
+  font-weight: 500;
+  text-transform: uppercase;
+  opacity: ${props => (props.isTextShowing ? 1 : 0)};
+  overflow: hidden;
+  white-space: nowrap;
+  transition: all 1s ease;
+  padding-right: 1rem;
 
   @media (max-width: ${constants.breakPoints.medium}) {
     display: none;
@@ -134,23 +142,37 @@ const LinkIconText = styled.h5`
 const ContactDetailContainer = styled.div`
   display: flex;
   align-items: center;
-  padding-bottom: 0.6rem;
+  padding-bottom: 0.9rem;
   font-size: 0.9rem;
+  cursor: pointer;
 
   @media (max-width: ${constants.breakPoints.medium}) {
     font-size: 1.5rem;
   }
 `
 
-const ContactDetail = ({icon, text}) => {
+const ContactDetail = ({icon, text, link}) => {
+  const [isTextShowing, setIsTextShowing] = useState(false);
+
   return (
-    <ContactDetailContainer>
-      <FontAwesomeIcon
-        icon={icon}
-        style={{ marginRight: ".9rem", opacity: 0.4 }}
-      />
-      <LinkIconText>{text}</LinkIconText>
-    </ContactDetailContainer>
+    <a href={link} target="_blank">
+      <ContactDetailContainer
+        onMouseEnter={() => setIsTextShowing(true)}
+        onMouseLeave={() => setIsTextShowing(false)}
+      >
+        <LinkIconText isTextShowing={isTextShowing}>{text}</LinkIconText>
+        <FontAwesomeIcon
+          icon={icon}
+          style={{
+            marginLeft: ".9rem",
+            opacity: isTextShowing ? 0.8 : 0.4,
+            transition: "all 1s ease",
+            marginLeft: icon === "file-pdf" ? 5 : 0,
+          }}
+          size="2x"
+        />
+      </ContactDetailContainer>
+    </a>
   )  
 }
 
@@ -178,10 +200,22 @@ const ContactsSection = () => {
         </Form>
 
         <LinksIcons>
-          <ContactDetail icon="envelope" text="Send me an e-mail" />
-          <ContactDetail icon={["fab", "linkedin"]} text="LinkedIn Profile" />
-          <ContactDetail icon={["fab", "github"]} text="Github repositories" />
-          <ContactDetail icon={"file-pdf"} text="Download my CV" />
+          <ContactDetail
+            icon="envelope"
+            text="Send me an e-mail"
+            link="mailto:andrea.scorcia@gmail.com"
+          />
+          <ContactDetail
+            icon={["fab", "linkedin"]}
+            text="My LinkedIn profile"
+            link="https://www.linkedin.com/in/andrea-scorcia-1144931a5/"
+          />
+          <ContactDetail
+            icon={["fab", "github"]}
+            text="My Github repositories"
+            link="https://github.com/AndSco?tab=repositories"
+          />
+          <ContactDetail icon={"file-pdf"} text="Download my CV" link="/" />
         </LinksIcons>
       </ContentWrapper>
       <Footer />

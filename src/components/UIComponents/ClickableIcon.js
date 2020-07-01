@@ -11,7 +11,7 @@ const IconContainer = styled.div`
   }
 
   @media (max-width: ${constants.breakPoints.medium}) {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 `
 

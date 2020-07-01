@@ -6,9 +6,7 @@ import constants from "../../constants/constants";
 
 const BurgerMenuContainer = styled.div`
   padding: 1rem;
-  /* z-index: 20; */
-  color: ${props =>
-    props.iconShowing === "bars" ? props.theme.text : props.theme.body};
+  color: ${props => props.theme.text};
   transition: all 0.5s ease;
 
   &:active {
@@ -34,14 +32,12 @@ const BurgerMenu = ({ openMobileMenu, closeMobileMenu, isMobileMenuOpen }) => {
 
   return (
     <BurgerMenuContainer
-      // onTouchStart={manageMenu}
       onClick={manageMenu}
       iconShowing={iconShowing}
     >
       <FontAwesomeIcon
-        // icon={iconShowing}
         icon="bars"
-        size={iconShowing === "times-circle" ? "3x" : "2x"}
+        size="2x"
       />
     </BurgerMenuContainer>
   )

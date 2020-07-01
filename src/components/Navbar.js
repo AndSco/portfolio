@@ -92,7 +92,7 @@ const NavRight = () => {
           <NavLink>Contact</NavLink>
         </Anchor>
       </div>
-      <ButtonLight title="RESUME" isHoverable={true} />
+      <ButtonLight title="CURRICULUM VITAE" isHoverable={true} />
     </LinksContainer>
   )
 }

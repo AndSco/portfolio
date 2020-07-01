@@ -25,7 +25,7 @@ const Modal = styled.div`
 `
 
 const DemoBox = styled.div`
-  width: 65vw;
+  width: 80vw;
   height: 80vh;
 
   @media (max-width: ${constants.breakPoints.medium}) {
@@ -52,7 +52,6 @@ const DetailsBox = styled.div`
 
 const ModalDemo = ({project, closeModal}) => {
   const {demoUrl, title, longDescription} = project;
-  console.log("url", demoUrl)
  return (
    <Modal>
      <FontAwesomeIcon
@@ -77,11 +76,11 @@ const ModalDemo = ({project, closeModal}) => {
          frameBorder="0"
        />
      </DemoBox>
-     <DetailsBox>
+     {/* <DetailsBox>
        <u><h4 style={{textAlign: "right", fontWeight: 400}}>{title}</h4></u>
        <p style={{fontSize: ".7rem", textAlign: "right"}}>{longDescription}</p>
        <ButtonLight title="See source code" color="white" noEffect />
-     </DetailsBox>
+     </DetailsBox> */}
    </Modal>
  )
 }

@@ -44,3 +44,4 @@ export const socialStripBounce = keyframes`
     transform: translate3d(0, 0, 0);
   }
 `
+

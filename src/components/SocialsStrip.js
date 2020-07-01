@@ -12,7 +12,7 @@ const StyledStrip = styled.div`
   left: 2rem;
   z-index: 2000;
   animation: ${socialStripBounce} 1s ease;
-
+  
   &::after {
     content: "";
     display: block;

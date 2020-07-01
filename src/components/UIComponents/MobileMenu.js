@@ -68,6 +68,7 @@ const MenuItem = ({closeMobileMenu, linkTo, text}) => {
 }
 
 const IconCloseContainer = styled.div`
+  color: ${props => props.theme.body};
   position: absolute;
   top: 30px;
   right: 30px;

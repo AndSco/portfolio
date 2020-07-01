@@ -12,7 +12,7 @@ const TextSide = styled.div`
     props.orientation === "left" ? "flex-start" : "flex-end"};
   width: 45vw;
   max-width: 320px;
-  min-height: 450px;
+  min-height: 500px;
   order: ${props => (props.orientation === "right" ? 1 : 0)};
   /* z-index: -19; */
   background: ${props => props.theme.aboutStrip};
@@ -39,7 +39,7 @@ const Title = styled.h3`
   color: ${props => props.theme.highlights};
 
   @media (max-width: ${constants.breakPoints.medium}) {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   };
 `
 
