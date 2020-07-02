@@ -18,6 +18,7 @@ export const Asterisk = ({color}) => {
 }
 
 const SectionTitle = styled.h2`
+  font-family: "Proxima Nova";
   text-transform: uppercase;
   ${props => props.styles};
   display: flex;

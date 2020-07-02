@@ -128,6 +128,8 @@ const LinksIcons = styled.div`
 `
 
 const LinkIconText = styled.h5`
+  font-family: "Proxima Nova";
+  font-size: 0.7rem;
   margin: 0;
   font-weight: 500;
   text-transform: uppercase;

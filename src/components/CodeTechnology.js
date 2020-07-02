@@ -66,7 +66,7 @@ const CircleContainer = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 40vw;
+  max-width: 35vw;
   justify-content: center;
   align-items: center;
 
@@ -101,7 +101,7 @@ const TechIcon = ({ iconName, techName }) => {
 const CodeTechnology = () => {
   return (
     <Wrapper>
-    <h4 style={{marginBottom: 30}}>My current stack</h4>
+    <h4 style={{marginBottom: 30, fontFamily: "proxima nova", textTransform: "uppercase", fontWeight: 400}}>My current stack</h4>
     <CircleContainer>
       {techs.map(tech => (
         <TechIcon key={tech.icon} iconName={tech.icon} techName={tech.name} />

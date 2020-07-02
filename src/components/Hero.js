@@ -37,7 +37,8 @@ const HeroContainer = styled.div`
 
   @media (min-width: ${constants.breakPoints.large}) {
     padding-top: 15vh;
-  };
+    padding-left: 15rem;
+  }
 `
 
 const StyledExcerpt = styled.p`
