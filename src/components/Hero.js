@@ -43,7 +43,7 @@ const HeroContainer = styled.div`
 
 const StyledExcerpt = styled.p`
   color: ${props => props.theme.text};
-  max-width: 300px;
+  max-width: 330px;
   font-size: ${constants.fonts.smallText.size};
   font-weight: ${constants.fonts.smallText.weight};
   transition: color 0.5s linear;
@@ -51,7 +51,7 @@ const StyledExcerpt = styled.p`
 
   @media (max-width: ${constants.breakPoints.medium}) {
     max-width: 200px;
-    font-size: 1rem;
+    /* font-size: ${constants.fonts.textSizeSmallerDevices.size}; */
   }
 `
 
@@ -63,7 +63,7 @@ const Hero = () => {
         <AnimatedTitle />
         <FadeInDiv>
           <StyledExcerpt>
-            Self-taught Javascript and ReactJS developer based in Brno
+            I'd love to join a team of experienced colleagues to improve my skills and contribute to meaningful projects. 
           </StyledExcerpt>
           <AnchorLink to="/#projectsSection">
             <ButtonLight title="See projects" width={200} textSize=".9rem" />

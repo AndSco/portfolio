@@ -15,7 +15,8 @@ const Content = styled.div`
   @media (max-width: ${constants.breakPoints.medium}) {
     flex-direction: column;
     text-align: center;
-  };
+    line-height: ${constants.fonts.textSizeSmallerDevices.lineHeight};
+  }
 `
 
 const About = () => {
@@ -26,16 +27,10 @@ const About = () => {
           <SectionTitle title="About me" />
           <ParagraphText padding={"0 0 2rem 0"}>
             Hello! I’m Andrea, a self-taught Javascript developer based in Brno,
-            Czech Republic. My background is not exactly Computer Science, but
-            rather social sciences and humanities. I've been working for the past
-            13 years in international organisations, focusing on online
-            communications. In the past three years, I took up web development and
-            created a number of web & mobile applications for work and for fun. On
-            the front-end, my tool of choice is ReactJS, and React Native on
-            mobile. I also love the development experience offered by GatsbyJS. On
-            the back-end, I usually reach for NodeJs, Express and MongoDB. This is
-            the stack I'm currently comfortable with, but I'm always excited to
-            learn new stuff (currently having a go at GraphQL and TypeScript).
+            Czech Republic. I've been working for more than 10 years in international organisations such as the European Commission, managing their online communications as Digital Leader. In the past three years, I took up web development and created a number of web & mobile applications for work and for fun. When it comes to front-end, my tool of choice is ReactJS, and React Native on mobile. I also love the development experience offered by GatsbyJS. On
+            the back-end side, I usually reach for NodeJs, Express and MongoDB. This is
+            the stack I'm currently comfortable with, but I'm always eager to
+            learn new stuff.
           </ParagraphText>
         </div>  
         <CodeTechnology />

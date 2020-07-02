@@ -12,7 +12,8 @@ export default styled.p`
   
 
   @media (max-width: ${constants.breakPoints.medium}) {
-    max-width: 75vw;
+    min-width: 75vw;
+    font-size: ${constants.fonts.textSizeSmallerDevices.size};
   }
   ;
 `

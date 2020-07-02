@@ -2,7 +2,7 @@ export default [
   {
     title: "#COVID19 Update",
     description:
-      "My quarantine project! Web app tracking the daily developments of the coronavirus pandemic worldwide, comparing chronological and quantitative data by country and giving an historical overview of past pandemics. Data from the Johns Hopkins University.",
+      "My quarantine project! Web app tracking the daily developments of the coronavirus pandemic worldwide, visually comparing chronological and quantitative data by country and giving a historical overview of past pandemics. The data is scraped from the public repository of the Johns Hopkins University.",
     stack: ["React", "NodeJS", "D3", "API", "Express"],
     picName: "covid19.png",
     demoUrl: "https://www.youtube.com/embed/7qsP-GybXGA",
@@ -14,7 +14,7 @@ export default [
   {
     title: "@ec.events.mt",
     description:
-      "Event management platform built for the Representation of the European Commission in Malta to handle registration for their events. The organiser can create their event, share the registration link with invitees and confirm attendance or otherwise to avoid gate-crashing.",
+      "Event management platform built for the Representation of the European Commission in Malta to handle registration for their events. The organiser can create his/her event, share the registration link with invitees and confirm or reject attendance, so as to avoid gate-crashing.",
     stack: ["React", "NodeJS", "Express"],
     picName: "ec-events-mt.png",
     demoUrl: "https://www.youtube.com/embed/1itBIc2rmwc",
@@ -26,7 +26,7 @@ export default [
   {
     title: "Seakats Malta mobile app",
     description:
-      "React Native application built for the Sea Kayaking club in Malta. Users can check in when going out for a paddle, specifying their itinerary & estimated time of arrival (ETA). If the kayaker does not check out by his/her ETA, all subscribers receive an alert notification. The app also serves as a logbook, a repository of kayaking trips and a source of technical references.",
+      "React Native application built for the Sea Kayaking club in Malta. Users can check in when going out for a paddle, specifying their itinerary & estimated time of arrival. If the kayaker does not check out by his/her ETA, all subscribers receive an alert notification. The app also serves as a logbook of the club's activity, a repository of kayaking trips, a source of technical references and handy practical info (e.g. nautical units conversion, buoyage and light signals interpretation).",
     stack: ["React Native", "NodeJS", "API Creation", "Redux"],
     picName: "seakats.jpg",
     demoUrl: "https://www.youtube.com/embed/7KI3v4ue7F0",
@@ -38,7 +38,7 @@ export default [
   {
     title: "Organigram generator",
     description:
-      "Staff changes happen all the time... Instead of designing a new diagram every time someone left or joined the organisation, this web application allows the staff of the European Commission Representation in Malta to create, update and save as PDF the organisation’s organigram in a few clicks. This responsive & progressive web app is also usable as a contacts’ directory to call or email colleagues with one tap.",
+      "Staff changes happen all the time... Instead of designing a new diagram every time a new intern joins the organisation, this web application allows the staff of the European Commission Representation in Malta to create, update and save the organisation’s organigram as a PDF in a few clicks. It also serves as a contacts’ directory to call or email colleagues with one tap.",
     stack: ["React", "NodeJS", "D3", "API"],
     picName: "organigramBlurred.png",
     demoUrl: "https://www.youtube.com/embed/7qsP-GybXGA",
@@ -62,7 +62,7 @@ export default [
   {
     title: "Family weather",
     description:
-      "The usual weather project... with a twist! Having my family spread in different European cities, the app gives an overview of the weather for each location, sorting them according to various parameters. Are your dear ones living someone else? Create and save your own dashboard and know how they're doing!",
+      "The usual weather project... with a twist! Having my family spread in different European cities, the app gives an overview of the weather for each location, sorting them according to various parameters. Are your dear ones living somewhere else? Create and save your own dashboard and know if they're having a sunny day!",
     stack: ["React", "NodeJS", "API"],
     picName: "familyWeather.png",
     demoUrl: "https://www.youtube.com/embed/7qsP-GybXGA",

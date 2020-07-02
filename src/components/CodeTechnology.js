@@ -71,7 +71,7 @@ const CircleContainer = styled.div`
   align-items: center;
 
   @media (max-width: ${constants.breakPoints.medium}) {
-    width: 75vw;
+    min-width: 75vw;
   };
 `
 

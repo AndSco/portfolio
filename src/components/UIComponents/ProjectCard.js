@@ -52,7 +52,8 @@ const Description = styled.div`
   margin: 1rem 0;
 
   @media (max-width: ${constants.breakPoints.medium}) {
-    font-size: 1rem;
+    font-size: ${constants.fonts.textSizeSmallerDevices.size};
+    line-height: ${constants.fonts.textSizeSmallerDevices.lineHeight};
   }
 `
 

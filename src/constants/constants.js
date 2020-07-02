@@ -22,6 +22,10 @@ export default {
       size: ".9rem",
       weight: 400,
     },
+    textSizeSmallerDevices: {
+      size: "16px", 
+      lineHeight: "26px"
+    },
   },
 
   breakPoints: {
