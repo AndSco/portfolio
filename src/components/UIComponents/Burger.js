@@ -7,9 +7,9 @@ const StyledBurger = styled.div`
   display: none;
   width: 2rem;
   height: 2rem;
-  position: fixed;
+  /* position: fixed;
   top: 25px;
-  right: 20px;
+  right: 20px; */
   z-index: 20;
 
   @media (max-width: ${constants.breakPoints.medium}) {

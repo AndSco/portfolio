@@ -7,7 +7,7 @@ const IconContainer = styled.div`
   font-size: 1rem;
 
   &:hover {
-    transform: scale(1.06);
+    transform: scale(1.1);
   }
 
   @media (max-width: ${constants.breakPoints.medium}) {

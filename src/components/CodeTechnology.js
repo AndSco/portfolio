@@ -35,6 +35,12 @@ export const techs = [
   },
 ]
 
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
+
 const Circle = styled.div`
   width: 80px;
   height: 80px;
@@ -47,9 +53,6 @@ const Circle = styled.div`
   margin: 0 1rem 0.5rem 1rem;
   transition: all 0.3s ease;
 
-  /* &:hover {
-    transform: scale(1.1);
-  } */
 
   @media (max-width: ${constants.breakPoints.medium}) {
     width: 60px;
@@ -97,9 +100,14 @@ const TechIcon = ({ iconName, techName }) => {
 
 const CodeTechnology = () => {
   return (
+    <Wrapper>
+    <h4 style={{marginBottom: 30}}>My current stack</h4>
     <CircleContainer>
-      {techs.map(tech => <TechIcon key={tech.icon} iconName={tech.icon} techName={tech.name} />)}
+      {techs.map(tech => (
+        <TechIcon key={tech.icon} iconName={tech.icon} techName={tech.name} />
+      ))}
     </CircleContainer>
+    </Wrapper>
   )
 }
 

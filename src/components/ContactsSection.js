@@ -33,11 +33,13 @@ const Form = styled.form`
   display: flex;
   flex-direction: column;
   width: 40vw;
+  min-width: 400px;
   margin-top: 1.7rem;
-  margin-right: 6rem;
+  margin-right: 2rem;
 
   @media (max-width: ${constants.breakPoints.medium}) {
     width: 75vw;
+    min-width: 75vw;
     margin-right: 0;
   }
 `
@@ -134,6 +136,8 @@ const LinkIconText = styled.h5`
   white-space: nowrap;
   transition: all 1s ease;
   padding-right: 1rem;
+  padding-left: 10px;
+  border-left: 2px solid;
 
   @media (max-width: ${constants.breakPoints.medium}) {
     display: none;

@@ -62,8 +62,7 @@ const Hero = () => {
         <AnimatedTitle />
         <FadeInDiv>
           <StyledExcerpt>
-            Self-taught Javascript developer based in Brno with a soft spot
-            for ReactJS!
+            Self-taught Javascript and ReactJS developer based in Brno
           </StyledExcerpt>
           <AnchorLink to="/#projectsSection">
             <ButtonLight title="See projects" width={200} textSize=".9rem" />

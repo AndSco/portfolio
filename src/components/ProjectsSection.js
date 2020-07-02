@@ -4,7 +4,7 @@ import SectionTitle from "./UIComponents/SectionTitle"
 import projects from "../constants/projects";
 import constants from "../constants/constants";
 import ModalDemo from "./ModalDemo";
-import ProjectCard2 from "./UIComponents/ProjectCard2"
+import ProjectCard2 from "./UIComponents/ProjectCard"
 
 
 const StyledContainer = styled.div`

@@ -5,6 +5,7 @@ import ClickableIcon from "./ClickableIcon"
 
 const MobileMenuContainer = styled.div`
   width: 70vw;
+  max-width: 300px;
   position: fixed;
   top: 0;
   height: 100vh;

@@ -127,7 +127,7 @@ const Navbar = ({ changeTheme, theme }) => {
     >
       <Logo />
       <NavRight changeTheme={changeTheme} />
-      <div style={{ display: "flex" }}>
+      <div style={{ display: "flex", alignItems: "center" }}>
         <ThemeSwitch changeTheme={changeTheme} theme={theme} />
         <Burger 
           isMobileMenuOpen={isMobileMenuOpen} 

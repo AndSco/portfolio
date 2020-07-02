@@ -1,7 +1,7 @@
 import React, { useContext } from "react"
 import styled, { ThemeContext } from "styled-components"
-import ProjectImage2 from "../UIComponents/ProjectImage2"
-import ClickableIcon from "../UIComponents/ClickableIcon";
+import ProjectImage2 from "./ProjectImage"
+import ClickableIcon from "./ClickableIcon";
 import constants from "../../constants/constants";
 
 const TextSide = styled.div`
@@ -12,11 +12,9 @@ const TextSide = styled.div`
     props.orientation === "left" ? "flex-start" : "flex-end"};
   width: 45vw;
   max-width: 320px;
-  min-height: 500px;
   order: ${props => (props.orientation === "right" ? 1 : 0)};
-  /* z-index: -19; */
   background: ${props => props.theme.aboutStrip};
-  padding: 1.5rem;
+  padding: 50px 40px;
   box-shadow: rgba(0, 0, 0, 0.38) 6px 7px 9px -4px;
   margin-left: ${props => (props.orientation === "right" ? "2rem" : 0)};
   margin-right: ${props => (props.orientation === "right" ? 0 : "2rem")};
@@ -27,8 +25,9 @@ const TextSide = styled.div`
     width: 90vw;
     max-width: 90vw;
     margin: 0;
-    min-height: 400px;
     box-shadow: none;
+    align-items: center;
+    text-align: center;
   }
 `
 
@@ -36,6 +35,7 @@ const Title = styled.h3`
   font-size: 1.2rem;
   font-weight: 700;
   margin: 0;
+  /* margin-bottom: 1rem; */
   color: ${props => props.theme.highlights};
 
   @media (max-width: ${constants.breakPoints.medium}) {
@@ -49,6 +49,7 @@ const Description = styled.div`
   font-size: 0.8rem;
   align-items: center;
   color: ${props => props.theme.text};
+  margin: 1rem 0;
 
   @media (max-width: ${constants.breakPoints.medium}) {
     font-size: 1rem;
@@ -66,26 +67,33 @@ const TechItem = styled.h6`
   }
 `
 
+const StackListContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+  
+  @media (max-width: ${constants.breakPoints.medium}) {
+    justify-content: center;
+  }
+`
+
 const StackList = ({ stack }) => {
   const theme = useContext(ThemeContext)
   return (
-    <div style={{ display: "flex", flexWrap: "wrap" }}>
+    <StackListContainer>
       {stack.map(tech => (
-        <TechItem key={tech}>
-          {tech}
-        </TechItem>
+        <TechItem key={tech}>{tech}</TechItem>
       ))}
-    </div>
+    </StackListContainer>
   )
 }
 
 const LinksSection = ({url, githubRepository}) => {
   const theme = useContext(ThemeContext)
   return (
-    <div style={{ display: "flex", margin: "0 .8rem" }}>
+    <div style={{ display: "flex", margin: "0 .8rem", width: 50, justifyContent: "space-between" }}>
       <ClickableIcon
         icon={["fab", "github"]}
-        styles={{ marginRight: "1rem" }}
         color={theme.secondaryDetails}
         link={githubRepository}
       />
