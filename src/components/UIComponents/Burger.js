@@ -54,8 +54,7 @@ const Burger = ({isMobileMenuOpen, closeMobileMenu, openMobileMenu}) => {
         <div />
         <div />
       </StyledBurger>
-      {isMobileMenuOpen &&
-        <MenuMobile isMenuVisible={isMobileMenuOpen} closeMobileMenu={closeMobileMenu} />}
+      <MenuMobile isMenuVisible={isMobileMenuOpen} closeMobileMenu={closeMobileMenu} />
     </>
   )
 }
