@@ -8,6 +8,7 @@ import constants from "../constants/constants";
 import BurgerMenu from "./UIComponents/BurgerMenu";
 import MobileMenu from "./UIComponents/MobileMenu";
 import Anchor from "./UIComponents/Anchor";
+import Burger from "./UIComponents/Burger";
 
 const NavLink = styled.div`
   font-family: "Proxima Nova";
@@ -133,11 +134,12 @@ const Navbar = ({ changeTheme, theme }) => {
       <NavRight changeTheme={changeTheme} />
       <div style={{ display: "flex" }}>
         <ThemeSwitch changeTheme={changeTheme} theme={theme} />
-        <BurgerMenu
+        {/* <BurgerMenu
           openMobileMenu={openMobileMenu}
           closeMobileMenu={closeMobileMenu}
           isMobileMenuOpen={isMobileMenuOpen}
-        />
+        /> */}
+        <Burger />
       </div>
     </Nav>
   )
