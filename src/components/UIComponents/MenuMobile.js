@@ -2,6 +2,8 @@ import React from "react"
 import styled from "styled-components"
 import Anchor from "./Anchor"
 import ClickableIcon from "./ClickableIcon"
+import { RemoveScroll } from "react-remove-scroll"
+
 
 const MobileMenuContainer = styled.div`
   width: 70vw;
@@ -94,26 +96,28 @@ const MenuMobile = ({ isMenuVisible, closeMobileMenu }) => {
   }, [isMenuVisible, handleTouch])
 
   return (
-    <MobileMenuContainer isMenuVisible={isMenuVisible} ref={componentRef}>
-      <div>
-        <MenuItem
-          closeMobileMenu={closeMobileMenu}
-          linkTo="aboutSection"
-          text="ABOUT"
-        />
-        <MenuItem
-          closeMobileMenu={closeMobileMenu}
-          linkTo="projectsSection"
-          text="Projects"
-        />
-        <MenuItem
-          closeMobileMenu={closeMobileMenu}
-          linkTo="contactsSection"
-          text="contact"
-        />
-      </div>
-      <IconSection />
-    </MobileMenuContainer>
+    <RemoveScroll>
+      <MobileMenuContainer isMenuVisible={isMenuVisible} ref={componentRef}>
+        <div>
+          <MenuItem
+            closeMobileMenu={closeMobileMenu}
+            linkTo="aboutSection"
+            text="ABOUT"
+          />
+          <MenuItem
+            closeMobileMenu={closeMobileMenu}
+            linkTo="projectsSection"
+            text="Projects"
+          />
+          <MenuItem
+            closeMobileMenu={closeMobileMenu}
+            linkTo="contactsSection"
+            text="contact"
+          />
+        </div>
+        <IconSection />
+      </MobileMenuContainer>
+    </RemoveScroll>
   )
 }
 

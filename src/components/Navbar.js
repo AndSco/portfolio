@@ -5,8 +5,6 @@ import ButtonLight from "./UIComponents/ButtonLight";
 import FlexJustified from "./UIComponents/FlexRow";
 import ThemeSwitch from "./UIComponents/ThemeSwitch";
 import constants from "../constants/constants";
-import BurgerMenu from "./UIComponents/BurgerMenu";
-import MobileMenu from "./UIComponents/MobileMenu";
 import Anchor from "./UIComponents/Anchor";
 import Burger from "./UIComponents/Burger";
 
@@ -103,8 +101,9 @@ const Navbar = ({ changeTheme, theme }) => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const openMobileMenu = () => setIsMobileMenuOpen(true);
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
+  const openMobileMenu = () => setIsMobileMenuOpen(true);
+
 
   const handleScroll = () => {
     if (isMobileMenuOpen) return;
@@ -126,20 +125,14 @@ const Navbar = ({ changeTheme, theme }) => {
       isVisible={isVisible}
       scrollPosition={scrollPosition}
     >
-      <MobileMenu
-        isMenuVisible={isMobileMenuOpen}
-        closeMobileMenu={closeMobileMenu}
-      />
       <Logo />
       <NavRight changeTheme={changeTheme} />
       <div style={{ display: "flex" }}>
         <ThemeSwitch changeTheme={changeTheme} theme={theme} />
-        {/* <BurgerMenu
-          openMobileMenu={openMobileMenu}
-          closeMobileMenu={closeMobileMenu}
-          isMobileMenuOpen={isMobileMenuOpen}
-        /> */}
-        <Burger />
+        <Burger 
+          isMobileMenuOpen={isMobileMenuOpen} 
+          closeMobileMenu={closeMobileMenu} 
+          openMobileMenu={openMobileMenu} />
       </div>
     </Nav>
   )

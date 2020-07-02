@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import styled from "styled-components";
 import MenuMobile from "./MenuMobile";
 import constants from "../../constants/constants";
@@ -44,18 +44,18 @@ const StyledBurger = styled.div`
   }
 `
 
-const Burger = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const closeMobileMenu = () => setIsOpen(false);
-
+const Burger = ({isMobileMenuOpen, closeMobileMenu, openMobileMenu}) => {
   return (
     <>
-      <StyledBurger isOpen={isOpen} onClick={() => setIsOpen(!isOpen)}>
+      <StyledBurger isOpen={isMobileMenuOpen} onClick={() => {
+        isMobileMenuOpen ? closeMobileMenu() : openMobileMenu()
+        }}>
         <div />
         <div />
         <div />
       </StyledBurger>
-      <MenuMobile isMenuVisible={isOpen} closeMobileMenu={closeMobileMenu} />
+      {isMobileMenuOpen &&
+        <MenuMobile isMenuVisible={isMobileMenuOpen} closeMobileMenu={closeMobileMenu} />}
     </>
   )
 }

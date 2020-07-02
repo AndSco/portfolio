@@ -1,6 +1,5 @@
 import React, { useState, useRef } from "react";
 import styled from "styled-components";
-import ProjectCard from "./UIComponents/ProjectCard";
 import SectionTitle from "./UIComponents/SectionTitle"
 import projects from "../constants/projects";
 import constants from "../constants/constants";
