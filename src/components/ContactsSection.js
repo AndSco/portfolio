@@ -193,17 +193,17 @@ const ContactsSection = () => {
         data-sal-delay="300"
         data-sal-easing="ease"
       >
-        <Form action="POST" data-netlify={true}>
+        <Form action="POST" data-netlify={"true"}>
           <InputContainer>
             <Label>Name</Label>
-            <Input type="text" name="name" />
+            <Input type="text" name="name" required />
           </InputContainer>
           <InputContainer>
             <Label>Email</Label>
-            <Input type="email" name="email" />
+            <Input type="email" name="email" required />
           </InputContainer>
           <Label>Message</Label>
-          <TextArea type="text" rows={6} name="message" />
+          <TextArea type="text" rows={6} name="message" required />
           <Button type="submit">SEND!</Button>
         </Form>
 
