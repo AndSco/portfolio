@@ -193,7 +193,7 @@ const ContactsSection = () => {
         data-sal-delay="300"
         data-sal-easing="ease"
       >
-        <Form action="POST" data-netlify={"true"}>
+        <Form name="contact" method="POST" data-netlify="true">
           <InputContainer>
             <Label>Name</Label>
             <Input type="text" name="name" required />
