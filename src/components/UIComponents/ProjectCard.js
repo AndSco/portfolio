@@ -49,10 +49,11 @@ const Title = styled.h3`
     height: 10px;
     background-color: ${props => props.theme.underline};
     z-index: -2;
+    transition: all 0.5s linear;
   }
 
   @media (max-width: ${constants.breakPoints.medium}) {
-    font-size: 1.4rem;
+    font-size: 22px;
   }
 `
 
@@ -77,7 +78,7 @@ const TechItem = styled.h6`
   font-weight: 300;
 
   @media (max-width: ${constants.breakPoints.medium}) {
-    font-size: 1rem;
+    font-size: 12px;
   }
 `
 

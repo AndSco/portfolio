@@ -90,7 +90,7 @@ const TextArea = styled.textarea`
   }
 `
 
-const Button = styled.div`
+const Button = styled.button`
   background-color: ${props => props.theme.highlights};
   color: ${props => props.theme.contactsButtonColor};
   font-size: 0.8rem;
@@ -100,6 +100,7 @@ const Button = styled.div`
   text-align: center;
   transition: all 0.2s linear;
   opacity: 0.7;
+  border: none;
 
   &:hover {
     opacity: 1;
@@ -192,18 +193,18 @@ const ContactsSection = () => {
         data-sal-delay="300"
         data-sal-easing="ease"
       >
-        <Form>
+        <Form action="POST" data-netlify={true}>
           <InputContainer>
             <Label>Name</Label>
-            <Input type="text" />
+            <Input type="text" name="name" />
           </InputContainer>
           <InputContainer>
             <Label>Email</Label>
-            <Input type="email" />
+            <Input type="email" name="email" />
           </InputContainer>
           <Label>Message</Label>
-          <TextArea type="text" rows={6} />
-          <Button>SEND!</Button>
+          <TextArea type="text" rows={6} name="message" />
+          <Button type="submit">SEND!</Button>
         </Form>
 
         <LinksIcons>
