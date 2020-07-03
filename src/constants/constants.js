@@ -14,7 +14,7 @@ export default {
     topBottom: "2rem",
     right: "9rem",
     left: "6rem",
-    paddingResponsive: "4rem 1rem",
+    paddingResponsive: "50px 15px",
   },
   fonts: {
     smallText: {

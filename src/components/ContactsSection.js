@@ -14,7 +14,8 @@ const Container = styled.div`
   flex-direction: column;
 
   @media (max-width: ${constants.breakPoints.medium}) {
-    padding: 3rem 0 4rem 0;
+    padding: ${constants.padding.paddingResponsive};
+    /* padding: 3rem 0 4rem 0; */
   }
 `
 

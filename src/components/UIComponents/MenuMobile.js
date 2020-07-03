@@ -32,7 +32,20 @@ const Link = styled.h2`
   text-transform: uppercase;
   display: flex;
   margin: 2.5rem 0;
-  justify-content: flex-end;
+  /* justify-content: flex-end; */
+  position: relative;
+  width: fit-content;
+
+  &::after {
+    position: absolute;
+    content: "";
+    display: block;
+    transform: translateY(200%);
+    width: 100%;
+    height: 10px;
+    background-color: ${props => props.theme.mobileMenuUnderline};
+    z-index: -2;
+  }
 `
 
 const IconSectionContainer = styled.div`

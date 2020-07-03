@@ -29,6 +29,7 @@ const HeroContainer = styled.div`
 
   @media (max-width: ${constants.breakPoints.medium}) {
     padding: 0;
+    padding-top: 2vh;
     flex-direction: column;
     height: auto;
     align-items: center;

@@ -2,7 +2,7 @@ export default [
   {
     title: "#COVID19 Update",
     description:
-      "My quarantine project! Web app tracking the daily developments of the coronavirus pandemic worldwide, visually comparing chronological and quantitative data by country and giving a historical overview of past pandemics. The data is scraped from the public repository of the Johns Hopkins University.",
+      "My quarantine project! Web app tracking the daily developments of the coronavirus outbreak worldwide, visually comparing chronological and quantitative data by country and giving a historical overview of past pandemics. The data is scraped from the public repository of the Johns Hopkins University.",
     stack: ["React", "NodeJS", "D3", "API", "Express"],
     picName: "covid19.png",
     demoUrl: "https://www.youtube.com/embed/7qsP-GybXGA",
@@ -24,7 +24,7 @@ export default [
     githubRepository: "https://github.com/AndSco/EC.events.mt",
   },
   {
-    title: "Seakats Malta mobile app",
+    title: "Kayaking mobile app",
     description:
       "React Native application built for the Sea Kayaking club in Malta. Users can check in when going out for a paddle, specifying their itinerary & estimated time of arrival. If the kayaker does not check out by his/her ETA, all subscribers receive an alert notification. The app also serves as a logbook of the club's activity, a repository of kayaking trips, a source of technical references and handy practical info (e.g. nautical units conversion, buoyage and light signals interpretation).",
     stack: ["React Native", "NodeJS", "API Creation", "Redux"],

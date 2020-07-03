@@ -19,7 +19,7 @@ const TextSide = styled.div`
   margin-left: ${props => (props.orientation === "right" ? "2rem" : 0)};
   margin-right: ${props => (props.orientation === "right" ? 0 : "2rem")};
   text-align: ${props => (props.orientation === "right" ? "right" : "left")};
-  
+
   @media (max-width: ${constants.breakPoints.medium}) {
     order: 2;
     width: 90vw;
@@ -28,6 +28,7 @@ const TextSide = styled.div`
     box-shadow: none;
     align-items: center;
     text-align: center;
+    padding: ${constants.padding.paddingResponsive};
   }
 `
 
@@ -35,12 +36,25 @@ const Title = styled.h3`
   font-size: 1.2rem;
   font-weight: 700;
   margin: 0;
-  /* margin-bottom: 1rem; */
+  position: relative;
   color: ${props => props.theme.highlights};
+  z-index: 2;
+  transition: all 0.5s linear;
+
+  &::after {
+    position: absolute;
+    content: "";
+    display: block;
+    transform: translateY(-10px);
+    width: 100%;
+    height: 10px;
+    background-color: ${props => props.theme.underline};
+    z-index: -2;
+  }
 
   @media (max-width: ${constants.breakPoints.medium}) {
     font-size: 1.4rem;
-  };
+  }
 `
 
 const Description = styled.div`
