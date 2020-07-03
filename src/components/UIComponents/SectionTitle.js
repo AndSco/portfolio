@@ -28,6 +28,7 @@ const SectionTitle = styled.h2`
   border-right: 7px solid ${props => props.theme.highlights};
   padding-right: 1rem;
   align-self: flex-start;
+  text-shadow: ${props => props.color || props.theme.textShadow};
 
   &:hover ${AsteriskContainer} {
     transform: rotate(180deg);

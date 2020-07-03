@@ -32,9 +32,9 @@ const Link = styled.h2`
   text-transform: uppercase;
   display: flex;
   margin: 2.5rem 0;
-  /* justify-content: flex-end; */
   position: relative;
   width: fit-content;
+  text-shadow: ${props => props.color || props.theme.textShadow};
 
   &::after {
     position: absolute;

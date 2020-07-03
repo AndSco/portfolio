@@ -26,8 +26,6 @@ const TextSide = styled.div`
     max-width: 90vw;
     margin: 0;
     box-shadow: none;
-    align-items: center;
-    text-align: center;
     padding: ${constants.padding.paddingResponsive};
   }
 `
@@ -40,6 +38,7 @@ const Title = styled.h3`
   color: ${props => props.theme.highlights};
   z-index: 2;
   transition: all 0.5s linear;
+  text-shadow: ${props => props.color || props.theme.textShadow};
 
   &::after {
     position: absolute;
@@ -86,10 +85,6 @@ const StackListContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 1.5rem;
-  
-  @media (max-width: ${constants.breakPoints.medium}) {
-    justify-content: center;
-  }
 `
 
 const StackList = ({ stack }) => {
