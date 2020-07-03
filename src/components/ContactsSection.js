@@ -185,6 +185,38 @@ const ContactDetail = ({icon, text, link}) => {
 }
 
 const ContactsSection = () => {
+  const [formState, setFormState] = useState({
+    name: "", 
+    email: "", 
+    message: ""
+  });
+
+  const handleChange = e => {
+    setFormState({
+      ...formState, 
+      [e.target.name]: e.target.value
+    })
+  }
+
+  const encode = data => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&")
+  }
+
+  const handleSubmit = (e) => {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", formState }),
+    })
+      .then(() => alert("Success!"))
+      .catch(error => alert(error))
+
+    e.preventDefault()
+ 
+  }
+
   return (
     <Container id="contactsSection">
       <SectionTitle title="Get in touch!" />
@@ -193,17 +225,46 @@ const ContactsSection = () => {
         data-sal-delay="300"
         data-sal-easing="ease"
       >
-        <Form name="contact" method="POST" data-netlify="true">
+        <Form
+          name="contact"
+          onSubmit={handleSubmit}
+          method="POST"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+        >
+          <input type="hidden" name="form-name" value="contact" />
           <InputContainer>
-            <Label>Name</Label>
-            <Input type="text" name="name" required />
+            <Label htmlFor="name">Name</Label>
+            <Input
+              type="text"
+              value={formState.name}
+              onChange={handleChange}
+              name="name"
+              id="name"
+              required
+            />
           </InputContainer>
           <InputContainer>
-            <Label>Email</Label>
-            <Input type="email" name="email" required />
+            <Label htmlFor="email">Email</Label>
+            <Input
+              type="email"
+              value={formState.email}
+              onChange={handleChange}
+              name="email"
+              id="email"
+              required
+            />
           </InputContainer>
-          <Label>Message</Label>
-          <TextArea type="text" rows={6} name="message" required />
+          <Label htmlFor="message">Message</Label>
+          <TextArea
+            type="text"
+            rows={6}
+            value={formState.message}
+            onChange={handleChange}
+            name="message"
+            id="message"
+            required
+          />
           <Button type="submit">SEND!</Button>
         </Form>
 

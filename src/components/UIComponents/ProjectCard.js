@@ -38,7 +38,7 @@ const Title = styled.h3`
   color: ${props => props.theme.highlights};
   z-index: 2;
   transition: all 0.5s linear;
-  text-shadow: ${props => props.color || props.theme.textShadow};
+  /* text-shadow: ${props => props.color || props.theme.textShadow}; */
 
   &::after {
     position: absolute;
