@@ -45,3 +45,16 @@ export const socialStripBounce = keyframes`
   }
 `
 
+export const scaleUpText = keyframes`
+  0% {
+    transform: scale(0);
+  }
+
+  60% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+`

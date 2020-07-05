@@ -1,15 +1,14 @@
-import React, { useState } from "react"
+import React from "react"
 import styled from "styled-components"
 import SectionTitle from "./UIComponents/SectionTitle"
 import constants from "../constants/constants"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Footer from "./Footer"
-import { RemoveScroll } from "react-remove-scroll"
-import ButtonLight from "./UIComponents/ButtonLight"
 import Form from "./Form";
+import ContactDetails from "./ContactDetails"
+import ModalEmail from "./ModalEmail";
+
 
 /// Modal management
-import { Modal } from "./ModalDemo"
 import { useModal } from "../constants/hooks"
 
 const Container = styled.div`
@@ -22,7 +21,6 @@ const Container = styled.div`
 
   @media (max-width: ${constants.breakPoints.medium}) {
     padding: ${constants.padding.paddingResponsive};
-    /* padding: 3rem 0 4rem 0; */
   }
 `
 
@@ -37,115 +35,13 @@ const ContentWrapper = styled.div`
   }
 `
 
-
-const LinksIcons = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  width: 350px;
-  padding: 0 1.5rem;
-  margin: 3rem 0;
-  flex-direction: column;
-  border-right: 3px solid ${props => props.theme.highlights};
-
-  @media (max-width: ${constants.breakPoints.medium}) {
-    flex-direction: row;
-    border: none;
-    justify-content: space-around;
-  }
-`
-
-const LinkIconText = styled.h5`
-  /* font-family: "Proxima Nova"; */
-  font-size: 0.7rem;
-  margin: 0;
-  font-weight: 500;
-  text-transform: uppercase;
-  opacity: ${props => (props.isTextShowing ? 1 : 0)};
-  overflow: hidden;
-  white-space: nowrap;
-  transition: all 1s ease;
-  padding-right: 1rem;
-  padding-left: 10px;
-  border-left: 2px solid ${props => props.theme.highlights};
-
-  @media (max-width: ${constants.breakPoints.medium}) {
-    display: none;
-  }
-`
-
-const ContactDetailContainer = styled.div`
-  display: flex;
-  align-items: center;
-  padding-bottom: 0.9rem;
-  font-size: 1.8rem;
-  cursor: pointer;
-
-  @media (max-width: ${constants.breakPoints.medium}) {
-    font-size: 1.4rem;
-  }
-`
-
-const ContactDetail = ({ icon, text, link }) => {
-  const [isTextShowing, setIsTextShowing] = useState(false)
-
-  return (
-    <a href={link} target="_blank">
-      <ContactDetailContainer
-        onMouseEnter={() => setIsTextShowing(true)}
-        onMouseLeave={() => setIsTextShowing(false)}
-      >
-        <LinkIconText isTextShowing={isTextShowing}>{text}</LinkIconText>
-        <FontAwesomeIcon
-          icon={icon}
-          style={{
-            marginLeft: ".9rem",
-            opacity: isTextShowing ? 0.8 : 0.4,
-            transition: "all 1s ease",
-            marginLeft: icon === "file-pdf" ? 5 : 0,
-          }}
-        />
-      </ContactDetailContainer>
-    </a>
-  )
-}
-
-const ModalContent = styled.div`
-  width: 100%;
-  height: 100%;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-transform: uppercase;
-`
-
-const ModalHeader = styled.h4`
-  /* color: ${props => props.theme.highlights}; */
-  font-size: 4rem;
-  font-weight: 800;
-  letter-spacing: -3px;
-`
-
 const ContactsSection = () => {
   const { isModalOpen, handleModal } = useModal();
 
   return (
     <Container id="contactsSection">
       {isModalOpen && (
-        <RemoveScroll>
-          <Modal>
-            <ModalContent>
-              <ModalHeader>Message sent!</ModalHeader>
-              <ButtonLight
-                title="back to site"
-                functionToPerform={handleModal}
-                textSize="1.2rem"
-              />
-            </ModalContent>
-          </Modal>
-        </RemoveScroll>
+        <ModalEmail handleModal={handleModal} />
       )}
       <SectionTitle title="Get in touch!" />
       <ContentWrapper
@@ -154,26 +50,7 @@ const ContactsSection = () => {
         data-sal-easing="ease"
       >
         <Form handleModal={handleModal} />
-          
-
-        <LinksIcons>
-          <ContactDetail
-            icon="envelope"
-            text="Send me an e-mail"
-            link="mailto:andrea.scorcia@gmail.com"
-          />
-          <ContactDetail
-            icon={["fab", "linkedin"]}
-            text="My LinkedIn profile"
-            link="https://www.linkedin.com/in/andrea-scorcia-1144931a5/"
-          />
-          <ContactDetail
-            icon={["fab", "github"]}
-            text="My Github repositories"
-            link="https://github.com/AndSco?tab=repositories"
-          />
-          <ContactDetail icon={"file-pdf"} text="Download my CV" link="/" />
-        </LinksIcons>
+        <ContactDetails />  
       </ContentWrapper>
       <Footer />
     </Container>
