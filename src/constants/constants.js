@@ -8,7 +8,7 @@ export default {
     aqua: "#5BFFDB",
     overlayGradient:
       "linear-gradient(rgba(255, 68, 131, 0.62), rgba(14, 217, 158, 0.62))",
-    modalBground: "rgba(66, 73, 73, .9)",
+    modalBground: "rgba(27, 27, 27, .99)",
   },
   padding: {
     topBottom: "2rem",

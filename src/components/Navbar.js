@@ -9,7 +9,7 @@ import Anchor from "./UIComponents/Anchor";
 import Burger from "./UIComponents/Burger";
 
 const NavLink = styled.div`
-  font-family: "Proxima Nova";
+  /* font-family: "Proxima Nova"; */
   font-size: .7rem;
   text-transform: uppercase;
   color: ${props => props.theme.text};

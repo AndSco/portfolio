@@ -34,9 +34,9 @@ const ButtonStyled = styled.div`
   }
 `
 
-const ButtonLight = ({title, width, textSize, color, noEffect}) => {
+const ButtonLight = ({title, width, textSize, color, noEffect, functionToPerform}) => {
   return (
-    <ButtonStyled width={width} textSize={textSize} color={color} noEffect={noEffect}>
+    <ButtonStyled width={width} textSize={textSize} color={color} noEffect={noEffect} onClick={functionToPerform}>
       {title}
     </ButtonStyled>
   )

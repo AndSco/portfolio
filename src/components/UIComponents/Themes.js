@@ -16,7 +16,7 @@ export const lightTheme = {
     "#F5F5F5",
   contactsStrip: "#efefef",
   contactsButtonColor: "white",
-  underline: "#f5f56b",
+  underline: "#cabbbb",
   mobileMenuUnderline: "#791872",
   textShadow: "1px 1px 2px rgba(0,0,0,0.22)"
 }

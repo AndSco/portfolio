@@ -1,11 +1,13 @@
-import React from "react";
+import React, {useState} from "react";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import constants from "../constants/constants";
 import ButtonLight from "./UIComponents/ButtonLight";
+import { RemoveScroll } from "react-remove-scroll"
+import Spinner from "./UIComponents/Spinner";
 
 
-const Modal = styled.div`
+export const Modal = styled.div`
   width: 100vw;
   height: 100vh;
   background-color: ${constants.colors.modalBground};
@@ -35,53 +37,45 @@ const DemoBox = styled.div`
   }
 `
 
-const DetailsBox = styled.div`
-  color: white;
-  padding: 1rem;
-  padding-left: 3.5rem;
-  padding-right: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  max-width: 250px;
-
-  @media (max-width: ${constants.breakPoints.medium}) {
-    display: none;
-  }
-`
 
 const ModalDemo = ({project, closeModal}) => {
-  const {demoUrl, title, longDescription} = project;
+  const {demoUrl} = project;
+  const [isLoading, setIsLoading] = useState(true);
+
  return (
-   <Modal>
-     <FontAwesomeIcon
-       icon="times-circle"
-       size="3x"
-       color="white"
-       style={{
-         position: "fixed",
-         right: "2rem",
-         top: "2rem",
-         cursor: "pointer",
-         zIndex: 1000
-       }}
-       onClick={closeModal}
-     />
-     <DemoBox>
-       <iframe
-         width="100%"
-         height="100%"
-         src={demoUrl}
-         // title={project}
-         frameBorder="0"
-       />
-     </DemoBox>
-     {/* <DetailsBox>
-       <u><h4 style={{textAlign: "right", fontWeight: 400}}>{title}</h4></u>
-       <p style={{fontSize: ".7rem", textAlign: "right"}}>{longDescription}</p>
-       <ButtonLight title="See source code" color="white" noEffect />
-     </DetailsBox> */}
-   </Modal>
+   <RemoveScroll>
+    <Modal>
+      <FontAwesomeIcon
+        icon="times-circle"
+        size="3x"
+        color="white"
+        style={{
+          position: "fixed",
+          right: "2rem",
+          top: "2rem",
+          cursor: "pointer",
+          zIndex: 1000
+        }}
+        onClick={closeModal}
+      />
+      <DemoBox>
+        {isLoading 
+          ?
+          <Spinner />
+          :
+          null
+        }
+        <iframe
+          width="100%"
+          height="100%"
+          src={demoUrl}
+          onLoad={() => setIsLoading(false)}
+          // title={project}
+          frameBorder="0"
+        />
+      </DemoBox>
+    </Modal>
+   </RemoveScroll>
  )
 }
 
