@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import ButtonLight from "./UIComponents/ButtonLight";
-import { RemoveScroll } from "react-remove-scroll";
-import { Modal } from "./ModalDemo";
+import Modal from "./UIComponents/Modal";
 import { scaleUpText, fadeIn } from "../constants/animations";
 
 
@@ -23,6 +22,7 @@ const ModalHeader = styled.h4`
   font-weight: 800;
   letter-spacing: -3px;
   animation: ${scaleUpText} .3s ease-in-out;
+  text-align: center;
 `
 
 const ButtonContainer = styled.div`
@@ -31,20 +31,19 @@ const ButtonContainer = styled.div`
 
 const ModalEmail = ({ handleModal }) => {
   return (
-    <RemoveScroll>
-      <Modal>
-        <ModalContent>
-          <ModalHeader>Message sent!</ModalHeader>
-          <ButtonContainer>
-            <ButtonLight
-              title="back to site"
-              functionToPerform={handleModal}
-              textSize="1.2rem"
-            />
-          </ButtonContainer>
-        </ModalContent>
-      </Modal>
-    </RemoveScroll>
+    <Modal handleModal={handleModal}>
+      <ModalContent>
+        <ModalHeader>Message sent!</ModalHeader>
+        <ButtonContainer>
+          <ButtonLight
+            title="back to site"
+            functionToPerform={handleModal}
+            textSize="1.2rem"
+            width="400px"
+          />
+        </ButtonContainer>
+      </ModalContent>
+    </Modal>
   )
 }
 

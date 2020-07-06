@@ -26,7 +26,7 @@ const ButtonStyled = styled.div`
   }
 
   @media (max-width: ${constants.breakPoints.medium}) {
-    padding: 10px 0;
+    padding: 10px;
   }
 
   @media (min-width: ${constants.breakPoints.large}) {

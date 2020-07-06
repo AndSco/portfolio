@@ -134,7 +134,7 @@ const CardContainer = styled.div`
 const ProjectCard = ({
   project,
   orientation,
-  openModal,
+  handleModal,
   prepareProjectForModal,
 }) => {
   const { title, description, stack, picName, demoUrl, url, githubRepository } = project;
@@ -155,7 +155,7 @@ const ProjectCard = ({
         picName={picName}
         demoUrl={demoUrl}
         orientation={orientation}
-        openModal={openModal}
+        openModal={handleModal}
         prepareProjectForModal={prepareProjectForModal}
       />
     </CardContainer>

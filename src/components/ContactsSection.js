@@ -6,10 +6,7 @@ import Footer from "./Footer"
 import Form from "./Form";
 import ContactDetails from "./ContactDetails"
 import ModalEmail from "./ModalEmail";
-
-
-/// Modal management
-import { useModal } from "../constants/hooks"
+import { useModal } from "../constants/hooks";
 
 const Container = styled.div`
   background-color: ${props => props.theme.contactsStrip};

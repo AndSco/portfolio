@@ -4,7 +4,8 @@ import SectionTitle from "./UIComponents/SectionTitle"
 import projects from "../constants/projects";
 import constants from "../constants/constants";
 import ModalDemo from "./ModalDemo";
-import ProjectCard2 from "./UIComponents/ProjectCard"
+import ProjectCard2 from "./UIComponents/ProjectCard";
+import { useModal } from "../constants/hooks";
 
 
 const StyledContainer = styled.div`
@@ -19,9 +20,10 @@ const StyledContainer = styled.div`
 `
 
 const ProjectsSection = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
+  // const [isModalOpen, setIsModalOpen] = useState(false);
+  const { isModalOpen, handleModal } = useModal();
+  // const openModal = () => setIsModalOpen(true);
+  // const closeModal = () => setIsModalOpen(false);
 
   const [currentProject, setCurrentProject] = useState(null);
   const prepareProjectForModal = (project) => setCurrentProject(project);
@@ -29,7 +31,7 @@ const ProjectsSection = () => {
   return (
     <StyledContainer id="projectsSection">
       {isModalOpen && (
-        <ModalDemo project={currentProject} closeModal={closeModal} />
+        <ModalDemo project={currentProject} handleModal={handleModal} />
       )}
       <SectionTitle
         title="Some of my projects"
@@ -42,7 +44,7 @@ const ProjectsSection = () => {
               key={proj.title}
               project={proj}
               orientation={index % 2 === 0 ? "left" : "right"}
-              openModal={openModal}
+              handleModal={handleModal}
               prepareProjectForModal={prepareProjectForModal}
             />
           )
