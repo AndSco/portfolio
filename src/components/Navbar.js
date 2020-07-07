@@ -8,6 +8,8 @@ import constants from "../constants/constants";
 import Anchor from "./UIComponents/Anchor";
 import Burger from "./UIComponents/Burger";
 
+import cv from "../files/cv.pdf";
+
 const NavLink = styled.div`
   /* font-family: "Proxima Nova"; */
   font-size: .7rem;
@@ -91,7 +93,7 @@ const NavRight = () => {
           <NavLink>Contact</NavLink>
         </Anchor>
       </div>
-      <ButtonLight title="CURRICULUM VITAE" isHoverable={true} />
+      <a href={cv} target="_blank"><ButtonLight title="CURRICULUM VITAE" isHoverable={true} /></a>
     </LinksContainer>
   )
 }

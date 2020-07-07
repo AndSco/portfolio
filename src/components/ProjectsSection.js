@@ -43,7 +43,7 @@ const ProjectsSection = () => {
             <ProjectCard2
               key={proj.title}
               project={proj}
-              orientation={index % 2 === 0 ? "left" : "right"}
+              orientation={index % 2 === 0 ? "right" : "left"}
               handleModal={handleModal}
               prepareProjectForModal={prepareProjectForModal}
             />
