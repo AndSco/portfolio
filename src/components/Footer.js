@@ -14,7 +14,7 @@ const StyledFooter = styled.div`
 `
 
 
-const Footer = () => <StyledFooter className="footer">Designed and coded w/ GatsbyJS by Andrea Scorcia | 2020</StyledFooter>
+const Footer = () => <StyledFooter className="footer">Designed & coded w/ GatsbyJS by Andrea Scorcia in 2020 | <u><span style={{marginLeft: ".5rem"}}><a href="https://github.com/AndSco/portfolio" target="_blank">See source code</a></span></u></StyledFooter>
  
 
 export default Footer;

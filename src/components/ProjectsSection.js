@@ -20,11 +20,7 @@ const StyledContainer = styled.div`
 `
 
 const ProjectsSection = () => {
-  // const [isModalOpen, setIsModalOpen] = useState(false);
   const { isModalOpen, handleModal } = useModal();
-  // const openModal = () => setIsModalOpen(true);
-  // const closeModal = () => setIsModalOpen(false);
-
   const [currentProject, setCurrentProject] = useState(null);
   const prepareProjectForModal = (project) => setCurrentProject(project);
 
@@ -43,7 +39,7 @@ const ProjectsSection = () => {
             <ProjectCard2
               key={proj.title}
               project={proj}
-              orientation={index % 2 === 0 ? "right" : "left"}
+              orientation={index % 2 === 0 ? "left" : "right"}
               handleModal={handleModal}
               prepareProjectForModal={prepareProjectForModal}
             />

@@ -26,7 +26,7 @@ const LinkIconText = styled.h5`
   font-size: 0.7rem;
   margin: 0;
   font-weight: 500;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   opacity: ${props => (props.isTextShowing ? 1 : 0)};
   overflow: hidden;
   white-space: nowrap;
@@ -82,7 +82,7 @@ const ContactDetails = () => {
     <LinksIcons>
       <ContactDetail
         icon="envelope"
-        text="Send me an e-mail"
+        text="andrea.scorcia@gmail.com"
         link="mailto:andrea.scorcia@gmail.com"
       />
       <ContactDetail
@@ -95,7 +95,7 @@ const ContactDetails = () => {
         text="My Github repositories"
         link="https://github.com/AndSco?tab=repositories"
       />
-      <ContactDetail icon={"file-pdf"} text="Download my CV" link="/" />
+      <ContactDetail icon={"file-pdf"} text="See my CV" link="cv.pdf" />
     </LinksIcons>
   )
 }
