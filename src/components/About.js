@@ -27,7 +27,7 @@ const About = () => {
           <SectionTitle title="About me" />
           <ParagraphText padding={"0 0 2rem 0"}>
             Hello! I’m Andrea, a self-taught Javascript developer based in Brno,
-            Czech Republic. I've been working for more than 10 years in international organisations such as the European Commission, managing their online communications as Digital Leader. In the past three years, I took up web development and created a number of web & mobile applications for work and for fun. When it comes to front-end, my tool of choice is ReactJS (with functional components & hooks), and React Native on mobile. I also love the development experience offered by GatsbyJS. On
+            Czech Republic. I've been working for more than 10 years in international organisations such as the European Commission, managing their online communications as Digital Leader. In the past three years, I took up web development and created a number of web & mobile applications for work and for fun. When it comes to front-end, my tool of choice is ReactJS (with functional components & hooks), and React Native on mobile (with Expo). I also love the development experience offered by GatsbyJS. On
             the back-end side, I usually reach for NodeJs, Express and MongoDB. This is
             the stack I'm currently comfortable with, but I'm always eager to
             learn new stuff.
