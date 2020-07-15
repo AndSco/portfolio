@@ -36,10 +36,9 @@ const ModalEmail = ({ handleModal }) => {
         <ModalHeader>Message sent!</ModalHeader>
         <ButtonContainer>
           <ButtonLight
-            title="back to site"
+            title="go back"
             functionToPerform={handleModal}
             textSize="1.2rem"
-            // width="200px"
           />
         </ButtonContainer>
       </ModalContent>
