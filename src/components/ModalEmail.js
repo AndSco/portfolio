@@ -39,7 +39,7 @@ const ModalEmail = ({ handleModal }) => {
             title="back to site"
             functionToPerform={handleModal}
             textSize="1.2rem"
-            width="400px"
+            // width="200px"
           />
         </ButtonContainer>
       </ModalContent>

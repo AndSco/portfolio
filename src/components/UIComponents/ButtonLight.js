@@ -6,7 +6,7 @@ import constants from "../../constants/constants";
 const ButtonStyled = styled.div`
   border: 1px solid ${props => props.color || props.theme.buttonColor};
   color: ${props => props.color || props.theme.buttonColor};
-  padding: 0.2rem 0.5rem;
+  padding: 0.2rem 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,7 +26,7 @@ const ButtonStyled = styled.div`
   }
 
   @media (max-width: ${constants.breakPoints.medium}) {
-    padding: 10px;
+    padding: 10px 20px;
   }
 
   @media (min-width: ${constants.breakPoints.large}) {
