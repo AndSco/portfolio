@@ -36,16 +36,12 @@ const Link = styled.h2`
   width: fit-content;
   text-shadow: ${props => props.color || props.theme.textShadow};
 
-  &::after {
-    position: absolute;
-    content: "";
-    display: block;
-    transform: translateY(1rem);
-    width: 100%;
-    height: 10px;
-    background-color: ${props => props.theme.mobileMenuUnderline};
-    z-index: -2;
-  }
+  background-image: ${props =>
+    `linear-gradient(120deg, ${props.theme.mobileMenuUnderline} 0%, ${props.theme.mobileMenuUnderline} 100%)`};
+  background-repeat: no-repeat;
+  background-size: 100% 0.5em;
+  background-position: 0 88%;
+  transition: background-size 0.25s ease-in;
 `
 
 const IconSectionContainer = styled.div`

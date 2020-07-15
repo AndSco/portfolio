@@ -39,17 +39,12 @@ const Title = styled.h3`
   z-index: 2;
   transition: all 0.5s linear;
 
-  &::after {
-    position: absolute;
-    content: "";
-    display: block;
-    transform: translateY(-10px);
-    width: 100%;
-    height: 10px;
-    background-color: ${props => props.theme.underline};
-    z-index: -2;
-    transition: all 0.5s linear;
-  }
+  background-image: ${props =>
+    `linear-gradient(120deg, ${props.theme.underline} 0%, ${props.theme.underline} 100%)`};
+  background-repeat: no-repeat;
+  background-size: 100% 0.5em;
+  background-position: 0 88%;
+  transition: background-size 0.25s ease-in;
 
   @media (max-width: ${constants.breakPoints.medium}) {
     font-size: 22px;
