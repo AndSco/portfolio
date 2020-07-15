@@ -19,6 +19,16 @@ const StyledContainer = styled.div`
   }
 `
 
+const ExplanationParagraph = styled.p`
+  max-width: 900px;
+  align-self: flex-start;
+
+  @media (max-width: ${constants.breakPoints.medium}) {
+    align-self: center;
+    text-align: center;
+  }
+`
+
 const ProjectsSection = () => {
   const { isModalOpen, handleModal } = useModal();
   const [currentProject, setCurrentProject] = useState(null);
@@ -33,6 +43,7 @@ const ProjectsSection = () => {
         title="Some of my projects"
         // styles={{ borderBottom: "2px solid", paddingBottom: "1rem" }}
       />
+      <ExplanationParagraph>A few of my projects have been built for internal use at my former workplace. Since these contain sensitive information, they are accessible only via authentication... That's why for each project I included a short video-demo showing its main features.</ExplanationParagraph>
       <div style={{ display: "flex", flexDirection: "column" }}>
         {projects.map((proj, index) => {
           return (

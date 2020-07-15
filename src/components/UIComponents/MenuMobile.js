@@ -40,7 +40,7 @@ const Link = styled.h2`
     position: absolute;
     content: "";
     display: block;
-    transform: translateY(200%);
+    transform: translateY(1rem);
     width: 100%;
     height: 10px;
     background-color: ${props => props.theme.mobileMenuUnderline};
