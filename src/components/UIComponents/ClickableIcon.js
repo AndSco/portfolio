@@ -17,9 +17,14 @@ const IconContainer = styled.div`
 
 const ClickableIcon = ({icon, size, color, styles, link}) => {
   return (
-    <a href={link} target="_blank">
+    <a href={link} target="_blank" rel="noreferrer">
       <IconContainer>
-      <FontAwesomeIcon icon={icon} style={{cursor: "pointer", ...styles}} size={size} color={color} />
+        <FontAwesomeIcon
+          icon={icon}
+          style={{ cursor: "pointer", ...styles }}
+          size={size}
+          color={color}
+        />
       </IconContainer>
     </a>
   )

@@ -56,7 +56,7 @@ const ContactDetail = ({ icon, text, link }) => {
   const [isTextShowing, setIsTextShowing] = useState(false)
 
   return (
-    <a href={link} target="_blank">
+    <a href={link} target="_blank" rel="noreferrer">
       <ContactDetailContainer
         onMouseEnter={() => setIsTextShowing(true)}
         onMouseLeave={() => setIsTextShowing(false)}
@@ -65,7 +65,6 @@ const ContactDetail = ({ icon, text, link }) => {
         <FontAwesomeIcon
           icon={icon}
           style={{
-            marginLeft: ".9rem",
             opacity: isTextShowing ? 0.8 : 0.4,
             transition: "all 1s ease",
             marginLeft: icon === "file-pdf" ? 5 : 0,

@@ -130,7 +130,12 @@ const Form = ({handleModal}) => {
       data-netlify="true"
       data-netlify-honeypot="bot-field"
     >
-      <input type="hidden" name="form-name" value="contact" />
+      <input
+        type="hidden"
+        name="form-name"
+        value="contact"
+        aria-label="email-form-submitter"
+      />
       <InputContainer>
         <Label htmlFor="name">Name</Label>
         <Input

@@ -1,4 +1,5 @@
 import React from "react"
+import SEO from "../components/seo";
 import "../styles/index.css"
 import Navbar from "../components/Navbar";
 import MainPageBody from "../components/MainPageBody"
@@ -25,6 +26,7 @@ const IndexPage = () => {
   return (
     <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
     <GlobalStyles />
+    <SEO title="Andrea Scorcia - Home" />
       <Navbar changeTheme={changeTheme} theme={theme} />
       <MainPageBody>
         <Hero />

@@ -23,7 +23,22 @@ const Divider = styled.span`
 `
 
 
-const Footer = () => <StyledFooter className="footer">Designed & coded w/ GatsbyJS by Andrea Scorcia in 2020 <Divider>|</Divider> <u><span><a href="https://github.com/AndSco/portfolio" target="_blank">See source code</a></span></u></StyledFooter>
+const Footer = () => (
+  <StyledFooter className="footer">
+    Designed & coded w/ GatsbyJS by Andrea Scorcia in 2020 <Divider>|</Divider>{" "}
+    <u>
+      <span>
+        <a
+          href="https://github.com/AndSco/portfolio"
+          target="_blank"
+          rel="noreferrer"
+        >
+          See source code
+        </a>
+      </span>
+    </u>
+  </StyledFooter>
+)
  
 
 export default Footer;

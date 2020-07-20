@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
 import styled from "styled-components";
 import MenuMobile from "./MenuMobile";
 import constants from "../../constants/constants";
@@ -7,9 +7,6 @@ const StyledBurger = styled.div`
   display: none;
   width: 2rem;
   height: 2rem;
-  /* position: fixed;
-  top: 25px;
-  right: 20px; */
   z-index: 20;
 
   @media (max-width: ${constants.breakPoints.medium}) {

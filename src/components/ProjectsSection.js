@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import SectionTitle from "./UIComponents/SectionTitle"
 import projects from "../constants/projects";

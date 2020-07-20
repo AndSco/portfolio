@@ -35,7 +35,7 @@ const ModalDemo = ({project, handleModal}) => {
           height="100%"
           src={demoUrl}
           onLoad={() => setIsLoading(false)}
-          // title={project}
+          title="projectDemo"
           frameBorder="0"
         />
       </DemoBox>

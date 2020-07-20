@@ -3,9 +3,9 @@ export default [
     title: "#COVID19 Update",
     description:
       "My quarantine project! Web app tracking the daily developments of the coronavirus outbreak worldwide, visually comparing chronological and quantitative data by country and giving a historical overview of past pandemics. The data is sourced from the public repository of the Johns Hopkins University.",
-    stack: ["React", "NodeJS", "D3", "API", "Express"],
+    stack: ["React", "D3"],
     picName: "covid19.png",
-    demoUrl: "https://www.youtube.com/embed/7qsP-GybXGA",
+    demoUrl: "https://www.youtube.com/embed/etmthIYkeLs",
     url: "https://covid19-update.herokuapp.com/",
     githubRepository: "https://github.com/AndSco/COVID19",
   },

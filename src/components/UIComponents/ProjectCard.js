@@ -66,7 +66,7 @@ const Description = styled.div`
 `
 
 const TechItem = styled.h6`
-  margin: 0.2rem 0.4rem;
+  margin: 0.4rem;
   color: ${props => props.theme.secondaryDetails};
   font-size: 0.7rem;
   font-weight: 300;
@@ -80,12 +80,13 @@ const StackListContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 1.5rem;
+
+  justify-content: ${props => props.orientation === "left" ? "flex-start" : "flex-end"};
 `
 
-const StackList = ({ stack }) => {
-  const theme = useContext(ThemeContext)
+const StackList = ({ stack, orientation }) => {
   return (
-    <StackListContainer>
+    <StackListContainer orientation={orientation}>
       {stack.map(tech => (
         <TechItem key={tech}>{tech}</TechItem>
       ))}
@@ -142,7 +143,7 @@ const ProjectCard = ({
       <TextSide orientation={orientation}>
         <Title>{title}</Title>
         <Description>{description}</Description>
-        <StackList stack={stack} />
+        <StackList stack={stack} orientation={orientation} />
         <LinksSection url={url} githubRepository={githubRepository} />
       </TextSide>
       <ProjectImage2

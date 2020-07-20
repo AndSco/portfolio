@@ -90,7 +90,7 @@ const MenuMobile = ({ isMenuVisible, closeMobileMenu }) => {
         closeMobileMenu()
       }
     },
-    [current]
+    [current, closeMobileMenu]
   )
 
   React.useEffect(() => {

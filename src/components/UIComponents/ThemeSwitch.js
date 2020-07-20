@@ -5,7 +5,12 @@ const ThemeSwitch = ({ changeTheme, theme }) => {
   return (
     <section>
       <div className="toggle-btn" id="_1st-toggle-btn">
-        <input type="checkbox" onChange={changeTheme} defaultChecked={theme !== "light"} />
+        <input
+          type="checkbox"
+          onChange={changeTheme}
+          defaultChecked={theme !== "light"}
+          aria-label="theme-switch"
+        />
         <span></span>
       </div>
     </section>
