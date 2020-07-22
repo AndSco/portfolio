@@ -3,7 +3,7 @@ export default [
     title: "#COVID19 Update",
     description:
       "My quarantine project! Web app tracking the daily developments of the coronavirus outbreak worldwide, visually comparing chronological and quantitative data by country and giving a historical overview of past pandemics. The data is sourced from the public repository of the Johns Hopkins University.",
-    stack: ["React", "D3"],
+    stack: ["React", "D3", "Web-scraping"],
     picName: "covid19.png",
     demoUrl: "https://www.youtube.com/embed/etmthIYkeLs",
     url: "https://covid19-update.herokuapp.com/",
@@ -22,17 +22,18 @@ export default [
   {
     title: "Automation tools",
     description:
-      "Repetitive and mind-numbing tasks are the stuff of nightmares! Like copy-pasting a lengthy web-page to a word document and format it section-by-section, or going through a never-ending procedure just to send out a newsletter. Automation to the rescue! I created this web app, a mix of browser automation & web-scraping, to automate some particularly boring routines at my previous workplace and integrate various non-connected corporate tools into one single workflow.",
+      "Repetitive and mind-numbing tasks are the stuff of nightmares! Like copy-pasting a lengthy web-page to a word document and format it section-by-section, going through a never-ending procedure just to send out a newsletter, or extracting the text of a newspaper article from a photo. Automation to the rescue! I created this web app, a mix of browser automation & web-scraping, to automate some particularly boring routines at my previous workplace and integrate various non-connected corporate tools into one single workflow.",
     stack: [
       "React",
       "NodeJS",
       "Express",
-      "Web-Scraping",
+      "Web-scraping",
       "Puppeteer",
       "CheerioJS",
+      "Tesseract",
     ],
     picName: "automationTools.png",
-    demoUrl: "https://www.youtube.com/embed/cGB7Lq7jPKs",
+    demoUrl: "https://www.youtube.com/embed/RB0Nf2zNCqY",
     url: "https://ecrep-automation-tools.herokuapp.com/",
     githubRepository: "https://github.com/AndSco/DNS_puppeteer",
   },
