@@ -94,7 +94,11 @@ const ContactDetails = () => {
         text="My Github repositories"
         link="https://github.com/AndSco?tab=repositories"
       />
-      <ContactDetail icon={"file-pdf"} text="See my CV" link="cv.pdf" />
+      <ContactDetail
+        icon={"file-pdf"}
+        text="See & download my Curriculum Vitae"
+        link="Andrea_Scorcia_CV.pdf"
+      />
     </LinksIcons>
   )
 }
