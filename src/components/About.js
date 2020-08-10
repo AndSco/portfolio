@@ -21,15 +21,10 @@ const Content = styled.div`
 const About = () => {
   return (
     <SkewedContainer id="aboutSection" scope="about">
-      <Content>
+      <Content data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">
         <div style={{ display: "flex", flexDirection: "column" }}>
           <SectionTitle title="About me" />
-          <ParagraphText
-            padding={"0 0 2rem 0"}
-            data-sal="slide-up"
-            data-sal-delay="400"
-            data-sal-easing="ease"
-          >
+          <ParagraphText padding={"0 0 2rem 0"}>
             Hello! I’m Andrea, a self-taught Javascript developer based in Brno,
             Czech Republic. I've been working for more than 10 years in
             international organisations such as the European Commission,

@@ -6,6 +6,7 @@ import constants from "../constants/constants"
 import ModalDemo from "./ModalDemo"
 import ProjectCard2 from "./UIComponents/ProjectCard"
 import { useModal } from "../constants/hooks"
+import FlexColumn from "./UIComponents/FlexColumn"
 
 const StyledContainer = styled.div`
   padding: 6rem ${constants.padding.left} 6rem ${constants.padding.right};
@@ -38,20 +39,22 @@ const ProjectsSection = () => {
       {isModalOpen && (
         <ModalDemo project={currentProject} handleModal={handleModal} />
       )}
-      <SectionTitle
-        title="Some of my projects"
-        // styles={{ borderBottom: "2px solid", paddingBottom: "1rem" }}
-      />
-      <ExplanationParagraph
+      <FlexColumn
         data-sal="slide-up"
         data-sal-delay="400"
         data-sal-easing="ease"
       >
-        A few of my projects have been built for internal use at my former
-        workplace. Since these contain sensitive information, they are
-        accessible only via authentication... That's why for each project I
-        included a short video-demo showing its main features.
-      </ExplanationParagraph>
+        <SectionTitle
+          title="Some of my projects"
+          // styles={{ borderBottom: "2px solid", paddingBottom: "1rem" }}
+        />
+        <ExplanationParagraph>
+          A few of my projects have been built for internal use at my former
+          workplace. Since these contain sensitive information, they are
+          accessible only via authentication... That's why for each project I
+          included a short video-demo showing its main features.
+        </ExplanationParagraph>
+      </FlexColumn>
       <div style={{ display: "flex", flexDirection: "column" }}>
         {projects.map((proj, index) => {
           return (

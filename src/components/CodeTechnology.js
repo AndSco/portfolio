@@ -98,7 +98,7 @@ const TechIcon = ({ iconName, techName }) => {
 
 const CodeTechnology = () => {
   return (
-    <Wrapper data-sal="slide-left" data-sal-delay="1000" data-sal-easing="ease">
+    <Wrapper data-sal="slide-left" data-sal-delay="600" data-sal-easing="ease">
       <h4
         style={{
           marginBottom: 30,

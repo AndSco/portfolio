@@ -47,12 +47,7 @@ const SectionTitle = styled.h2`
 
 const Title = ({ title, styles }) => {
   return (
-    <SectionTitle
-      styles={styles}
-      data-sal="slide-up"
-      data-sal-delay="400"
-      data-sal-easing="ease"
-    >
+    <SectionTitle styles={styles}>
       <Asterisk />
       {title}
     </SectionTitle>
