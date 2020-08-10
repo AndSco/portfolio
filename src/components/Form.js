@@ -1,7 +1,6 @@
-import React, { useState } from "react";
-import styled from "styled-components";
-import constants from "../constants/constants";
-
+import React, { useState } from "react"
+import styled from "styled-components"
+import constants from "../constants/constants"
 
 const StyledForm = styled.form`
   display: flex;
@@ -85,7 +84,7 @@ const Button = styled.button`
   }
 `
 
-const Form = ({handleModal}) => {
+const Form = ({ handleModal }) => {
   const startingFormState = {
     name: "",
     email: "",
@@ -129,6 +128,9 @@ const Form = ({handleModal}) => {
       method="POST"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
+      data-sal="slide-up"
+      data-sal-delay="400"
+      data-sal-easing="ease"
     >
       <input
         type="hidden"
@@ -173,4 +175,4 @@ const Form = ({handleModal}) => {
   )
 }
 
-export default Form;
+export default Form

@@ -1,12 +1,11 @@
-import React, { useState } from "react";
-import styled from "styled-components";
+import React, { useState } from "react"
+import styled from "styled-components"
 import SectionTitle from "./UIComponents/SectionTitle"
-import projects from "../constants/projects";
-import constants from "../constants/constants";
-import ModalDemo from "./ModalDemo";
-import ProjectCard2 from "./UIComponents/ProjectCard";
-import { useModal } from "../constants/hooks";
-
+import projects from "../constants/projects"
+import constants from "../constants/constants"
+import ModalDemo from "./ModalDemo"
+import ProjectCard2 from "./UIComponents/ProjectCard"
+import { useModal } from "../constants/hooks"
 
 const StyledContainer = styled.div`
   padding: 6rem ${constants.padding.left} 6rem ${constants.padding.right};
@@ -30,9 +29,9 @@ const ExplanationParagraph = styled.p`
 `
 
 const ProjectsSection = () => {
-  const { isModalOpen, handleModal } = useModal();
-  const [currentProject, setCurrentProject] = useState(null);
-  const prepareProjectForModal = (project) => setCurrentProject(project);
+  const { isModalOpen, handleModal } = useModal()
+  const [currentProject, setCurrentProject] = useState(null)
+  const prepareProjectForModal = project => setCurrentProject(project)
 
   return (
     <StyledContainer id="projectsSection">
@@ -43,7 +42,16 @@ const ProjectsSection = () => {
         title="Some of my projects"
         // styles={{ borderBottom: "2px solid", paddingBottom: "1rem" }}
       />
-      <ExplanationParagraph>A few of my projects have been built for internal use at my former workplace. Since these contain sensitive information, they are accessible only via authentication... That's why for each project I included a short video-demo showing its main features.</ExplanationParagraph>
+      <ExplanationParagraph
+        data-sal="slide-up"
+        data-sal-delay="400"
+        data-sal-easing="ease"
+      >
+        A few of my projects have been built for internal use at my former
+        workplace. Since these contain sensitive information, they are
+        accessible only via authentication... That's why for each project I
+        included a short video-demo showing its main features.
+      </ExplanationParagraph>
       <div style={{ display: "flex", flexDirection: "column" }}>
         {projects.map((proj, index) => {
           return (
@@ -61,4 +69,4 @@ const ProjectsSection = () => {
   )
 }
 
-export default ProjectsSection;
+export default ProjectsSection

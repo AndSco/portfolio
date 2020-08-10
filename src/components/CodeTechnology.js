@@ -1,8 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import constants from "../constants/constants";
-
+import React from "react"
+import styled from "styled-components"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import constants from "../constants/constants"
 
 export const techs = [
   {
@@ -53,7 +52,6 @@ const Circle = styled.div`
   margin: 0 1rem 0.5rem 1rem;
   transition: all 0.3s ease;
 
-
   @media (max-width: ${constants.breakPoints.medium}) {
     width: 60px;
     height: 60px;
@@ -72,7 +70,7 @@ const CircleContainer = styled.div`
 
   @media (max-width: ${constants.breakPoints.medium}) {
     min-width: 75vw;
-  };
+  }
 `
 
 const IconContainer = styled.div`
@@ -100,20 +98,23 @@ const TechIcon = ({ iconName, techName }) => {
 
 const CodeTechnology = () => {
   return (
-    <Wrapper>
-    <h4 style={{
-      marginBottom: 30, 
-      // fontFamily: "proxima nova", 
-      textTransform: "uppercase", 
-      fontWeight: 400
-    }}>My current stack</h4>
-    <CircleContainer>
-      {techs.map(tech => (
-        <TechIcon key={tech.icon} iconName={tech.icon} techName={tech.name} />
-      ))}
-    </CircleContainer>
+    <Wrapper data-sal="slide-left" data-sal-delay="1000" data-sal-easing="ease">
+      <h4
+        style={{
+          marginBottom: 30,
+          textTransform: "uppercase",
+          fontWeight: 400,
+        }}
+      >
+        My current stack
+      </h4>
+      <CircleContainer>
+        {techs.map(tech => (
+          <TechIcon key={tech.icon} iconName={tech.icon} techName={tech.name} />
+        ))}
+      </CircleContainer>
     </Wrapper>
   )
 }
 
-export default CodeTechnology;
+export default CodeTechnology

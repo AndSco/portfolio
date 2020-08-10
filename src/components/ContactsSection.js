@@ -3,10 +3,10 @@ import styled from "styled-components"
 import SectionTitle from "./UIComponents/SectionTitle"
 import constants from "../constants/constants"
 import Footer from "./Footer"
-import Form from "./Form";
+import Form from "./Form"
 import ContactDetails from "./ContactDetails"
-import ModalEmail from "./ModalEmail";
-import { useModal } from "../constants/hooks";
+import ModalEmail from "./ModalEmail"
+import { useModal } from "../constants/hooks"
 
 const Container = styled.div`
   background-color: ${props => props.theme.contactsStrip};
@@ -33,21 +33,15 @@ const ContentWrapper = styled.div`
 `
 
 const ContactsSection = () => {
-  const { isModalOpen, handleModal } = useModal();
+  const { isModalOpen, handleModal } = useModal()
 
   return (
     <Container id="contactsSection">
-      {isModalOpen && (
-        <ModalEmail handleModal={handleModal} />
-      )}
+      {isModalOpen && <ModalEmail handleModal={handleModal} />}
       <SectionTitle title="Get in touch!" />
-      <ContentWrapper
-        data-sal="fade"
-        data-sal-delay="300"
-        data-sal-easing="ease"
-      >
+      <ContentWrapper>
         <Form handleModal={handleModal} />
-        <ContactDetails />  
+        <ContactDetails />
       </ContentWrapper>
       <Footer />
     </Container>
@@ -55,6 +49,3 @@ const ContactsSection = () => {
 }
 
 export default ContactsSection
-
-
-

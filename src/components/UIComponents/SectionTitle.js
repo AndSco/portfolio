@@ -1,15 +1,15 @@
-import React from "react";
-import styled from "styled-components";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import constants from "../../constants/constants";
+import React from "react"
+import styled from "styled-components"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import constants from "../../constants/constants"
 
 const AsteriskContainer = styled.div`
   color: ${props => props.color || props.theme.highlights};
   margin-right: 0.7rem;
-  transition: all .6s ease;
+  transition: all 0.6s ease;
 `
 
-export const Asterisk = ({color}) => {
+export const Asterisk = ({ color }) => {
   return (
     <AsteriskContainer color={color}>
       <FontAwesomeIcon icon="star-of-life" size="sm" />
@@ -45,13 +45,18 @@ const SectionTitle = styled.h2`
   }
 `
 
-const Title = ({title, styles}) => {
+const Title = ({ title, styles }) => {
   return (
-    <SectionTitle styles={styles}>
+    <SectionTitle
+      styles={styles}
+      data-sal="slide-up"
+      data-sal-delay="400"
+      data-sal-easing="ease"
+    >
       <Asterisk />
       {title}
     </SectionTitle>
   )
 }
 
-export default Title;
+export default Title

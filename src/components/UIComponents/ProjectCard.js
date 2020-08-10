@@ -1,8 +1,8 @@
 import React, { useContext } from "react"
 import styled, { ThemeContext } from "styled-components"
 import ProjectImage2 from "./ProjectImage"
-import ClickableIcon from "./ClickableIcon";
-import constants from "../../constants/constants";
+import ClickableIcon from "./ClickableIcon"
+import constants from "../../constants/constants"
 
 const TextSide = styled.div`
   display: flex;
@@ -81,7 +81,8 @@ const StackListContainer = styled.div`
   flex-wrap: wrap;
   margin-bottom: 1.5rem;
 
-  justify-content: ${props => props.orientation === "left" ? "flex-start" : "flex-end"};
+  justify-content: ${props =>
+    props.orientation === "left" ? "flex-start" : "flex-end"};
 `
 
 const StackList = ({ stack, orientation }) => {
@@ -94,10 +95,17 @@ const StackList = ({ stack, orientation }) => {
   )
 }
 
-const LinksSection = ({url, githubRepository}) => {
+const LinksSection = ({ url, githubRepository }) => {
   const theme = useContext(ThemeContext)
   return (
-    <div style={{ display: "flex", margin: "0 .8rem", width: 50, justifyContent: "space-between" }}>
+    <div
+      style={{
+        display: "flex",
+        margin: "0 .8rem",
+        width: 50,
+        justifyContent: "space-between",
+      }}
+    >
       <ClickableIcon
         icon={["fab", "github"]}
         color={theme.secondaryDetails}
@@ -114,7 +122,6 @@ const LinksSection = ({url, githubRepository}) => {
     </div>
   )
 }
-
 
 const CardContainer = styled.div`
   display: flex;
@@ -133,11 +140,19 @@ const ProjectCard = ({
   handleModal,
   prepareProjectForModal,
 }) => {
-  const { title, description, stack, picName, demoUrl, url, githubRepository } = project;
+  const {
+    title,
+    description,
+    stack,
+    picName,
+    demoUrl,
+    url,
+    githubRepository,
+  } = project
   return (
     <CardContainer
-      data-sal="fade"
-      data-sal-delay="300"
+      data-sal="slide-up"
+      data-sal-delay="10"
       data-sal-easing="ease"
     >
       <TextSide orientation={orientation}>

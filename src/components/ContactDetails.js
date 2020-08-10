@@ -1,8 +1,7 @@
-import React, {useState} from "react";
-import styled from "styled-components";
-import constants from "../constants/constants";
+import React, { useState } from "react"
+import styled from "styled-components"
+import constants from "../constants/constants"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-
 
 const LinksIcons = styled.div`
   display: flex;
@@ -12,7 +11,7 @@ const LinksIcons = styled.div`
   padding: 0 1.5rem;
   margin: 3rem 0;
   flex-direction: column;
-  border-right: 3px solid ${props => props.theme.highlights};
+  border-right: 7px solid ${props => props.theme.highlights};
 
   @media (max-width: ${constants.breakPoints.medium}) {
     flex-direction: row;
@@ -60,6 +59,9 @@ const ContactDetail = ({ icon, text, link }) => {
       <ContactDetailContainer
         onMouseEnter={() => setIsTextShowing(true)}
         onMouseLeave={() => setIsTextShowing(false)}
+        data-sal="slide-left"
+        data-sal-delay="400"
+        data-sal-easing="ease"
       >
         <LinkIconText isTextShowing={isTextShowing}>{text}</LinkIconText>
         <FontAwesomeIcon
@@ -74,7 +76,6 @@ const ContactDetail = ({ icon, text, link }) => {
     </a>
   )
 }
-
 
 const ContactDetails = () => {
   return (
@@ -103,4 +104,4 @@ const ContactDetails = () => {
   )
 }
 
-export default ContactDetails;
+export default ContactDetails
