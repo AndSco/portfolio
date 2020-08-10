@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from "react";
-import styled from "styled-components";
-import Logo from "./Logo";
-import ButtonLight from "./UIComponents/ButtonLight";
-import FlexJustified from "./UIComponents/FlexRow";
-import ThemeSwitch from "./UIComponents/ThemeSwitch";
-import constants from "../constants/constants";
-import Anchor from "./UIComponents/Anchor";
-import Burger from "./UIComponents/Burger";
-
+import React, { useState, useEffect } from "react"
+import styled from "styled-components"
+import Logo from "./Logo"
+import ButtonLight from "./UIComponents/ButtonLight"
+import FlexJustified from "./UIComponents/FlexRow"
+import ThemeSwitch from "./UIComponents/ThemeSwitch"
+import constants from "../constants/constants"
+import Anchor from "./UIComponents/Anchor"
+import Burger from "./UIComponents/Burger"
+import cv from "../images/Andrea_Scorcia_CV.pdf"
 
 const NavLink = styled.div`
   font-size: .7rem;
@@ -72,8 +72,6 @@ const LinksContainer = styled(FlexJustified)`
   }
 `
 
-
-
 const NavRight = () => {
   return (
     <LinksContainer data-sal="fade" data-sal-delay="300" data-sal-easing="ease">
@@ -91,7 +89,7 @@ const NavRight = () => {
           <NavLink>Contact</NavLink>
         </Anchor>
       </div>
-      <a href={"Andrea_Scorcia_CV.pdf"} target="_blank" rel="noreferrer">
+      <a href={cv} target="_blank" rel="noreferrer">
         <ButtonLight title="CURRICULUM VITAE" isHoverable={true} />
       </a>
     </LinksContainer>
@@ -99,45 +97,42 @@ const NavRight = () => {
 }
 
 const Navbar = ({ changeTheme, theme }) => {
-  const [isVisible, setIsVisible] = useState(true);
-  const [scrollPosition, setScrollPosition] = useState(0);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true)
+  const [scrollPosition, setScrollPosition] = useState(0)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
-  const closeMobileMenu = () => setIsMobileMenuOpen(false);
-  const openMobileMenu = () => setIsMobileMenuOpen(true);
-
+  const closeMobileMenu = () => setIsMobileMenuOpen(false)
+  const openMobileMenu = () => setIsMobileMenuOpen(true)
 
   const handleScroll = () => {
-    if (isMobileMenuOpen) return;
+    if (isMobileMenuOpen) return
     if (document.body.getBoundingClientRect().top === 0) {
-      setIsVisible(true);
-      return;
+      setIsVisible(true)
+      return
     }
-    setScrollPosition(document.body.getBoundingClientRect().top);
-    setIsVisible(document.body.getBoundingClientRect().top > scrollPosition);
+    setScrollPosition(document.body.getBoundingClientRect().top)
+    setIsVisible(document.body.getBoundingClientRect().top > scrollPosition)
   }
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   })
 
   return (
-    <Nav
-      isVisible={isVisible}
-      scrollPosition={scrollPosition}
-    >
+    <Nav isVisible={isVisible} scrollPosition={scrollPosition}>
       <Logo />
       <NavRight changeTheme={changeTheme} />
       <div style={{ display: "flex", alignItems: "center" }}>
         <ThemeSwitch changeTheme={changeTheme} theme={theme} />
-        <Burger 
-          isMobileMenuOpen={isMobileMenuOpen} 
-          closeMobileMenu={closeMobileMenu} 
-          openMobileMenu={openMobileMenu} />
+        <Burger
+          isMobileMenuOpen={isMobileMenuOpen}
+          closeMobileMenu={closeMobileMenu}
+          openMobileMenu={openMobileMenu}
+        />
       </div>
     </Nav>
   )
 }
 
-export default Navbar;
+export default Navbar
