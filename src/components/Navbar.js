@@ -7,7 +7,7 @@ import ThemeSwitch from "./UIComponents/ThemeSwitch"
 import constants from "../constants/constants"
 import Anchor from "./UIComponents/Anchor"
 import Burger from "./UIComponents/Burger"
-import cv from "../images/Andrea_Scorcia_CV.pdf"
+import cv from "../files/Andrea_Scorcia_CV.pdf"
 
 const NavLink = styled.div`
   font-size: .7rem;
