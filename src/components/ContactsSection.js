@@ -32,13 +32,29 @@ const ContentWrapper = styled.div`
   }
 `
 
+const TitleWrapper = styled.div`
+  display: inline-flex;
+
+  @media (max-width: ${constants.breakPoints.medium}) {
+    align-self: center;
+    justify-content: center;
+    font-size: 1.5rem;
+  }
+`
+
 const ContactsSection = () => {
   const { isModalOpen, handleModal } = useModal()
 
   return (
     <Container id="contactsSection">
       {isModalOpen && <ModalEmail handleModal={handleModal} />}
-      <SectionTitle title="Get in touch!" />
+      <TitleWrapper
+        data-sal="slide-up"
+        data-sal-delay="400"
+        data-sal-easing="ease"
+      >
+        <SectionTitle title="Get in touch!" />
+      </TitleWrapper>
       <ContentWrapper>
         <Form handleModal={handleModal} />
         <ContactDetails />
