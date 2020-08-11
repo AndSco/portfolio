@@ -33,6 +33,8 @@ const LinkIconText = styled.h5`
   padding-right: 1rem;
   padding-left: 10px;
   border-left: 2px solid ${props => props.theme.highlights};
+  padding-top: 5px;
+  padding-bottom: 5px;
 
   @media (max-width: ${constants.breakPoints.medium}) {
     display: none;
