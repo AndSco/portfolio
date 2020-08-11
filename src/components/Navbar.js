@@ -90,7 +90,7 @@ const NavRight = () => {
         </Anchor>
       </div>
       <a href={cv} target="_blank" rel="noreferrer">
-        <ButtonLight title="CURRICULUM VITAE" isHoverable={true} />
+        <ButtonLight title="See my CV" isHoverable={true} />
       </a>
     </LinksContainer>
   )

@@ -97,7 +97,7 @@ const ContactDetails = () => {
       />
       <ContactDetail
         icon={"file-pdf"}
-        text="See & download my Curriculum Vitae"
+        text="See & download my CV"
         link="Andrea_Scorcia_CV.pdf"
       />
     </LinksIcons>
