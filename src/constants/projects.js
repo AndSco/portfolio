@@ -40,12 +40,12 @@ export default [
   {
     title: "Organigram generator",
     description:
-      "Staff changes happen all the time... Instead of designing a new diagram every time a new intern joins the organisation, this web application allows the staff of the European Commission Representation in Malta to create, update and save the organisation’s organigram as a PDF in a few clicks. It also serves as a contacts’ directory to call or email colleagues with one tap.",
-    stack: ["React", "React Context", "NodeJS", "D3", "API", "PWA", "MongoDB"],
-    picName: "organigram.png",
+      "Staff changes happen all the time... Instead of designing a new diagram every time a new intern joins the organisation, this web application allows the staff of the European Commission Representation in Malta to create, update and save the organisation’s organigram as a PDF in a few clicks. It also serves as a contacts’ directory to call or email colleagues with just one tap.",
+    stack: ["React", "TypeScript", "NodeJS", "MongoDB"],
+    picName: "organigramEC.png",
     demoUrl: "https://www.youtube.com/embed/yS4GSCnt16k",
-    url: "https://ecrep-organigram.herokuapp.com/",
-    githubRepository: "https://github.com/AndSco/organigram",
+    url: "https://organigram-ecrep.herokuapp.com/",
+    githubRepository: "https://github.com/AndSco/ecrep-organigram-typescript",
   },
   {
     title: "Kayaking mobile app",

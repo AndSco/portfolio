@@ -32,12 +32,10 @@ const About = () => {
             Malta. In the past three years, I took up web development and
             created a number of web & mobile applications for work and for fun.
             When it comes to front-end, my tool of choice is ReactJS (with
-            functional components & hooks), and React Native on mobile (with
-            Expo). I also love the development experience offered by GatsbyJS.
-            On the back-end side, I usually reach for NodeJs, with Express and
-            MongoDB. This is the stack I'm currently comfortable with, but I'm
-            always eager to learn new stuff (I'm studying TypeScript at the
-            moment).
+            functional components & hooks), coupled with TypeScript. On the
+            back-end side, I usually reach for NodeJs, with Express and MongoDB.
+            This is the stack I'm currently comfortable with, but I'm always
+            eager to learn new stuff!
           </ParagraphText>
         </div>
         <CodeTechnology />

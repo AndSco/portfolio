@@ -2,37 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import constants from "../constants/constants"
-
-export const techs = [
-  {
-    name: "Javascript",
-    icon: ["fab", "js"],
-  },
-  {
-    name: "React",
-    icon: ["fab", "react"],
-  },
-  {
-    name: "NodeJS",
-    icon: ["fab", "node"],
-  },
-  {
-    name: "HTML5",
-    icon: ["fab", "html5"],
-  },
-  {
-    name: "CSS3",
-    icon: ["fab", "css3-alt"],
-  },
-  {
-    name: "React Native",
-    icon: "mobile-alt",
-  },
-  {
-    name: "MongoDB",
-    icon: "database",
-  },
-]
+import { techs } from "../constants/technologies"
 
 const Wrapper = styled.div`
   display: flex;
@@ -85,11 +55,15 @@ const IconContainer = styled.div`
   }
 `
 
-const TechIcon = ({ iconName, techName }) => {
+const TechIcon = ({ iconName, techName, isTypeScript }) => {
   return (
     <IconContainer>
       <Circle>
-        <FontAwesomeIcon icon={iconName} size="2x" />
+        {!isTypeScript ? (
+          <FontAwesomeIcon icon={iconName} size="2x" />
+        ) : (
+          <h2 style={{ fontSize: "2em", margin: 0 }}>TS</h2>
+        )}
       </Circle>
       <h6>{techName}</h6>
     </IconContainer>
@@ -112,6 +86,11 @@ const CodeTechnology = () => {
         {techs.map(tech => (
           <TechIcon key={tech.icon} iconName={tech.icon} techName={tech.name} />
         ))}
+        <TechIcon
+          iconName="TypeScript"
+          techName="TypeScript"
+          isTypeScript={true}
+        />
       </CircleContainer>
     </Wrapper>
   )
