@@ -70,6 +70,10 @@ const TechItem = styled.h6`
   color: ${props => props.theme.secondaryDetails};
   font-size: 0.7rem;
   font-weight: bold;
+  padding: 0.5em;
+  background-color: white;
+  border-radius: 40px;
+  border: 1px solid;
 
   @media (max-width: ${constants.breakPoints.medium}) {
     font-size: 12px;
