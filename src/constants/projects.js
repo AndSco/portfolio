@@ -10,6 +10,16 @@ export default [
     githubRepository: "https://github.com/AndSco/COVID19",
   },
   {
+    title: "Organigram generator",
+    description:
+      "Staff changes happen all the time... Instead of designing a new diagram every time a new intern joins the organisation, this web application allows the staff of the European Commission Representation in Malta to create, update and save the organisation’s organigram as a PDF in a few clicks. It also serves as a contacts’ directory to call or email colleagues with just one tap.",
+    stack: ["React", "TypeScript", "NodeJS", "MongoDB"],
+    picName: "organigramEC.png",
+    demoUrl: "https://youtu.be/Ry6yp9EbaaI",
+    url: "https://organigram-ecrep.herokuapp.com/",
+    githubRepository: "https://github.com/AndSco/ecrep-organigram-typescript",
+  },
+  {
     title: "@ec.events.mt",
     description:
       "Event management platform built for the Representation of the European Commission in Malta to handle registration for their events. The organiser can create his/her event, share the registration link with invitees and confirm or reject attendance, so as to avoid gate-crashing.",
@@ -36,16 +46,6 @@ export default [
     demoUrl: "https://www.youtube.com/embed/RB0Nf2zNCqY",
     url: "https://ecrep-automation-tools.herokuapp.com/",
     githubRepository: "https://github.com/AndSco/DNS_puppeteer",
-  },
-  {
-    title: "Organigram generator",
-    description:
-      "Staff changes happen all the time... Instead of designing a new diagram every time a new intern joins the organisation, this web application allows the staff of the European Commission Representation in Malta to create, update and save the organisation’s organigram as a PDF in a few clicks. It also serves as a contacts’ directory to call or email colleagues with just one tap.",
-    stack: ["React", "TypeScript", "NodeJS", "MongoDB"],
-    picName: "organigramEC.png",
-    demoUrl: "https://www.youtube.com/embed/yS4GSCnt16k",
-    url: "https://organigram-ecrep.herokuapp.com/",
-    githubRepository: "https://github.com/AndSco/ecrep-organigram-typescript",
   },
   {
     title: "Kayaking mobile app",
