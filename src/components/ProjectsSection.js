@@ -4,7 +4,7 @@ import SectionTitle from "./UIComponents/SectionTitle"
 import projects from "../constants/projects"
 import constants from "../constants/constants"
 import ModalDemo from "./ModalDemo"
-import ProjectCard2 from "./UIComponents/ProjectCard"
+import ProjectCard from "./UIComponents/ProjectCard"
 import { useModal } from "../constants/hooks"
 import FlexColumn from "./UIComponents/FlexColumn"
 
@@ -58,7 +58,7 @@ const ProjectsSection = () => {
       <div style={{ display: "flex", flexDirection: "column" }}>
         {projects.map((proj, index) => {
           return (
-            <ProjectCard2
+            <ProjectCard
               key={proj.title}
               project={proj}
               orientation={index % 2 === 0 ? "left" : "right"}

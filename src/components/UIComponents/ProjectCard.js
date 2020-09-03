@@ -1,6 +1,6 @@
 import React, { useContext } from "react"
 import styled, { ThemeContext } from "styled-components"
-import ProjectImage2 from "./ProjectImage"
+import ProjectImage from "./ProjectImage"
 import ClickableIcon from "./ClickableIcon"
 import constants from "../../constants/constants"
 
@@ -69,7 +69,7 @@ const TechItem = styled.h6`
   margin: 0.4rem;
   color: ${props => props.theme.secondaryDetails};
   font-size: 0.7rem;
-  font-weight: 300;
+  font-weight: bold;
 
   @media (max-width: ${constants.breakPoints.medium}) {
     font-size: 12px;
@@ -161,7 +161,7 @@ const ProjectCard = ({
         <StackList stack={stack} orientation={orientation} />
         <LinksSection url={url} githubRepository={githubRepository} />
       </TextSide>
-      <ProjectImage2
+      <ProjectImage
         project={project}
         picName={picName}
         demoUrl={demoUrl}

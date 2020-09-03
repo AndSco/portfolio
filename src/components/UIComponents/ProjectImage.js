@@ -2,8 +2,8 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import { graphql, StaticQuery } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import constants from "../../constants/constants";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import constants from "../../constants/constants"
 
 const PlayButton = styled.h1`
   color: white;
@@ -68,7 +68,6 @@ const ProjectImage = ({
     openModal()
   }
 
-
   return (
     <StaticQuery
       query={graphql`
@@ -130,4 +129,3 @@ const ProjectImage = ({
 }
 
 export default ProjectImage
-
