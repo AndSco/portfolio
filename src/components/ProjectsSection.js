@@ -44,10 +44,7 @@ const ProjectsSection = () => {
         data-sal-delay="400"
         data-sal-easing="ease"
       >
-        <SectionTitle
-          title="Some of my projects"
-          // styles={{ borderBottom: "2px solid", paddingBottom: "1rem" }}
-        />
+        <SectionTitle title="Some of my projects" />
         <ExplanationParagraph>
           A few of my projects have been built for internal use at my former
           workplace. Since these contain sensitive information, they are

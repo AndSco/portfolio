@@ -3,6 +3,7 @@ import styled, { ThemeContext } from "styled-components"
 import ProjectImage from "./ProjectImage"
 import ClickableIcon from "./ClickableIcon"
 import constants from "../../constants/constants"
+import { lightTheme } from "./Themes"
 
 const TextSide = styled.div`
   display: flex;
@@ -74,6 +75,10 @@ const TechItem = styled.h6`
   background-color: white;
   border-radius: 40px;
   border: 1px solid;
+  color: ${props =>
+    props.theme === lightTheme
+      ? props.theme.secondaryDetails
+      : props.theme.body};
 
   @media (max-width: ${constants.breakPoints.medium}) {
     font-size: 12px;
