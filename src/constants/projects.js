@@ -20,16 +20,6 @@ export default [
     githubRepository: "https://github.com/AndSco/ecrep-organigram-typescript",
   },
   {
-    title: "@ec.events.mt",
-    description:
-      "Event management platform built for the Representation of the European Commission in Malta to handle registration for their events. The organiser can create his/her event, share the registration link with invitees and confirm or reject attendance, so as to avoid gate-crashing.",
-    stack: ["React", "React Context", "NodeJS", "Express", "MongoDB"],
-    picName: "ec-events.png",
-    demoUrl: "https://www.youtube.com/embed/bEwRsJQkEgU",
-    url: "https://ec-events-mt.herokuapp.com/",
-    githubRepository: "https://github.com/AndSco/EC.events.mt",
-  },
-  {
     title: "Automation tools",
     description:
       "Repetitive and mind-numbing tasks are the stuff of nightmares! Like copy-pasting a lengthy web-page to a word document and format it section-by-section, going through a never-ending procedure just to send out a newsletter, or extracting the text of a newspaper article from a photo. Automation to the rescue! I created this web app, a mix of browser automation & web-scraping, to automate some particularly boring routines at my previous workplace and integrate various non-connected corporate tools into one single workflow.",
@@ -63,6 +53,16 @@ export default [
     demoUrl: "https://www.youtube.com/embed/pSsuKNdnCoA",
     url: "NA",
     githubRepository: "https://github.com/AndSco/seakatsRNclient",
+  },
+  {
+    title: "@ec.events.mt",
+    description:
+      "Event management platform built for the Representation of the European Commission in Malta to handle registration for their events. The organiser can create his/her event, share the registration link with invitees and confirm or reject attendance, so as to avoid gate-crashing.",
+    stack: ["React", "React Context", "NodeJS", "Express", "MongoDB"],
+    picName: "ec-events.png",
+    demoUrl: "https://www.youtube.com/embed/bEwRsJQkEgU",
+    url: "https://ec-events-mt.herokuapp.com/",
+    githubRepository: "https://github.com/AndSco/EC.events.mt",
   },
   {
     title: "FamilyWeather+",
