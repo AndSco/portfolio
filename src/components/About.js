@@ -25,7 +25,10 @@ const About = () => {
         <div style={{ display: "flex", flexDirection: "column" }}>
           <SectionTitle title="About me" />
           <ParagraphText padding={"0 0 2rem 0"}>
-            Hello, I'm Andrea, a self-taught Javascript developer based in Brno.
+            Hello, I'm Andrea, a self-taught Javascript and ReactJS developer
+            based in Brno, Czech Republic.
+            <br />
+            <br />
             I've been working for more than ten years in communications,
             including with international organisations such as the European
             Commission, managing the online & visual communication for its
