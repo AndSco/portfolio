@@ -18,13 +18,12 @@ export default {
   },
   fonts: {
     smallText: {
-      // fontFamily: "Roboto, sans-serif",
       size: ".9rem",
       weight: 400,
     },
     textSizeSmallerDevices: {
-      size: "16px", 
-      lineHeight: "26px"
+      size: "16px",
+      lineHeight: "26px",
     },
   },
 

@@ -25,17 +25,23 @@ const About = () => {
         <div style={{ display: "flex", flexDirection: "column" }}>
           <SectionTitle title="About me" />
           <ParagraphText padding={"0 0 2rem 0"}>
-            Hello! I’m Andrea, a self-taught Javascript developer based in Brno,
-            Czech Republic. I've been working for more than 10 years in
-            international organisations such as the European Commission,
-            managing the online & visual communication for its Representation in
-            Malta. In the past three years, I took up web development and
-            created a number of web & mobile applications for work and for fun.
+            Hello, I'm Andrea, a self-taught Javascript developer based in Brno.
+            I've been working for more than ten years in communications,
+            including with international organisations such as the European
+            Commission, managing the online & visual communication for its
+            Representation in Malta. <br />
+            <br />
+            Over the past three years, I took up web development and created a
+            number of web & mobile applications for work and for fun. <br />
+            <br />
             When it comes to front-end, my tool of choice is ReactJS (with
-            functional components & hooks), coupled with TypeScript. On the
-            back-end side, I usually reach for NodeJs, with Express and MongoDB.
-            This is the stack I'm currently comfortable with, but I'm always
-            eager to learn new stuff!
+            functional components & hooks), with the additional safety net of
+            Typescript. I have also experimented with React Native to bring my
+            apps on small screens. <br />
+            <br />
+            On the back-end side, I usually reach for NodeJS, Express and
+            MongoDB. This is the stack I'm currently comfortable with, but I'm
+            always eager to learn new stuff!
           </ParagraphText>
         </div>
         <CodeTechnology />
