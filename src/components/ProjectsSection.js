@@ -22,7 +22,8 @@ const StyledContainer = styled.div`
 const ExplanationParagraph = styled.p`
   max-width: 900px;
   align-self: flex-start;
-  line-height: 1.7rem;
+  line-height: 1.4rem;
+  font-size: 0.9rem;
 
   @media (max-width: ${constants.breakPoints.medium}) {
     align-self: center;
