@@ -1,9 +1,8 @@
-import React from "react";
-import styled from "styled-components";
-import BackgroundImage from "./BackgroundImage";
-import FadeInDiv from "./UIComponents/FadeInDiv";
-import constants from "../constants/constants";
-
+import React from "react"
+import styled from "styled-components"
+import BackgroundImage from "./BackgroundImage"
+import FadeInDiv from "./UIComponents/FadeInDiv"
+import constants from "../constants/constants"
 
 const BackgroundCircle = styled.div`
   min-width: 600px;
@@ -29,11 +28,11 @@ const BackgroundCircle = styled.div`
 const Circles = () => {
   return (
     <FadeInDiv>
-    <BackgroundCircle>
-      <BackgroundImage />
-    </BackgroundCircle>
+      <BackgroundCircle>
+        <BackgroundImage />
+      </BackgroundCircle>
     </FadeInDiv>
   )
 }
 
-export default Circles;
+export default Circles

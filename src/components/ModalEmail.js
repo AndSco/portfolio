@@ -1,10 +1,8 @@
-import React from "react";
-import styled from "styled-components";
-import ButtonLight from "./UIComponents/ButtonLight";
-import Modal from "./UIComponents/Modal";
-import { scaleUpText, fadeIn } from "../constants/animations";
-
-
+import React from "react"
+import styled from "styled-components"
+import ButtonLight from "./UIComponents/ButtonLight"
+import Modal from "./UIComponents/Modal"
+import { scaleUpText, fadeIn } from "../constants/animations"
 
 const ModalContent = styled.div`
   width: 100%;
@@ -21,7 +19,7 @@ const ModalHeader = styled.h4`
   font-size: 4rem;
   font-weight: 800;
   letter-spacing: -3px;
-  animation: ${scaleUpText} .3s ease-in-out;
+  animation: ${scaleUpText} 0.3s ease-in-out;
   text-align: center;
 `
 
@@ -46,4 +44,4 @@ const ModalEmail = ({ handleModal }) => {
   )
 }
 
-export default ModalEmail;
+export default ModalEmail

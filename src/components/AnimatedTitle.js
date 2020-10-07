@@ -1,9 +1,8 @@
 import React from "react"
 import "../styles/index.css"
-import styled from "styled-components";
-import {slideUp, slideDown} from "../constants/animations";
-import constants from "../constants/constants";
-
+import styled from "styled-components"
+import { slideUp, slideDown } from "../constants/animations"
+import constants from "../constants/constants"
 
 const Title = styled.div`
   font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir,
@@ -40,7 +39,6 @@ const Title = styled.div`
 `
 
 const AnimatedTitle = props => {
-
   return (
     <div>
       <Title main>Andrea</Title>
@@ -51,4 +49,4 @@ const AnimatedTitle = props => {
   )
 }
 
-export default AnimatedTitle;
+export default AnimatedTitle

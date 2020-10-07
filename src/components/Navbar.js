@@ -10,7 +10,7 @@ import Burger from "./UIComponents/Burger"
 import cv from "../files/Andrea_Scorcia_CV.pdf"
 
 const NavLink = styled.div`
-  font-size: .7rem;
+  font-size: 0.7rem;
   text-transform: uppercase;
   color: ${props => props.theme.text};
   display: flex;
@@ -18,19 +18,18 @@ const NavLink = styled.div`
   cursor: pointer;
   margin: 0 2.5rem;
   border-bottom: ${props => "0px solid " + props.theme.highlights};
-  transition: color 0.50s linear; 
-  
+  transition: color 0.5s linear;
+
   &:hover {
     transform: scale(1.1);
-    /* border-bottom: ${props => "2px solid " + props.theme.highlights}; */
   }
 
   &::after {
-    content: ""; 
+    content: "";
     height: 2px;
     width: 0px;
     background-color: ${props => props.theme.highlights};
-    transition: all 0.20s linear; 
+    transition: all 0.2s linear;
   }
 
   &:hover::after {

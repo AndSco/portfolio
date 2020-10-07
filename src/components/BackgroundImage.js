@@ -1,12 +1,11 @@
-import React, {useContext} from "react";
-import { graphql, useStaticQuery } from "gatsby";
-import styled, {ThemeContext} from "styled-components";
-import BackgroundImage from "gatsby-background-image";
-import constants from "../constants/constants";
-
+import React, { useContext } from "react"
+import { graphql, useStaticQuery } from "gatsby"
+import styled, { ThemeContext } from "styled-components"
+import BackgroundImage from "gatsby-background-image"
+import constants from "../constants/constants"
 
 const BackgroundSection = ({ className }) => {
-  const themeContext = useContext(ThemeContext);
+  const themeContext = useContext(ThemeContext)
   const data = useStaticQuery(graphql`
     query {
       placeholderImage: file(relativePath: { eq: "andrea_bw.jpg" }) {
@@ -17,20 +16,16 @@ const BackgroundSection = ({ className }) => {
         }
       }
     }
-  `);   
-  
-  const imageData = data.placeholderImage.childImageSharp.fluid;
-  const backgroundStack = [
-    themeContext.overlayGradient,
-    imageData,
-  ]  
+  `)
+
+  const imageData = data.placeholderImage.childImageSharp.fluid
+  const backgroundStack = [themeContext.overlayGradient, imageData]
   return (
     <BackgroundImage
       Tag="section"
       className={className}
       fluid={backgroundStack}
-    >
-    </BackgroundImage>
+    ></BackgroundImage>
   )
 }
 
@@ -48,6 +43,5 @@ const StyledBackgroundSection = styled(BackgroundSection)`
     height: 150px;
   }
 `
-
 
 export default StyledBackgroundSection

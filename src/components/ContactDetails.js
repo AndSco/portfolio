@@ -22,11 +22,9 @@ const LinksIcons = styled.div`
 `
 
 const LinkIconText = styled.h5`
-  /* font-family: "Proxima Nova"; */
   font-size: 0.8rem;
   margin: 0;
   font-weight: 500;
-  /* text-transform: uppercase; */
   opacity: ${props => (props.isTextShowing ? 1 : 0)};
   overflow: hidden;
   white-space: nowrap;

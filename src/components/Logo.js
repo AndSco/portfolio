@@ -1,9 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-
+import React from "react"
+import styled from "styled-components"
 
 const StyledLogo = styled.h1`
-  /* font-family: "Gugi"; */
   font-size: 1.5rem;
   padding: 14px;
   border: 1px solid ${props => props.theme.highlights};
@@ -29,4 +27,4 @@ const Logo = () => {
   )
 }
 
-export default Logo;
+export default Logo

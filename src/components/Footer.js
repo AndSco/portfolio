@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import constants from "../constants/constants";
+import React from "react"
+import styled from "styled-components"
+import constants from "../constants/constants"
 
 const StyledFooter = styled.div`
   display: flex;
@@ -18,10 +18,9 @@ const StyledFooter = styled.div`
 const Divider = styled.span`
   margin: 0 1rem;
   @media (max-width: ${constants.breakPoints.medium}) {
-    display: none; 
-  }  
+    display: none;
+  }
 `
-
 
 const Footer = () => (
   <StyledFooter className="footer">
@@ -39,6 +38,5 @@ const Footer = () => (
     </u>
   </StyledFooter>
 )
- 
 
-export default Footer;
+export default Footer

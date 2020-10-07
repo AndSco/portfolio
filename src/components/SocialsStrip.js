@@ -1,8 +1,8 @@
-import React from "react";
-import styled from "styled-components";
-import ClickableIcon from "./UIComponents/ClickableIcon";
-import constants from "../constants/constants";
-import { socialStripBounce } from "../constants/animations";
+import React from "react"
+import styled from "styled-components"
+import ClickableIcon from "./UIComponents/ClickableIcon"
+import constants from "../constants/constants"
+import { socialStripBounce } from "../constants/animations"
 
 const StyledStrip = styled.div`
   display: flex;
@@ -12,7 +12,7 @@ const StyledStrip = styled.div`
   left: 2rem;
   z-index: 2000;
   animation: ${socialStripBounce} 1s ease;
-  
+
   &::after {
     content: "";
     display: block;
@@ -29,17 +29,15 @@ const StyledStrip = styled.div`
 `
 
 const StyledIconContainer = styled.div`
-  margin: .5rem 0;
-  padding: .2rem;
+  margin: 0.5rem 0;
+  padding: 0.2rem;
 
   &:hover {
     transform: translateY(-3px) scale(1.2);
   }
-`;
+`
 
-
-
-const IconContainer = ({iconName, link}) => {
+const IconContainer = ({ iconName, link }) => {
   return (
     <StyledIconContainer>
       <ClickableIcon icon={iconName} link={link} />
@@ -66,4 +64,4 @@ const SocialStrip = () => {
   )
 }
 
-export default SocialStrip;
+export default SocialStrip

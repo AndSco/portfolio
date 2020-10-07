@@ -1,9 +1,8 @@
-import React, {useState} from "react";
-import styled from "styled-components";
-import constants from "../constants/constants";
-import Spinner from "./UIComponents/Spinner";
-import Modal from "./UIComponents/Modal";
-
+import React, { useState } from "react"
+import styled from "styled-components"
+import constants from "../constants/constants"
+import Spinner from "./UIComponents/Spinner"
+import Modal from "./UIComponents/Modal"
 
 const DemoBox = styled.div`
   width: 80vw;
@@ -16,20 +15,14 @@ const DemoBox = styled.div`
   }
 `
 
+const ModalDemo = ({ project, handleModal }) => {
+  const { demoUrl } = project
+  const [isLoading, setIsLoading] = useState(true)
 
-const ModalDemo = ({project, handleModal}) => {
-  const {demoUrl} = project;
-  const [isLoading, setIsLoading] = useState(true);
-
- return (
+  return (
     <Modal handleModal={handleModal}>
       <DemoBox>
-        {isLoading 
-          ?
-          <Spinner />
-          :
-          null
-        }
+        {isLoading ? <Spinner /> : null}
         <iframe
           width="100%"
           height="100%"
@@ -40,7 +33,7 @@ const ModalDemo = ({project, handleModal}) => {
         />
       </DemoBox>
     </Modal>
- )
+  )
 }
 
-export default ModalDemo;
+export default ModalDemo

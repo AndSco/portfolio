@@ -1,12 +1,11 @@
-import React from "react";
-import AnimatedTitle from "./AnimatedTitle";
-import styled from "styled-components";
-import constants from "../constants/constants";
+import React from "react"
+import AnimatedTitle from "./AnimatedTitle"
+import styled from "styled-components"
+import constants from "../constants/constants"
 import Circles from "./Circles"
-import ButtonLight from "./UIComponents/ButtonLight";
-import { AnchorLink } from "gatsby-plugin-anchor-links";
-import FadeInDiv from "./UIComponents/FadeInDiv";
-
+import ButtonLight from "./UIComponents/ButtonLight"
+import { AnchorLink } from "gatsby-plugin-anchor-links"
+import FadeInDiv from "./UIComponents/FadeInDiv"
 
 const TextContainer = styled.div`
   display: flex;
@@ -17,7 +16,7 @@ const TextContainer = styled.div`
     align-items: center;
     text-align: center;
     margin-top: 2rem;
-  }  
+  }
 `
 
 const HeroContainer = styled.div`
@@ -52,10 +51,8 @@ const StyledExcerpt = styled.p`
 
   @media (max-width: ${constants.breakPoints.medium}) {
     max-width: 200px;
-    /* font-size: ${constants.fonts.textSizeSmallerDevices.size}; */
   }
 `
-
 
 const Hero = () => {
   return (
@@ -64,7 +61,8 @@ const Hero = () => {
         <AnimatedTitle />
         <FadeInDiv>
           <StyledExcerpt>
-            I'd love to join a team of experienced colleagues to improve my skills and contribute to meaningful projects. 
+            I'd love to join a team of experienced colleagues to improve my
+            skills and contribute to meaningful projects.
           </StyledExcerpt>
           <AnchorLink to="/#projectsSection">
             <ButtonLight title="See projects" width={200} textSize=".9rem" />
@@ -76,4 +74,4 @@ const Hero = () => {
   )
 }
 
-export default Hero;
+export default Hero

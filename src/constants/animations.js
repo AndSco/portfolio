@@ -1,4 +1,4 @@
-import {keyframes} from "styled-components";
+import { keyframes } from "styled-components"
 
 export const fadeIn = keyframes`
   from {
@@ -8,7 +8,7 @@ export const fadeIn = keyframes`
   to {
     opacity: 1;
   }
-` 
+`
 
 export const slideUp = keyframes`
   from { 
@@ -31,7 +31,6 @@ export const slideDown = keyframes`
     opacity: 1;
   }  
 `
-
 
 export const socialStripBounce = keyframes`
   0% {
