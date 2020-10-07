@@ -9,17 +9,15 @@ const TextSide = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: ${props =>
-    props.orientation === "left" ? "flex-start" : "flex-end"};
+  align-items: flex-start;
   width: 45vw;
-  max-width: 320px;
+  max-width: 400px;
   order: ${props => (props.orientation === "right" ? 1 : 0)};
   background: ${props => props.theme.aboutStrip};
   padding: 50px 40px;
   box-shadow: rgba(0, 0, 0, 0.38) 6px 7px 9px -4px;
   margin-left: ${props => (props.orientation === "right" ? "2rem" : 0)};
   margin-right: ${props => (props.orientation === "right" ? 0 : "2rem")};
-  text-align: ${props => (props.orientation === "right" ? "right" : "left")};
 
   @media (max-width: ${constants.breakPoints.medium}) {
     order: 2;
@@ -67,7 +65,7 @@ const Description = styled.div`
 `
 
 const TechItem = styled.h6`
-  margin: 0.4rem;
+  margin: 0.3rem 0.4rem;
   color: ${props => props.theme.secondaryDetails};
   font-size: 0.7rem;
   font-weight: bold;
@@ -89,9 +87,6 @@ const StackListContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 1.5rem;
-
-  justify-content: ${props =>
-    props.orientation === "left" ? "flex-start" : "flex-end"};
 `
 
 const StackList = ({ stack, orientation }) => {

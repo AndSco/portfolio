@@ -28,7 +28,7 @@ export default {
   },
 
   breakPoints: {
-    medium: "900px",
+    medium: "1000px",
     large: "1600px",
   },
 }
