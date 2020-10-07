@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import constants from "../constants/constants"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import cv from "../files/Andrea_Scorcia_CV.pdf"
 
 const LinksIcons = styled.div`
   display: flex;
