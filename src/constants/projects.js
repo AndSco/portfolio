@@ -10,15 +10,43 @@ export default [
     githubRepository: "https://github.com/AndSco/COVID19",
   },
   {
+    title: "QuizMachine",
+    description:
+      "A simple quiz-taking and quiz-generating application built completely in TypeScript. Users can test themselves with quizzes coming from two sets of APIs (trivia & programming) picking the subject (or going random), setting the difficulty level and choosing the number of questions. Users can also register to create their own quizzes to share with the community.",
+    stack: [
+      "TypeScript",
+      "React",
+      "React Router",
+      "Express",
+      "PassportJS",
+      "Rest API",
+      "API consumption",
+      "Styled Components",
+    ],
+    picName: "quiz-machine.png",
+    demoUrl: "https://www.youtube.com/embed/zf3Bl0Cj2aw",
+    url: "https://quiz-machine2020.herokuapp.com/",
+    githubRepository: "https://github.com/AndSco/quiz-machine",
+  },
+  {
     title: "Organigram generator",
     description:
       "Staff changes happen all the time... Instead of designing a new diagram every time a new intern joins the organisation, this web application allows the staff of the European Commission Representation in Malta to create, update and save the organisation’s organigram as a PDF in a few clicks. It also serves as a contacts’ directory to call or email colleagues with just one tap.",
-    stack: ["React", "TypeScript", "NodeJS", "MongoDB", "Styled Components"],
+    stack: [
+      "React",
+      "TypeScript",
+      "Express",
+      "NodeJS",
+      "MongoDB",
+      "Styled Components",
+      "Rest API",
+    ],
     picName: "organigramEC.png",
     demoUrl: "https://www.youtube.com/embed/Ry6yp9EbaaI",
     url: "https://organigram-ecrep.herokuapp.com/",
     githubRepository: "https://github.com/AndSco/ecrep-organigram-typescript",
   },
+
   {
     title: "Automation tools",
     description:
@@ -31,6 +59,7 @@ export default [
       "Puppeteer",
       "CheerioJS",
       "Tesseract",
+      "Rest API",
     ],
     picName: "automationTools.png",
     demoUrl: "https://www.youtube.com/embed/RB0Nf2zNCqY",
@@ -41,14 +70,7 @@ export default [
     title: "Kayaking mobile app",
     description:
       "Working prototype of React Native application built for the Sea Kayak club in Malta. Users can check in when going out for a paddle, specifying their itinerary & estimated time of arrival. If the kayaker does not check out by his/her ETA, all subscribers receive an alert notification. The app also serves as a logbook of the club's activities, a repository of kayaking trips, a source of technical references and handy practical info (e.g. nautical units conversion, interpretation of buoyage and light signals).",
-    stack: [
-      "React Native",
-      "Expo",
-      "NodeJS",
-      "API Creation",
-      "Redux",
-      "MongoDB",
-    ],
+    stack: ["React Native", "Expo", "NodeJS", "Rest API", "Redux", "MongoDB"],
     picName: "seakats.jpg",
     demoUrl: "https://www.youtube.com/embed/pSsuKNdnCoA",
     url: "NA",
@@ -58,7 +80,15 @@ export default [
     title: "@ec.events.mt",
     description:
       "Event management platform built for the Representation of the European Commission in Malta to handle registration for their events. The organiser can create his/her event, share the registration link with invitees and confirm or reject attendance, so as to avoid gate-crashing.",
-    stack: ["React", "React Context", "NodeJS", "Express", "MongoDB"],
+    stack: [
+      "React",
+      "React Context",
+      "NodeJS",
+      "Express",
+      "MongoDB",
+      "JWT",
+      "Rest API",
+    ],
     picName: "ec-events.png",
     demoUrl: "https://www.youtube.com/embed/bEwRsJQkEgU",
     url: "https://ec-events-mt.herokuapp.com/",
@@ -68,7 +98,7 @@ export default [
     title: "FamilyWeather+",
     description:
       "The usual weather project... with a twist! Having my family spread in different European cities, this progressive web app gives an overview of the weather for each of these locations, sorting them according to various parameters. Are your dear ones living somewhere else? Or maybe you just want to compare weather in different locations ahead of your weekend break? Create and save your own dashboard! The data is from the Open Weather Map API.",
-    stack: ["React", "NodeJS", "API", "PWA"],
+    stack: ["React", "NodeJS", "API consumption", "PWA"],
     picName: "familyWeather.png",
     demoUrl: "https://www.youtube.com/embed/kpToaEfVOd4",
     url: "https://familyweather.herokuapp.com/",

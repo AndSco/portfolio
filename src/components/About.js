@@ -39,7 +39,7 @@ const About = () => {
             <br />
             When it comes to front-end, my tool of choice is ReactJS (with
             functional components & hooks), with the additional safety net of
-            Typescript. I have also experimented with React Native to bring my
+            TypeScript. I have also experimented with React Native to bring my
             apps on small screens. <br />
             <br />
             On the back-end side, I usually reach for NodeJS, Express and

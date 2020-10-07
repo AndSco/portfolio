@@ -83,14 +83,14 @@ const CodeTechnology = () => {
         My current stack
       </h4>
       <CircleContainer>
-        {techs.map(tech => (
-          <TechIcon key={tech.icon} iconName={tech.icon} techName={tech.name} />
-        ))}
         <TechIcon
           iconName="TypeScript"
           techName="TypeScript"
           isTypeScript={true}
         />
+        {techs.map(tech => (
+          <TechIcon key={tech.icon} iconName={tech.icon} techName={tech.name} />
+        ))}
       </CircleContainer>
     </Wrapper>
   )
