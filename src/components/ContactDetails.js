@@ -58,7 +58,11 @@ const ContactDetail = ({ icon, text, link }) => {
   const [isTextShowing, setIsTextShowing] = useState(false)
 
   return (
-    <a href={link} target="_blank" rel="noreferrer">
+    <a
+      href={link}
+      target={icon === "mobile-alt" ? "_self" : "_blank"}
+      rel="noreferrer"
+    >
       <ContactDetailContainer
         onMouseEnter={() => setIsTextShowing(true)}
         onMouseLeave={() => setIsTextShowing(false)}
