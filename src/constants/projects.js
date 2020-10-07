@@ -102,6 +102,6 @@ export default [
     picName: "familyWeather.png",
     demoUrl: "https://www.youtube.com/embed/kpToaEfVOd4",
     url: "https://familyweather.herokuapp.com/",
-    githubRepository: "https://github.com/AndSco/meteoPWA",
+    githubRepository: "https://github.com/AndSco/final-meteo-react",
   },
 ]
