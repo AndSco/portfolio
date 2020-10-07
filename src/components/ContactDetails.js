@@ -72,7 +72,7 @@ const ContactDetail = ({ icon, text, link }) => {
           style={{
             opacity: isTextShowing ? 0.8 : 0.4,
             transition: "all 1s ease",
-            marginLeft: icon === "file-pdf" ? 5 : 0,
+            marginRight: icon === "mobile-alt" ? 5 : 0,
           }}
         />
       </ContactDetailContainer>
@@ -99,9 +99,9 @@ const ContactDetails = () => {
         link="https://github.com/AndSco?tab=repositories"
       />
       <ContactDetail
-        icon={"file-pdf"}
-        text="See & download my CV"
-        link="Andrea_Scorcia_CV.pdf"
+        icon={"mobile-alt"}
+        text="+420 604 715 513"
+        link="tel:+420604715513"
       />
     </LinksIcons>
   )
