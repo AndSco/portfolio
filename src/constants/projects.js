@@ -2,7 +2,7 @@ export default [
   {
     title: "#COVID19 Update",
     description:
-      "My quarantine project! Web app tracking the daily developments of the coronavirus outbreak worldwide, visually comparing chronological and quantitative data by country and giving a historical overview of past pandemics. The data is sourced from the public repository of the Johns Hopkins University.",
+      "My lockdown project! Web app tracking the daily developments of the coronavirus outbreak worldwide, visually comparing chronological and quantitative data by country and giving a historical overview of past pandemics. The data is sourced from the public repository of the Johns Hopkins University.",
     stack: ["React", "D3", "Web-scraping"],
     picName: "covid19.png",
     demoUrl: "https://www.youtube.com/embed/etmthIYkeLs",
