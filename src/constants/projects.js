@@ -74,7 +74,7 @@ export default [
     picName: "seakats.jpg",
     demoUrl: "https://www.youtube.com/embed/pSsuKNdnCoA",
     url: "NA",
-    githubRepository: "https://github.com/AndSco/seakatsRNclient",
+    githubRepository: "https://github.com/AndSco/Seakats",
   },
   {
     title: "@ec.events.mt",
