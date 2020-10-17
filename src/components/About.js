@@ -43,8 +43,12 @@ const About = () => {
             apps on small screens. <br />
             <br />
             On the back-end side, I usually reach for NodeJS, Express and
-            MongoDB. This is the stack I'm currently comfortable with, but I'm
-            always eager to learn new stuff!
+            MongoDB, while for testing I use Jest, React Testing Library and
+            SuperTest.
+            <br />
+            <br />
+            This is the stack I'm currently comfortable with, but I'm always
+            eager to learn new stuff!
           </ParagraphText>
         </div>
         <CodeTechnology />
