@@ -50,7 +50,7 @@ function SEO({ description, lang, meta, title }) {
           // You should ideally replace the hardcoded URL below with a value you set
           // in your gatsby-config.js file.  And import all shared site metadata into
           // this component with the useStaticQuery hook.
-          content: `https://www.andreascorcia.com/${ogImage}`,
+          content: `https://www.andreascorcia.com${ogImage}`,
         },
         {
           name: `twitter:card`,
