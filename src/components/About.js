@@ -43,8 +43,8 @@ const About = () => {
             apps on small screens. <br />
             <br />
             On the back-end side, I usually reach for NodeJS, Express and
-            MongoDB, while for testing I use Jest, React Testing Library and
-            SuperTest.
+            MongoDB, while for testing I use Jest, React Testing Library,
+            Cypress and SuperTest.
             <br />
             <br />
             This is the stack I'm currently comfortable with, but I'm always
