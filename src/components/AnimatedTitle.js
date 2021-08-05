@@ -43,7 +43,7 @@ const AnimatedTitle = props => {
     <div>
       <Title main>Andrea</Title>
       <Title main>Scorcia</Title>
-      <Title>Javascript</Title>
+      <Title>Frontend</Title>
       <Title>Developer</Title>
     </div>
   )

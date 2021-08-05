@@ -16,6 +16,7 @@ const ButtonStyled = styled.div`
   width: ${props => (props.width ? props.width + "px" : undefined)};
   cursor: pointer;
   transition: color 0.2s linear, border 0.2s linear;
+  margin-top: ${props => (props.marginTop ? props.marginTop : undefined)};
 
   &:hover {
     color: ${props => (props.noEffect ? props.color : props.theme.highlights)};
@@ -34,9 +35,9 @@ const ButtonStyled = styled.div`
   }
 `
 
-const ButtonLight = ({title, width, textSize, color, noEffect, functionToPerform}) => {
+const ButtonLight = ({title, width, textSize, color, noEffect, functionToPerform, marginTop}) => {
   return (
-    <ButtonStyled width={width} textSize={textSize} color={color} noEffect={noEffect} onClick={functionToPerform}>
+    <ButtonStyled width={width} textSize={textSize} color={color} noEffect={noEffect} marginTop={marginTop} onClick={functionToPerform}>
       {title}
     </ButtonStyled>
   )

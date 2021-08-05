@@ -60,12 +60,12 @@ const Hero = () => {
       <TextContainer>
         <AnimatedTitle />
         <FadeInDiv>
-          <StyledExcerpt>
+          {/* <StyledExcerpt>
             I'd love to join a team of experienced colleagues to improve my
             skills and contribute to meaningful projects.
-          </StyledExcerpt>
+          </StyledExcerpt> */}
           <AnchorLink to="/#projectsSection">
-            <ButtonLight title="See projects" width={200} textSize=".9rem" />
+            <ButtonLight title="See projects" width={200} textSize=".9rem" marginTop="2rem" />
           </AnchorLink>
         </FadeInDiv>
       </TextContainer>
