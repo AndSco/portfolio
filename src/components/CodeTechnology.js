@@ -55,14 +55,14 @@ const IconContainer = styled.div`
   }
 `
 
-const TechIcon = ({ iconName, techName, isTypeScript }) => {
+const TechIcon = ({ iconName, techName, hasIcon = true, iconSurrogate }) => {
   return (
     <IconContainer>
       <Circle>
-        {!isTypeScript ? (
+        {hasIcon ? (
           <FontAwesomeIcon icon={iconName} size="2x" />
         ) : (
-          <h2 style={{ fontSize: "2em", margin: 0 }}>TS</h2>
+          <h2 style={{ fontSize: "2em", margin: 0 }}>{iconSurrogate}</h2>
         )}
       </Circle>
       <h6>{techName}</h6>
@@ -86,11 +86,24 @@ const CodeTechnology = () => {
         <TechIcon
           iconName="TypeScript"
           techName="TypeScript"
-          isTypeScript={true}
+          hasIcon={false}
+          iconSurrogate="TS"
         />
         {techs.map(tech => (
           <TechIcon key={tech.icon} iconName={tech.icon} techName={tech.name} />
         ))}
+        <TechIcon
+          iconName="GQL"
+          techName="GraphQL"
+          hasIcon={false}
+          iconSurrogate="GQL"
+        />
+         <TechIcon
+          iconName="GO"
+          techName="GO"
+          hasIcon={false}
+          iconSurrogate="GO"
+        />
       </CircleContainer>
     </Wrapper>
   )
