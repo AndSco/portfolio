@@ -6,7 +6,8 @@ export default [
     stack: ["React", "D3", "Web-scraping"],
     picName: "covid19.png",
     demoUrl: "https://www.youtube.com/embed/etmthIYkeLs",
-    url: "https://covid19-update.herokuapp.com/",
+    url: "NA",
+    // url: "https://covid19-update.herokuapp.com/",
     githubRepository: "https://github.com/AndSco/COVID19",
   },
   {
